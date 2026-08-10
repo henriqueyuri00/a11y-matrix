@@ -1,5 +1,8 @@
 # a11y-matrix
 
+[![test](https://github.com/henriqueyuri00/a11y-matrix/actions/workflows/test.yml/badge.svg)](https://github.com/henriqueyuri00/a11y-matrix/actions/workflows/test.yml)
+[![license: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+
 **Your accessibility check tests one user. Real users arrive with preferences already set.**
 
 `a11y-matrix` runs axe-core across the browser states a normal pipeline never enters — dark mode,
