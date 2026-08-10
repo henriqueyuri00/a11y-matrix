@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Wide data table, presented the sanctioned way</title>
+<style>
+  body { background:#fff; color:#1a1a1a; font:16px/1.6 system-ui, sans-serif; margin:0; padding:20px; }
+  /* A data table is one of the layouts WCAG 1.4.10 explicitly excepts, so
+     scrolling it horizontally is allowed. The container is focusable and
+     labelled, otherwise a keyboard user could never reach the scrolled-off
+     columns and 1.4.10 would simply be traded for 2.1.1. */
+  .tw { overflow-x:auto; max-width:100%; }
+  table { width:100%; min-width:520px; border-collapse:collapse; font-size:14px; }
+  /* No explicit background on the cells. That is deliberate and matches the
+     real-world case: axe then has to resolve the background by walking up
+     through the scroll container, and for a cell scrolled out of view it gives
+     up with "partially obscured" — the message this tool has to interpret. */
+  th, td { border:1px solid #d5d5d5; padding:8px 10px; text-align:left; color:#1a1a1a; }
+</style>
+</head>
+<body>
+  <main>
+    <h1>Regional totals</h1>
+    <div class="tw" tabindex="0" role="region" aria-label="Regional totals by quarter">
+      <table>
+        <tr><th>Region</th><th>Quarter</th><th>Notes on the reported figure</th></tr>
+        <tr><td>North</td><td>Q1</td><td>Restated after the audit closed in February.</td></tr>
+        <tr><td>South</td><td>Q1</td><td>Includes the deferred licence revenue.</td></tr>
+      </table>
+    </div>
+  </main>
+</body>
+</html>

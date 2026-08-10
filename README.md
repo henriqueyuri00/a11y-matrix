@@ -63,6 +63,24 @@ Single-factor deltas name the cause, and the cause is the bug report.
 `forced-colors` deliberately drops contrast findings: in that mode the OS palette is not yours, so
 reporting a contrast result there would be measuring the wrong thing.
 
+## Two things it refuses to get wrong
+
+**Reflow is measured, not inferred.** axe has no rule for WCAG 1.4.10. What you get instead is a
+contrast rule complaining that an element is "partially obscured", which is a side effect and not
+the requirement. `a11y-matrix` asks the document directly whether it is wider than its own viewport
+and reports `page-horizontal-overflow` with the actual pixel figure. That is the 1.4.10 condition,
+stated plainly.
+
+**Fixing it correctly is not punished.** axe emits the *same* "partially obscured" message for an
+element covered by an overlay (a real defect) and for a table cell scrolled out of view inside an
+overflow container (the sanctioned way to present a wide data table at 320px). This tool walks the
+DOM and asks whether the element sits inside an ancestor that genuinely scrolls horizontally and
+that a keyboard can reach. If so the finding is suppressed — and the count and reason are printed,
+never dropped silently, so you can audit the decision.
+
+That second one was found by scanning my own sales page, correcting it the recommended way, and
+watching the tool keep failing the corrected version.
+
 ## Usage
 
 ```bash

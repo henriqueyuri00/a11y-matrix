@@ -126,6 +126,9 @@ function report(results, opts) {
       if (r.goneFromState.length)
         lines.push(`  ${C.dim}${r.goneFromState.length} baseline finding(s) absent here — usually the element ` +
                    `is not rendered in this state, not that it was fixed.${C.off}`);
+      if (r.suppressed)
+        lines.push(`  ${C.dim}${r.suppressed} finding(s) suppressed: scrolled out of view inside a ` +
+                   `keyboard-reachable scroll container, which is the sanctioned pattern.${C.off}`);
       continue;
     }
 
@@ -134,8 +137,11 @@ function report(results, opts) {
     for (const f of uniq) {
       const mark = f.kind === "incomplete" ? C.yellow + "review  " : C.red + f.impact.padEnd(8);
       lines.push(`    ${mark}${C.off} ${f.rule}  ${C.dim}${f.target}${C.off}`);
-      if (f.summary) lines.push(`             ${C.dim}${f.summary.slice(0, 160)}${C.off}`);
+      if (f.summary) lines.push(`             ${C.dim}${f.summary.slice(0, 200)}${C.off}`);
     }
+    if (r.suppressed)
+      lines.push(`  ${C.dim}${r.suppressed} further finding(s) suppressed: scrolled out of view inside a ` +
+                 `keyboard-reachable scroll container, which is the sanctioned pattern.${C.off}`);
     if (r.goneFromState.length)
       lines.push(`  ${C.dim}${r.goneFromState.length} baseline violation(s) absent here — usually the element is ` +
                  `not rendered in this state, not that it was fixed.${C.off}`);

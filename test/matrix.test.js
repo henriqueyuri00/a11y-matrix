@@ -103,6 +103,33 @@ console.log("\nSTATE SELECTION");
        ["dark", "reduced-motion", "forced-colors"].every(id => by(id).uniqueToState.length === 0));
   }
 
+  console.log("\nREFLOW IS MEASURED, NOT INFERRED");
+  {
+    const r = await runMatrix(fixture("reflow-only.html"), selectStates(["reflow-320"]), OPTS);
+    const at320 = r.find(s => s.state.id === "reflow-320");
+    ok("  document overflow at 320px is reported as its own rule",
+       at320.uniqueToState.some(f => f.rule === "page-horizontal-overflow"),
+       at320.uniqueToState.map(f => f.rule).join(","));
+    ok("  and it is a violation, not a judgement call",
+       at320.uniqueToState.some(f => f.rule === "page-horizontal-overflow" && f.kind === "violation"));
+    ok("  the baseline width does not trigger it",
+       ![...r.find(s => s.state.id === "baseline").findings.values()]
+         .some(f => f.rule === "page-horizontal-overflow"));
+  }
+
+  console.log("\nSCROLL CONTAINERS — fixing it correctly must not be punished");
+  {
+    const r = await runMatrix(fixture("scrollable-table.html"), STATES, OPTS);
+    const noisy = r.filter(s => s.state.id !== "baseline" && s.uniqueToState.length);
+    ok("  a labelled, focusable scroll region reports nothing new", noisy.length === 0,
+       noisy.map(s => s.state.id + ":" + s.uniqueToState.map(f => f.rule).join("/")).join(" | "));
+    ok("  the document itself never overflows",
+       !r.some(s => [...s.findings.values()].some(f => f.rule === "page-horizontal-overflow")));
+    ok("  and the suppression is disclosed rather than silent",
+       r.some(s => s.suppressed > 0),
+       "no state reported a suppressed count, so the reader cannot audit the decision");
+  }
+
   console.log("\nFORCED COLORS — contrast findings are suppressed there on purpose");
   {
     const r = await runMatrix(fixture("dark-only.html"), selectStates(["forced-colors"]), OPTS);
