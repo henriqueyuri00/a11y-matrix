@@ -58,7 +58,13 @@ async function runState(browser, url, state, opts) {
     viewport: state.viewport,
     reducedMotion: state.media.reducedMotion,
     colorScheme: state.media.colorScheme,
-    forcedColors: state.media.forcedColors
+    forcedColors: state.media.forcedColors,
+    /* Without this, injecting axe fails outright on any site with a strict
+       script-src — which is to say, on exactly the well-engineered sites most
+       likely to be worth scanning. The page is only ever read; nothing is sent
+       anywhere, and the relaxation applies to this throwaway context, not to
+       the user's browser. */
+    bypassCSP: true
   });
   const page = await context.newPage();
   try {
