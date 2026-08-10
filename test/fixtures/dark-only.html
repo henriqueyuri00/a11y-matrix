@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Dark-only contrast regression</title>
+<style>
+  :root { --bg:#ffffff; --ink:#1a1a1a; --accent:#1c5d3f; --on-accent:#ffffff; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#12161a; --ink:#e8ecef; --accent:#6cc49a; }
+    /* The defect. The dark theme redefines the button's text colour, but the
+       selector outranks the component's own rule, so the accent-on-accent pair
+       lands at roughly 1.04:1. In the light theme the button is white on dark
+       green and passes comfortably, so a single light-mode axe run is green. */
+    :root:not([data-theme=light]) .btn { color: #6cc49a; }
+  }
+  body { background: var(--bg); color: var(--ink); font: 16px/1.5 system-ui, sans-serif; padding: 40px; }
+  .btn { background: var(--accent); color: var(--on-accent); border: 0;
+         padding: 10px 18px; border-radius: 8px; font-size: 15px; }
+</style>
+</head>
+<body>
+  <main>
+    <h1>Order summary</h1>
+    <p>Your order is ready to submit.</p>
+    <button class="btn" type="button">Confirm order</button>
+  </main>
+</body>
+</html>

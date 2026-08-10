@@ -1,0 +1,83 @@
+name: "a11y-matrix"
+description: "Run axe across dark mode, reduced motion, forced colors and the 320px reflow width, and report what each state uniquely breaks."
+author: "Henrique Yuri"
+branding:
+  icon: "grid"
+  color: "green"
+
+inputs:
+  url:
+    description: "URL or file path to scan."
+    required: true
+  states:
+    description: "Comma-separated subset of states. Baseline is always included."
+    required: false
+    default: ""
+  tags:
+    description: "axe tag filter."
+    required: false
+    default: "wcag2a,wcag2aa,wcag21a,wcag21aa"
+  fail-on:
+    description: "unique | any | never. Default fails only on findings new relative to the baseline."
+    required: false
+    default: "unique"
+  settle:
+    description: "Milliseconds to wait after load before scanning."
+    required: false
+    default: "400"
+  comment-file:
+    description: "Path to write a PR-comment-shaped markdown summary to."
+    required: false
+    default: ""
+
+outputs:
+  unique-total:
+    description: "Number of findings present in a non-baseline state and absent from the baseline."
+    value: ${{ steps.scan.outputs.unique-total }}
+
+runs:
+  using: "composite"
+  steps:
+    # A composite action is checked out without node_modules, so the runtime
+    # deps have to be installed into the action's own directory rather than the
+    # caller's — installing into the workspace would collide with whatever the
+    # caller already has pinned.
+    - name: Install dependencies
+      shell: bash
+      run: npm install --omit=dev --no-audit --no-fund --prefix "$GITHUB_ACTION_PATH"
+
+    - name: Install chromium
+      shell: bash
+      working-directory: ${{ github.action_path }}
+      run: npx playwright install --with-deps chromium
+
+    - name: Scan
+      id: scan
+      shell: bash
+      env:
+        INPUT_URL: ${{ inputs.url }}
+        INPUT_STATES: ${{ inputs.states }}
+        INPUT_TAGS: ${{ inputs.tags }}
+        INPUT_FAIL_ON: ${{ inputs.fail-on }}
+        INPUT_SETTLE: ${{ inputs.settle }}
+        INPUT_COMMENT_FILE: ${{ inputs.comment-file }}
+      run: |
+        set -o pipefail
+        args=("$INPUT_URL" --tags "$INPUT_TAGS" --fail-on "$INPUT_FAIL_ON" --settle "$INPUT_SETTLE")
+        [ -n "$INPUT_STATES" ] && args+=(--states "$INPUT_STATES")
+        [ -n "$INPUT_COMMENT_FILE" ] && args+=(--markdown "$INPUT_COMMENT_FILE")
+        args+=(--json "$RUNNER_TEMP/a11y-matrix.json")
+
+        # The exit code is the result, not an error: capture it, publish the
+        # output, then re-raise. Letting set -e kill the step here would skip
+        # the output entirely and leave the caller unable to react.
+        status=0
+        node "$GITHUB_ACTION_PATH/src/cli.js" "${args[@]}" || status=$?
+
+        total=$(node -e 'const f=process.argv[1];const fs=require("fs");process.stdout.write(fs.existsSync(f)?String(JSON.parse(fs.readFileSync(f,"utf8")).uniqueTotal):"0")' "$RUNNER_TEMP/a11y-matrix.json")
+        echo "unique-total=$total" >> "$GITHUB_OUTPUT"
+
+        if [ -n "$INPUT_COMMENT_FILE" ] && [ -f "$INPUT_COMMENT_FILE" ]; then
+          cat "$INPUT_COMMENT_FILE" >> "$GITHUB_STEP_SUMMARY"
+        fi
+        exit $status

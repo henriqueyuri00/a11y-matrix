@@ -1,0 +1,56 @@
+name: test
+
+on:
+  push: { branches: [main] }
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  unit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20, cache: npm }
+      - run: npm ci || npm install
+      - run: npx playwright install --with-deps chromium
+      - run: npm test
+
+  # The composite action cannot be verified by unit tests -- its failure modes
+  # are shell quoting, a missing node_modules in the action path, and the exit
+  # code being swallowed. So it is exercised here for real, both ways round:
+  # a fixture that must fail the build, and one that must not.
+  action:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+
+      - name: Clean fixture must pass
+        uses: ./
+        with:
+          url: test/fixtures/clean.html
+          comment-file: clean-report.md
+
+      - name: Broken fixture must fail
+        id: broken
+        continue-on-error: true
+        uses: ./
+        with:
+          url: test/fixtures/dark-only.html
+          states: dark
+          comment-file: broken-report.md
+
+      - name: Assert the broken fixture actually failed
+        run: |
+          if [ "${{ steps.broken.outcome }}" != "failure" ]; then
+            echo "::error::dark-only.html should have failed the action but did not"
+            exit 1
+          fi
+          echo "unique-total reported: ${{ steps.broken.outputs.unique-total }}"
+          if [ "${{ steps.broken.outputs.unique-total }}" = "0" ]; then
+            echo "::error::the action failed but reported no unique findings -- the output is wrong"
+            exit 1
+          fi
+          test -s broken-report.md || { echo "::error::markdown report was not written"; exit 1; }

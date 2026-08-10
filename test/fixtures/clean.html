@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Clean in every state</title>
+<style>
+  :root { --bg:#ffffff; --ink:#1a1a1a; --accent:#12452f; --on-accent:#ffffff; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#12161a; --ink:#e8ecef; --accent:#8fd6b0; --on-accent:#08130d; }
+  }
+  body { background:var(--bg); color:var(--ink); font:16px/1.6 system-ui, sans-serif; padding:24px;
+         margin:0; }
+  main { max-width:60ch; }
+  .btn { background:var(--accent); color:var(--on-accent); border:0;
+         padding:12px 18px; border-radius:8px; font-size:15px; min-height:24px; }
+  /* No fixed widths anywhere, so 320px reflows rather than overflowing. */
+  img { max-width:100%; height:auto; }
+</style>
+</head>
+<body>
+  <main>
+    <h1>Order summary</h1>
+    <p>Your order is ready to submit.</p>
+    <button class="btn" type="button">Confirm order</button>
+  </main>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Overflow only at the reflow width</title>
+<style>
+  body { background:#fff; color:#1a1a1a; font:16px/1.6 system-ui, sans-serif; margin:0; padding:20px; }
+  /* Fine at 1280 and at 390. At 320 the fixed width pushes the badge out of the
+     container and over the paragraph, so its background can no longer be
+     resolved — content obscured, which is what 1.4.10 is about. */
+  .row { position:relative; width:360px; }
+  .badge { position:absolute; right:-40px; top:0; background:#e8f1ec; color:#3d6b55;
+           padding:4px 10px; border-radius:999px; font-size:13px; }
+</style>
+</head>
+<body>
+  <main>
+    <h1>Invoice</h1>
+    <div class="row">
+      <p>Payment is due within thirty days of the invoice date shown above.</p>
+      <span class="badge">Unpaid</span>
+    </div>
+  </main>
+</body>
+</html>

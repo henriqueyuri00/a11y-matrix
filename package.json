@@ -1,0 +1,26 @@
+{
+  "name": "a11y-matrix",
+  "version": "1.0.0",
+  "description": "Runs axe across the user preference states your pipeline skips — dark mode, reduced motion, forced colors, 320px reflow — and reports what each one uniquely breaks.",
+  "bin": { "a11y-matrix": "src/cli.js" },
+  "main": "src/run.js",
+  "files": ["src", "README.md", "LICENSE"],
+  "scripts": {
+    "test": "node test/matrix.test.js",
+    "demo": "node src/cli.js test/fixtures/dark-only.html"
+  },
+  "keywords": [
+    "accessibility", "a11y", "axe", "axe-core", "wcag", "wcag21", "playwright",
+    "dark-mode", "prefers-color-scheme", "prefers-reduced-motion", "forced-colors",
+    "reflow", "contrast", "ci", "testing"
+  ],
+  "author": "Henrique Yuri",
+  "license": "MIT",
+  "repository": { "type": "git", "url": "git+https://github.com/henriqueyuri00/a11y-matrix.git" },
+  "homepage": "https://github.com/henriqueyuri00/a11y-matrix#readme",
+  "engines": { "node": ">=18" },
+  "dependencies": {
+    "axe-core": "^4.13.0",
+    "playwright": "^1.62.1"
+  }
+}
