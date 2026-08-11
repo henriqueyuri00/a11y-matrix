@@ -189,6 +189,10 @@ your CI has never entered.
 
 If you need to write down where you stand against all 50 WCAG 2.1 A/AA criteria, the
 [ACR Builder](https://henriqueyuri00.github.io/acr-builder/) is free and MIT-licensed too.
+Alongside it there are plain-English notes on
+[what a customer means when they ask for your VPAT](https://henriqueyuri00.github.io/acr-builder/vpat/),
+[whether the European Accessibility Act applies to you](https://henriqueyuri00.github.io/acr-builder/eaa/),
+and [why an accessibility statement has to be based on an actual evaluation](https://henriqueyuri00.github.io/acr-builder/statement/).
 
 ## Development
 
