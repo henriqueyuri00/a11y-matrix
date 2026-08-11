@@ -1,0 +1,42 @@
+[
+  { "name": "W3C",                "url": "https://www.w3.org/",                          "category": "standards" },
+  { "name": "WebAIM",             "url": "https://webaim.org/",                          "category": "standards" },
+  { "name": "The A11Y Project",   "url": "https://www.a11yproject.com/",                 "category": "standards" },
+  { "name": "Deque",              "url": "https://www.deque.com/",                       "category": "standards" },
+
+  { "name": "MDN",                "url": "https://developer.mozilla.org/en-US/",          "category": "docs" },
+  { "name": "React",              "url": "https://react.dev/",                            "category": "docs" },
+  { "name": "Vue",                "url": "https://vuejs.org/",                             "category": "docs" },
+  { "name": "Svelte",             "url": "https://svelte.dev/",                            "category": "docs" },
+  { "name": "Astro",              "url": "https://astro.build/",                           "category": "docs" },
+  { "name": "Tailwind CSS",       "url": "https://tailwindcss.com/",                       "category": "docs" },
+  { "name": "Node.js",            "url": "https://nodejs.org/en",                          "category": "docs" },
+  { "name": "Python",             "url": "https://www.python.org/",                        "category": "docs" },
+  { "name": "Rust",               "url": "https://www.rust-lang.org/",                     "category": "docs" },
+  { "name": "Go",                 "url": "https://go.dev/",                                "category": "docs" },
+  { "name": "Kubernetes",         "url": "https://kubernetes.io/",                         "category": "docs" },
+  { "name": "Docker Docs",        "url": "https://docs.docker.com/",                       "category": "docs" },
+  { "name": "Playwright",         "url": "https://playwright.dev/",                        "category": "docs" },
+  { "name": "Vite",               "url": "https://vite.dev/",                              "category": "docs" },
+  { "name": "TypeScript",         "url": "https://www.typescriptlang.org/",                "category": "docs" },
+  { "name": "PostgreSQL",         "url": "https://www.postgresql.org/",                    "category": "docs" },
+
+  { "name": "Primer",             "url": "https://primer.style/",                          "category": "design-system" },
+  { "name": "Carbon",             "url": "https://carbondesignsystem.com/",                "category": "design-system" },
+  { "name": "Shopify Polaris",    "url": "https://polaris.shopify.com/",                   "category": "design-system" },
+  { "name": "Atlassian Design",   "url": "https://atlassian.design/",                      "category": "design-system" },
+  { "name": "Radix UI",           "url": "https://www.radix-ui.com/",                      "category": "design-system" },
+
+  { "name": "GitHub",             "url": "https://github.com/",                            "category": "platform" },
+  { "name": "GitLab",             "url": "https://about.gitlab.com/",                      "category": "platform" },
+  { "name": "npm",                "url": "https://www.npmjs.com/",                         "category": "platform" },
+  { "name": "DEV Community",      "url": "https://dev.to/",                                "category": "platform" },
+  { "name": "Netlify",            "url": "https://www.netlify.com/",                       "category": "platform" },
+  { "name": "Vercel",             "url": "https://vercel.com/",                            "category": "platform" },
+  { "name": "Stripe",             "url": "https://stripe.com/",                            "category": "platform" },
+
+  { "name": "Wikipedia",          "url": "https://www.wikipedia.org/",                     "category": "general" },
+  { "name": "GOV.UK",             "url": "https://www.gov.uk/",                            "category": "general" },
+  { "name": "NASA",               "url": "https://www.nasa.gov/",                          "category": "general" },
+  { "name": "BBC",                "url": "https://www.bbc.com/",                           "category": "general" }
+]

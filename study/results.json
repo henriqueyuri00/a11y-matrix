@@ -1,0 +1,3020 @@
+[
+  {
+    "url": "https://www.w3.org/",
+    "name": "W3C",
+    "category": "standards",
+    "ok": true,
+    "baseline": {
+      "violations": 0,
+      "incomplete": 1
+    },
+    "byState": {
+      "dark": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "reduced-motion": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "forced-colors": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "mobile": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "reflow-320": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "dark-mobile": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      }
+    },
+    "distinctMissed": 0,
+    "distinctViolations": 0,
+    "rules": []
+  },
+  {
+    "url": "https://webaim.org/",
+    "name": "WebAIM",
+    "category": "standards",
+    "ok": true,
+    "baseline": {
+      "violations": 0,
+      "incomplete": 26
+    },
+    "byState": {
+      "dark": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "reduced-motion": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "forced-colors": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "mobile": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "reflow-320": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "dark-mobile": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      }
+    },
+    "distinctMissed": 0,
+    "distinctViolations": 0,
+    "rules": []
+  },
+  {
+    "url": "https://www.a11yproject.com/",
+    "name": "The A11Y Project",
+    "category": "standards",
+    "ok": true,
+    "baseline": {
+      "violations": 0,
+      "incomplete": 5
+    },
+    "byState": {
+      "dark": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "reduced-motion": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "forced-colors": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "mobile": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "reflow-320": {
+        "violations": 1,
+        "incomplete": 1,
+        "ok": true,
+        "suppressed": 0,
+        "keys": [
+          "incomplete|color-contrast|.c-homepage-feature--50-50.c-homepage-feature:nth-child(4) > .c-homepage-card:nth-child(2) > .c-homepage-card__description",
+          "violation|page-horizontal-overflow|document"
+        ]
+      },
+      "dark-mobile": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      }
+    },
+    "distinctMissed": 2,
+    "distinctViolations": 1,
+    "rules": [
+      "color-contrast",
+      "page-horizontal-overflow"
+    ]
+  },
+  {
+    "url": "https://www.deque.com/",
+    "name": "Deque",
+    "category": "standards",
+    "ok": true,
+    "baseline": {
+      "violations": 0,
+      "incomplete": 8
+    },
+    "byState": {
+      "dark": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "reduced-motion": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "forced-colors": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "mobile": {
+        "violations": 0,
+        "incomplete": 5,
+        "ok": true,
+        "suppressed": 0,
+        "keys": [
+          "incomplete|aria-valid-attr-value|div[aria-controls=\"language-listbox-mobile\"]",
+          "incomplete|aria-valid-attr-value|.mega-toggle-animated",
+          "incomplete|color-contrast|.menu-item-has-children.menu-item-type-custom.menu-item-object-custom:nth-child(1) > .menu-heading[role=\"heading\"][aria-level=\"2\"]",
+          "incomplete|color-contrast|#onetrust-policy-text",
+          "incomplete|color-contrast|#onetrust-policy-text > a:nth-child(1)"
+        ]
+      },
+      "reflow-320": {
+        "violations": 0,
+        "incomplete": 3,
+        "ok": true,
+        "suppressed": 0,
+        "keys": [
+          "incomplete|aria-valid-attr-value|div[aria-controls=\"language-listbox-mobile\"]",
+          "incomplete|aria-valid-attr-value|.mega-toggle-animated",
+          "incomplete|color-contrast|#onetrust-policy-text"
+        ]
+      },
+      "dark-mobile": {
+        "violations": 0,
+        "incomplete": 5,
+        "ok": true,
+        "suppressed": 0,
+        "keys": [
+          "incomplete|aria-valid-attr-value|div[aria-controls=\"language-listbox-mobile\"]",
+          "incomplete|aria-valid-attr-value|.mega-toggle-animated",
+          "incomplete|color-contrast|.menu-item-has-children.menu-item-type-custom.menu-item-object-custom:nth-child(1) > .menu-heading[role=\"heading\"][aria-level=\"2\"]",
+          "incomplete|color-contrast|#onetrust-policy-text",
+          "incomplete|color-contrast|#onetrust-policy-text > a:nth-child(1)"
+        ]
+      }
+    },
+    "distinctMissed": 5,
+    "distinctViolations": 0,
+    "rules": [
+      "aria-valid-attr-value",
+      "color-contrast"
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/",
+    "name": "MDN",
+    "category": "docs",
+    "ok": true,
+    "baseline": {
+      "violations": 0,
+      "incomplete": 5
+    },
+    "byState": {
+      "dark": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "reduced-motion": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "forced-colors": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "mobile": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "reflow-320": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "dark-mobile": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      }
+    },
+    "distinctMissed": 0,
+    "distinctViolations": 0,
+    "rules": []
+  },
+  {
+    "url": "https://react.dev/",
+    "name": "React",
+    "category": "docs",
+    "ok": true,
+    "baseline": {
+      "violations": 5,
+      "incomplete": 59
+    },
+    "byState": {
+      "dark": {
+        "violations": 0,
+        "incomplete": 2,
+        "ok": true,
+        "suppressed": 0,
+        "keys": [
+          "incomplete|color-contrast|.cm-line:nth-child(4) > .sp-syntax-static",
+          "incomplete|color-contrast|.cm-line:nth-child(5) > .sp-syntax-static"
+        ]
+      },
+      "reduced-motion": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "forced-colors": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "mobile": {
+        "violations": 3,
+        "incomplete": 1,
+        "ok": true,
+        "suppressed": 0,
+        "keys": [
+          "violation|scrollable-region-focusable|.border-primary\\/5.dark\\:border-primary-dark\\/5.dark\\:bg-gradient-right-dark:nth-child(3) > .my-20.lg\\:my-32.gap-2 > .max-w-7xl.mx-auto.flex-col > .lg\\:ps-10.lg\\:pe-5.w-full > .mb-2.lg\\:my-16.lg\\:bg-card > .lg\\:bg-gray-10.lg\\:dark\\:bg-gray-70.dark\\:shadow-inner-border-dark > .lg\\:-m-5.dark\\:bg-gray-95.dark\\:shadow-nav-dark > .sandpack.sandpack--codeblock.overflow-x-auto > .sp-wrapper > .sp-stack > .sp-code-editor",
+          "violation|scrollable-region-focusable|.bg-gradient-left.dark\\:bg-gradient-left-dark.border-primary\\/10:nth-child(4) > .my-20.lg\\:my-32.gap-2 > .max-w-7xl.mx-auto.flex-col > .lg\\:ps-10.lg\\:pe-5.w-full > .mb-2.lg\\:my-16.lg\\:bg-card > .lg\\:bg-gray-10.lg\\:dark\\:bg-gray-70.dark\\:shadow-inner-border-dark > .lg\\:-m-5.dark\\:bg-gray-95.dark\\:shadow-nav-dark > .sandpack.sandpack--codeblock.overflow-x-auto > .sp-wrapper > .sp-stack > .sp-code-editor",
+          "violation|scrollable-region-focusable|.border-primary\\/5.dark\\:border-primary-dark\\/5.dark\\:bg-gradient-right-dark:nth-child(5) > .my-20.lg\\:my-32.gap-2 > .max-w-7xl.mx-auto.flex-col > .lg\\:ps-10.lg\\:pe-5.w-full > .mb-2.lg\\:my-16.lg\\:bg-card > .lg\\:bg-gray-10.lg\\:dark\\:bg-gray-70.dark\\:shadow-inner-border-dark > .lg\\:-m-5.dark\\:bg-gray-95.dark\\:shadow-nav-dark > .sandpack.sandpack--codeblock.overflow-x-auto > .sp-wrapper > .sp-stack > .sp-code-editor",
+          "incomplete|color-contrast|.lg\\:hidden.justify-start.w-full > .mt-10.py-2\\.5[href$=\"blog\"]"
+        ]
+      },
+      "reflow-320": {
+        "violations": 3,
+        "incomplete": 4,
+        "ok": true,
+        "suppressed": 0,
+        "keys": [
+          "violation|scrollable-region-focusable|.border-primary\\/5.dark\\:border-primary-dark\\/5.dark\\:bg-gradient-right-dark:nth-child(3) > .my-20.lg\\:my-32.gap-2 > .max-w-7xl.mx-auto.flex-col > .lg\\:ps-10.lg\\:pe-5.w-full > .mb-2.lg\\:my-16.lg\\:bg-card > .lg\\:bg-gray-10.lg\\:dark\\:bg-gray-70.dark\\:shadow-inner-border-dark > .lg\\:-m-5.dark\\:bg-gray-95.dark\\:shadow-nav-dark > .sandpack.sandpack--codeblock.overflow-x-auto > .sp-wrapper > .sp-stack > .sp-code-editor",
+          "violation|scrollable-region-focusable|.bg-gradient-left.dark\\:bg-gradient-left-dark.border-primary\\/10:nth-child(4) > .my-20.lg\\:my-32.gap-2 > .max-w-7xl.mx-auto.flex-col > .lg\\:ps-10.lg\\:pe-5.w-full > .mb-2.lg\\:my-16.lg\\:bg-card > .lg\\:bg-gray-10.lg\\:dark\\:bg-gray-70.dark\\:shadow-inner-border-dark > .lg\\:-m-5.dark\\:bg-gray-95.dark\\:shadow-nav-dark > .sandpack.sandpack--codeblock.overflow-x-auto > .sp-wrapper > .sp-stack > .sp-code-editor",
+          "violation|scrollable-region-focusable|.border-primary\\/5.dark\\:border-primary-dark\\/5.dark\\:bg-gradient-right-dark:nth-child(5) > .my-20.lg\\:my-32.gap-2 > .max-w-7xl.mx-auto.flex-col > .lg\\:ps-10.lg\\:pe-5.w-full > .mb-2.lg\\:my-16.lg\\:bg-card > .lg\\:bg-gray-10.lg\\:dark\\:bg-gray-70.dark\\:shadow-inner-border-dark > .lg\\:-m-5.dark\\:bg-gray-95.dark\\:shadow-nav-dark > .sandpack.sandpack--codeblock.overflow-x-auto > .sp-wrapper > .sp-stack > .sp-code-editor",
+          "incomplete|color-contrast|.border-primary\\/5.dark\\:border-primary-dark\\/5.dark\\:bg-gradient-right-dark:nth-child(3) > .my-20.lg\\:my-32.gap-2 > .max-w-7xl.mx-auto.flex-col > .lg\\:ps-10.lg\\:pe-5.w-full > .mb-2.lg\\:my-16.lg\\:bg-card > .lg\\:bg-gray-10.lg\\:dark\\:bg-gray-70.dark\\:shadow-inner-border-dark > .lg\\:-m-5.dark\\:bg-gray-95.dark\\:shadow-nav-dark > .sandpack.sandpack--codeblock.overflow-x-auto > .sp-wrapper > .sp-stack > .sp-code-editor > pre > .sp-pre-placeholder.grow-\\[2\\] > .cm-line:nth-child(5)",
+          "incomplete|color-contrast|.cm-line:nth-child(17)",
+          "incomplete|color-contrast|.border-primary\\/5.dark\\:border-primary-dark\\/5.dark\\:bg-gradient-right-dark:nth-child(5) > .my-20.lg\\:my-32.gap-2 > .max-w-7xl.mx-auto.flex-col > .lg\\:ps-10.lg\\:pe-5.w-full > .mb-2.lg\\:my-16.lg\\:bg-card > .lg\\:bg-gray-10.lg\\:dark\\:bg-gray-70.dark\\:shadow-inner-border-dark > .mt-0.lg\\:-my-20.xs\\:p-5 > .dark\\:border-opacity-10.dark\\:shadow-nav-dark.shadow-nav > .rounded-t-2xl.shadow-outer-border.backdrop-filter > .space-between.bg-gray-30\\/20.text-center > .leading-snug.flex-row.justify-center",
+          "incomplete|color-contrast|.lg\\:hidden.justify-start.w-full > .mt-10.py-2\\.5[href$=\"blog\"]"
+        ]
+      },
+      "dark-mobile": {
+        "violations": 3,
+        "incomplete": 3,
+        "ok": true,
+        "suppressed": 0,
+        "keys": [
+          "violation|scrollable-region-focusable|.border-primary\\/5.dark\\:border-primary-dark\\/5.dark\\:bg-gradient-right-dark:nth-child(3) > .my-20.lg\\:my-32.gap-2 > .max-w-7xl.mx-auto.flex-col > .lg\\:ps-10.lg\\:pe-5.w-full > .mb-2.lg\\:my-16.lg\\:bg-card > .lg\\:bg-gray-10.lg\\:dark\\:bg-gray-70.dark\\:shadow-inner-border-dark > .lg\\:-m-5.dark\\:bg-gray-95.dark\\:shadow-nav-dark > .sandpack.sandpack--codeblock.overflow-x-auto > .sp-wrapper > .sp-stack > .sp-code-editor",
+          "violation|scrollable-region-focusable|.bg-gradient-left.dark\\:bg-gradient-left-dark.border-primary\\/10:nth-child(4) > .my-20.lg\\:my-32.gap-2 > .max-w-7xl.mx-auto.flex-col > .lg\\:ps-10.lg\\:pe-5.w-full > .mb-2.lg\\:my-16.lg\\:bg-card > .lg\\:bg-gray-10.lg\\:dark\\:bg-gray-70.dark\\:shadow-inner-border-dark > .lg\\:-m-5.dark\\:bg-gray-95.dark\\:shadow-nav-dark > .sandpack.sandpack--codeblock.overflow-x-auto > .sp-wrapper > .sp-stack > .sp-code-editor",
+          "violation|scrollable-region-focusable|.border-primary\\/5.dark\\:border-primary-dark\\/5.dark\\:bg-gradient-right-dark:nth-child(5) > .my-20.lg\\:my-32.gap-2 > .max-w-7xl.mx-auto.flex-col > .lg\\:ps-10.lg\\:pe-5.w-full > .mb-2.lg\\:my-16.lg\\:bg-card > .lg\\:bg-gray-10.lg\\:dark\\:bg-gray-70.dark\\:shadow-inner-border-dark > .lg\\:-m-5.dark\\:bg-gray-95.dark\\:shadow-nav-dark > .sandpack.sandpack--codeblock.overflow-x-auto > .sp-wrapper > .sp-stack > .sp-code-editor",
+          "incomplete|color-contrast|.cm-line:nth-child(4) > .sp-syntax-static",
+          "incomplete|color-contrast|.cm-line:nth-child(5) > .sp-syntax-static",
+          "incomplete|color-contrast|.lg\\:hidden.justify-start.w-full > .mt-10.py-2\\.5[href$=\"blog\"]"
+        ]
+      }
+    },
+    "distinctMissed": 9,
+    "distinctViolations": 3,
+    "rules": [
+      "color-contrast",
+      "scrollable-region-focusable"
+    ]
+  },
+  {
+    "url": "https://vuejs.org/",
+    "name": "Vue",
+    "category": "docs",
+    "ok": true,
+    "baseline": {
+      "violations": 13,
+      "incomplete": 3
+    },
+    "byState": {
+      "dark": {
+        "violations": 0,
+        "incomplete": 1,
+        "ok": true,
+        "suppressed": 0,
+        "keys": [
+          "incomplete|color-contrast|h1"
+        ]
+      },
+      "reduced-motion": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "forced-colors": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "mobile": {
+        "violations": 3,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": [
+          "violation|color-contrast|.platinum > .spsr-item.action[href$=\"sponsor/\"]",
+          "violation|color-contrast|.gold > .spsr-item.action[href$=\"sponsor/\"]",
+          "violation|link-in-text-block|a[data-v-14930d23=\"\"][rel=\"noopener noreferrer\"][target=\"_blank\"]"
+        ]
+      },
+      "reflow-320": {
+        "violations": 3,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": [
+          "violation|color-contrast|.platinum > .spsr-item.action[href$=\"sponsor/\"]",
+          "violation|color-contrast|.gold > .spsr-item.action[href$=\"sponsor/\"]",
+          "violation|link-in-text-block|a[data-v-14930d23=\"\"][rel=\"noopener noreferrer\"][target=\"_blank\"]"
+        ]
+      },
+      "dark-mobile": {
+        "violations": 3,
+        "incomplete": 1,
+        "ok": true,
+        "suppressed": 0,
+        "keys": [
+          "violation|color-contrast|.platinum > .spsr-item.action[href$=\"sponsor/\"]",
+          "violation|color-contrast|.gold > .spsr-item.action[href$=\"sponsor/\"]",
+          "violation|link-in-text-block|a[data-v-14930d23=\"\"][rel=\"noopener noreferrer\"][target=\"_blank\"]",
+          "incomplete|color-contrast|h1"
+        ]
+      }
+    },
+    "distinctMissed": 4,
+    "distinctViolations": 3,
+    "rules": [
+      "color-contrast",
+      "link-in-text-block"
+    ]
+  },
+  {
+    "url": "https://svelte.dev/",
+    "name": "Svelte",
+    "category": "docs",
+    "ok": true,
+    "baseline": {
+      "violations": 0,
+      "incomplete": 13
+    },
+    "byState": {
+      "dark": {
+        "violations": 4,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": [
+          "violation|link-in-text-block|a[href$=\"sveltesociety.dev/\"]",
+          "violation|link-in-text-block|p > a[href$=\"chat\"]",
+          "violation|link-in-text-block|a[href$=\"vercel.com\"]",
+          "violation|link-in-text-block|.copyright > a"
+        ]
+      },
+      "reduced-motion": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "forced-colors": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "mobile": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "reflow-320": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "dark-mobile": {
+        "violations": 4,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": [
+          "violation|link-in-text-block|a[href$=\"sveltesociety.dev/\"]",
+          "violation|link-in-text-block|p > a[href$=\"chat\"]",
+          "violation|link-in-text-block|a[href$=\"vercel.com\"]",
+          "violation|link-in-text-block|.copyright > a"
+        ]
+      }
+    },
+    "distinctMissed": 4,
+    "distinctViolations": 4,
+    "rules": [
+      "link-in-text-block"
+    ]
+  },
+  {
+    "url": "https://astro.build/",
+    "name": "Astro",
+    "category": "docs",
+    "ok": true,
+    "baseline": {
+      "violations": 0,
+      "incomplete": 64
+    },
+    "byState": {
+      "dark": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "reduced-motion": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "forced-colors": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "mobile": {
+        "violations": 0,
+        "incomplete": 1,
+        "ok": true,
+        "suppressed": 3,
+        "keys": [
+          "incomplete|color-contrast|#feature-card-instant-page-loads-description"
+        ]
+      },
+      "reflow-320": {
+        "violations": 0,
+        "incomplete": 2,
+        "ok": true,
+        "suppressed": 5,
+        "keys": [
+          "incomplete|color-contrast|#feature-card-middleware-description",
+          "incomplete|color-contrast|#feature-card-instant-page-loads-description"
+        ]
+      },
+      "dark-mobile": {
+        "violations": 0,
+        "incomplete": 1,
+        "ok": true,
+        "suppressed": 3,
+        "keys": [
+          "incomplete|color-contrast|#feature-card-instant-page-loads-description"
+        ]
+      }
+    },
+    "distinctMissed": 2,
+    "distinctViolations": 0,
+    "rules": [
+      "color-contrast"
+    ]
+  },
+  {
+    "url": "https://tailwindcss.com/",
+    "name": "Tailwind CSS",
+    "category": "docs",
+    "ok": true,
+    "baseline": {
+      "violations": 24,
+      "incomplete": 289
+    },
+    "byState": {
+      "dark": {
+        "violations": 8,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": [
+          "violation|color-contrast|div:nth-child(1) > .whitespace-pre.text-black\\/20.dark\\:text-white\\/25:nth-child(1) > .dark\\:inline.hidden",
+          "violation|color-contrast|div:nth-child(1) > .sm\\:h-10.h-6.whitespace-pre > .dark\\:inline.hidden",
+          "violation|color-contrast|.max-w-full.relative:nth-child(2) > .sm\\:h-10.h-6.whitespace-pre > .dark\\:inline.hidden",
+          "violation|color-contrast|.max-w-full.relative:nth-child(3) > .sm\\:h-10.h-6.whitespace-pre > .dark\\:inline.hidden",
+          "violation|color-contrast|.max-w-full.relative:nth-child(4) > .sm\\:h-10.h-6.whitespace-pre > .dark\\:inline.hidden",
+          "violation|color-contrast|.max-w-screen.\\32 xl\\:flex.h-6 > .dark\\:inline.hidden",
+          "violation|color-contrast|.max-w-full.relative:nth-child(5) > .sm\\:h-10.h-6.whitespace-pre > .dark\\:inline.hidden",
+          "violation|color-contrast|.max-w-full.relative:nth-child(6) > .sm\\:h-10.h-6.whitespace-pre > .dark\\:inline.hidden"
+        ]
+      },
+      "reduced-motion": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "forced-colors": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "mobile": {
+        "violations": 7,
+        "incomplete": 36,
+        "ok": true,
+        "suppressed": 0,
+        "keys": [
+          "violation|color-contrast|.max-sm\\:inline",
+          "violation|color-contrast|.text-gray-950\\/50",
+          "violation|color-contrast|.max-w-full.relative:nth-child(2) > .\\32 xl\\:before\\:hidden.\\32 xl\\:after\\:hidden.before\\:top-0 > .-left-\\(--gutter-width\\).origin-bottom-right.max-2xl\\:mb-4",
+          "violation|color-contrast|.text-pink-500",
+          "violation|color-contrast|.\\@min-\\[theme\\(--breakpoint-sm\\)\\]\\:w-auto",
+          "violation|color-contrast|.max-w-full.relative:nth-child(4) > .\\32 xl\\:before\\:hidden.\\32 xl\\:after\\:hidden.before\\:top-0 > .-left-\\(--gutter-width\\).origin-bottom-right.max-2xl\\:mb-4",
+          "violation|color-contrast|.text-fuchsia-500",
+          "incomplete|color-contrast|.text-white\\/80",
+          "incomplete|color-contrast|.text-xl\\/6",
+          "incomplete|color-contrast|.xl\\:col-span-12 > .sm\\:p-8.bg-gray-950\\/2\\.5.after\\:pointer-events-none > .-mr-16.-mb-16 > .bg-gray-950.rounded-xl > .scheme-dark.p-1.dark\\:inset-ring > .text-\\[13px\\]\\/6.\\*\\:\\*\\:p-3\\!.with-line-numbers > .\\*\\:overflow-auto.\\*\\:bg-white\\/10\\!.\\*\\:p-5 > .shiki.tailwindcss-theme > code > .line:nth-child(17) > span:nth-child(1)",
+          "incomplete|color-contrast|.xl\\:col-span-12 > .sm\\:p-8.bg-gray-950\\/2\\.5.after\\:pointer-events-none > .-mr-16.-mb-16 > .bg-gray-950.rounded-xl > .scheme-dark.p-1.dark\\:inset-ring > .text-\\[13px\\]\\/6.\\*\\:\\*\\:p-3\\!.with-line-numbers > .\\*\\:overflow-auto.\\*\\:bg-white\\/10\\!.\\*\\:p-5 > .shiki.tailwindcss-theme > code > .line:nth-child(17) > span:nth-child(3)",
+          "incomplete|color-contrast|.xl\\:col-span-12 > .sm\\:p-8.bg-gray-950\\/2\\.5.after\\:pointer-events-none > .-mr-16.-mb-16 > .bg-gray-950.rounded-xl > .scheme-dark.p-1.dark\\:inset-ring > .text-\\[13px\\]\\/6.\\*\\:\\*\\:p-3\\!.with-line-numbers > .\\*\\:overflow-auto.\\*\\:bg-white\\/10\\!.\\*\\:p-5 > .shiki.tailwindcss-theme > code > .line:nth-child(17) > span:nth-child(5)",
+          "incomplete|color-contrast|.relative:nth-child(163) > .items-center.flex.h-\\(--height\\) > .text-\\[13px\\]\\/7.font-mono.text-gray-950",
+          "incomplete|color-contrast|.relative:nth-child(181) > .items-center.flex.h-\\(--height\\) > .text-\\[13px\\]\\/7.font-mono.text-gray-950",
+          "incomplete|color-contrast|.relative:nth-child(199) > .items-center.flex.h-\\(--height\\) > .text-\\[13px\\]\\/7.font-mono.text-gray-950",
+          "incomplete|color-contrast|.xl\\:col-span-10.md\\:col-span-15.col-span-full:nth-child(9) > .sm\\:p-8.bg-gray-950\\/2\\.5.after\\:pointer-events-none > .-mr-16.-mb-16 > .bg-gray-950.rounded-xl > .scheme-dark.p-1.dark\\:inset-ring > .text-\\[13px\\]\\/6.\\*\\:\\*\\:p-3\\!.with-line-numbers > .\\*\\:overflow-auto.\\*\\:bg-white\\/10\\!.\\*\\:p-5 > .shiki.tailwindcss-theme > code > .line:nth-child(17) > span:nth-child(1)",
+          "incomplete|color-contrast|.xl\\:col-span-10.md\\:col-span-15.col-span-full:nth-child(9) > .sm\\:p-8.bg-gray-950\\/2\\.5.after\\:pointer-events-none > .-mr-16.-mb-16 > .bg-gray-950.rounded-xl > .scheme-dark.p-1.dark\\:inset-ring > .text-\\[13px\\]\\/6.\\*\\:\\*\\:p-3\\!.with-line-numbers > .\\*\\:overflow-auto.\\*\\:bg-white\\/10\\!.\\*\\:p-5 > .shiki.tailwindcss-theme > code > .line:nth-child(17) > span:nth-child(2)",
+          "incomplete|color-contrast|.xl\\:col-span-10.md\\:col-span-15.col-span-full:nth-child(11) > .sm\\:p-8.bg-gray-950\\/2\\.5.after\\:pointer-events-none > .-mr-16.-mb-16 > .bg-gray-950.rounded-xl > .scheme-dark.p-1.dark\\:inset-ring > .text-\\[13px\\]\\/6.\\*\\:\\*\\:p-3\\!.with-line-numbers > .\\*\\:overflow-auto.\\*\\:bg-white\\/10\\!.\\*\\:p-5 > .shiki.tailwindcss-theme > code > .line:nth-child(5) > span:nth-child(5)",
+          "incomplete|color-contrast|.xl\\:col-span-10.md\\:col-span-15.col-span-full:nth-child(11) > .sm\\:p-8.bg-gray-950\\/2\\.5.after\\:pointer-events-none > .-mr-16.-mb-16 > .bg-gray-950.rounded-xl > .scheme-dark.p-1.dark\\:inset-ring > .text-\\[13px\\]\\/6.\\*\\:\\*\\:p-3\\!.with-line-numbers > .\\*\\:overflow-auto.\\*\\:bg-white\\/10\\!.\\*\\:p-5 > .shiki.tailwindcss-theme > code > .line:nth-child(9) > span:nth-child(5)",
+          "incomplete|color-contrast|.xl\\:col-span-10.md\\:col-span-15.col-span-full:nth-child(11) > .sm\\:p-8.bg-gray-950\\/2\\.5.after\\:pointer-events-none > .-mr-16.-mb-16 > .bg-gray-950.rounded-xl > .scheme-dark.p-1.dark\\:inset-ring > .text-\\[13px\\]\\/6.\\*\\:\\*\\:p-3\\!.with-line-numbers > .\\*\\:overflow-auto.\\*\\:bg-white\\/10\\!.\\*\\:p-5 > .shiki.tailwindcss-theme > code > .line:nth-child(13) > span:nth-child(5)",
+          "incomplete|color-contrast|.xl\\:col-span-10.md\\:col-span-15.col-span-full:nth-child(11) > .sm\\:p-8.bg-gray-950\\/2\\.5.after\\:pointer-events-none > .-mr-16.-mb-16 > .bg-gray-950.rounded-xl > .scheme-dark.p-1.dark\\:inset-ring > .text-\\[13px\\]\\/6.\\*\\:\\*\\:p-3\\!.with-line-numbers > .\\*\\:overflow-auto.\\*\\:bg-white\\/10\\!.\\*\\:p-5 > .shiki.tailwindcss-theme > code > .line:nth-child(17) > span:nth-child(1)",
+          "incomplete|color-contrast|.xl\\:col-span-10.md\\:col-span-15.col-span-full:nth-child(11) > .sm\\:p-8.bg-gray-950\\/2\\.5.after\\:pointer-events-none > .-mr-16.-mb-16 > .bg-gray-950.rounded-xl > .scheme-dark.p-1.dark\\:inset-ring > .text-\\[13px\\]\\/6.\\*\\:\\*\\:p-3\\!.with-line-numbers > .\\*\\:overflow-auto.\\*\\:bg-white\\/10\\!.\\*\\:p-5 > .shiki.tailwindcss-theme > code > .line:nth-child(17) > span:nth-child(3)",
+          "incomplete|color-contrast|.line:nth-child(17) > .highlighted-word.before\\:-inset-x-0\\.5.before\\:-inset-y-0\\.25",
+          "incomplete|color-contrast|.xl\\:col-span-10.md\\:col-span-15.col-span-full:nth-child(11) > .sm\\:p-8.bg-gray-950\\/2\\.5.after\\:pointer-events-none > .-mr-16.-mb-16 > .bg-gray-950.rounded-xl > .scheme-dark.p-1.dark\\:inset-ring > .text-\\[13px\\]\\/6.\\*\\:\\*\\:p-3\\!.with-line-numbers > .\\*\\:overflow-auto.\\*\\:bg-white\\/10\\!.\\*\\:p-5 > .shiki.tailwindcss-theme > code > .line:nth-child(17) > span:nth-child(5)",
+          "incomplete|color-contrast|.gap-10.flex-1.flex-col:nth-child(1) > div:nth-child(1) > h3",
+          "incomplete|color-contrast|.gap-10.flex-1.flex-col:nth-child(1) > div:nth-child(1) > ul > li:nth-child(1) > .hover\\:underline[href$=\"docs\"]",
+          "incomplete|color-contrast|.gap-10.flex-1.flex-col:nth-child(1) > div:nth-child(1) > ul > li:nth-child(2) > .hover\\:underline[href$=\"play.tailwindcss.com/\"]",
+          "incomplete|color-contrast|.gap-10.flex-1.flex-col:nth-child(1) > div:nth-child(1) > ul > li:nth-child(3) > .hover\\:underline[href$=\"blog\"]",
+          "incomplete|color-contrast|.gap-10.flex-1.flex-col:nth-child(1) > div:nth-child(1) > ul > li:nth-child(4) > .hover\\:underline[href$=\"showcase\"]",
+          "incomplete|color-contrast|.gap-10.flex-1.flex-col:nth-child(1) > div:nth-child(1) > ul > li:nth-child(5) > .hover\\:underline[href$=\"partners\"]",
+          "incomplete|color-contrast|.gap-10.flex-1.flex-col:nth-child(1) > div:nth-child(2) > h3",
+          "incomplete|color-contrast|div:nth-child(2) > ul > li:nth-child(1) > .hover\\:underline[href$=\"www.refactoringui.com\"]",
+          "incomplete|color-contrast|div:nth-child(2) > ul > li:nth-child(2) > .hover\\:underline[href$=\"headlessui.com\"]",
+          "incomplete|color-contrast|div:nth-child(2) > ul > li:nth-child(3) > .hover\\:underline[href$=\"heroicons.com\"]",
+          "incomplete|color-contrast|div:nth-child(2) > ul > li:nth-child(4) > .hover\\:underline[href$=\"heropatterns.com\"]",
+          "incomplete|color-contrast|div:nth-child(1) > .mb-2 > .hover\\:underline[href=\"/plus?ref=footer\"]",
+          "incomplete|color-contrast|div:nth-child(1) > ul > li:nth-child(1) > .hover\\:underline[href=\"/plus/ui-blocks?ref=footer\"]",
+          "incomplete|color-contrast|div:nth-child(1) > ul > li:nth-child(2) > .hover\\:underline[href=\"/plus/templates?ref=footer\"]",
+          "incomplete|color-contrast|div:nth-child(1) > ul > li:nth-child(3) > .hover\\:underline[href=\"/plus/ui-kit?ref=footer\"]",
+          "incomplete|color-contrast|.gap-10.flex-1.flex-col:nth-child(2) > div:nth-child(2) > h3",
+          "incomplete|color-contrast|.gap-10.flex-1.flex-col:nth-child(2) > div:nth-child(2) > ul > li:nth-child(1) > .hover\\:underline",
+          "incomplete|color-contrast|div:nth-child(2) > ul > li:nth-child(2) > .hover\\:underline[href$=\"partners#insiders\"]",
+          "incomplete|color-contrast|div:nth-child(2) > ul > li:nth-child(3) > .hover\\:underline[href$=\"tailwindcss\"]"
+        ]
+      },
+      "reflow-320": {
+        "violations": 8,
+        "incomplete": 32,
+        "ok": true,
+        "suppressed": 1,
+        "keys": [
+          "violation|color-contrast|.max-sm\\:inline",
+          "violation|color-contrast|.text-\\[1\\.0625rem\\].text-sky-500.dark\\:text-sky-400:nth-child(4)",
+          "violation|color-contrast|.text-gray-950\\/50",
+          "violation|color-contrast|.max-w-full.relative:nth-child(2) > .\\32 xl\\:before\\:hidden.\\32 xl\\:after\\:hidden.before\\:top-0 > .-left-\\(--gutter-width\\).origin-bottom-right.max-2xl\\:mb-4",
+          "violation|color-contrast|.text-pink-500",
+          "violation|color-contrast|.\\@min-\\[theme\\(--breakpoint-sm\\)\\]\\:w-auto",
+          "violation|color-contrast|.max-w-full.relative:nth-child(4) > .\\32 xl\\:before\\:hidden.\\32 xl\\:after\\:hidden.before\\:top-0 > .-left-\\(--gutter-width\\).origin-bottom-right.max-2xl\\:mb-4",
+          "violation|color-contrast|.text-fuchsia-500",
+          "incomplete|color-contrast|.text-white\\/80",
+          "incomplete|color-contrast|.text-xl\\/6",
+          "incomplete|color-contrast|.xl\\:col-span-12 > .sm\\:p-8.bg-gray-950\\/2\\.5.after\\:pointer-events-none > .-mr-16.-mb-16 > .bg-gray-950.rounded-xl > .scheme-dark.p-1.dark\\:inset-ring > .text-\\[13px\\]\\/6.\\*\\:\\*\\:p-3\\!.with-line-numbers > .\\*\\:overflow-auto.\\*\\:bg-white\\/10\\!.\\*\\:p-5 > .shiki.tailwindcss-theme > code > .line:nth-child(17) > span:nth-child(1)",
+          "incomplete|color-contrast|.xl\\:col-span-12 > .sm\\:p-8.bg-gray-950\\/2\\.5.after\\:pointer-events-none > .-mr-16.-mb-16 > .bg-gray-950.rounded-xl > .scheme-dark.p-1.dark\\:inset-ring > .text-\\[13px\\]\\/6.\\*\\:\\*\\:p-3\\!.with-line-numbers > .\\*\\:overflow-auto.\\*\\:bg-white\\/10\\!.\\*\\:p-5 > .shiki.tailwindcss-theme > code > .line:nth-child(17) > span:nth-child(3)",
+          "incomplete|color-contrast|.xl\\:col-span-12 > .sm\\:p-8.bg-gray-950\\/2\\.5.after\\:pointer-events-none > .-mr-16.-mb-16 > .bg-gray-950.rounded-xl > .scheme-dark.p-1.dark\\:inset-ring > .text-\\[13px\\]\\/6.\\*\\:\\*\\:p-3\\!.with-line-numbers > .\\*\\:overflow-auto.\\*\\:bg-white\\/10\\!.\\*\\:p-5 > .shiki.tailwindcss-theme > code > .line:nth-child(17) > span:nth-child(5)",
+          "incomplete|color-contrast|.relative:nth-child(163) > .items-center.flex.h-\\(--height\\) > .text-\\[13px\\]\\/7.font-mono.text-gray-950",
+          "incomplete|color-contrast|.relative:nth-child(181) > .items-center.flex.h-\\(--height\\) > .text-\\[13px\\]\\/7.font-mono.text-gray-950",
+          "incomplete|color-contrast|.relative:nth-child(199) > .items-center.flex.h-\\(--height\\) > .text-\\[13px\\]\\/7.font-mono.text-gray-950",
+          "incomplete|color-contrast|.xl\\:col-span-10.md\\:col-span-15.col-span-full:nth-child(9) > .sm\\:p-8.bg-gray-950\\/2\\.5.after\\:pointer-events-none > .-mr-16.-mb-16 > .bg-gray-950.rounded-xl > .scheme-dark.p-1.dark\\:inset-ring > .text-\\[13px\\]\\/6.\\*\\:\\*\\:p-3\\!.with-line-numbers > .\\*\\:overflow-auto.\\*\\:bg-white\\/10\\!.\\*\\:p-5 > .shiki.tailwindcss-theme > code > .line:nth-child(17) > span:nth-child(1)",
+          "incomplete|color-contrast|.xl\\:col-span-10.md\\:col-span-15.col-span-full:nth-child(9) > .sm\\:p-8.bg-gray-950\\/2\\.5.after\\:pointer-events-none > .-mr-16.-mb-16 > .bg-gray-950.rounded-xl > .scheme-dark.p-1.dark\\:inset-ring > .text-\\[13px\\]\\/6.\\*\\:\\*\\:p-3\\!.with-line-numbers > .\\*\\:overflow-auto.\\*\\:bg-white\\/10\\!.\\*\\:p-5 > .shiki.tailwindcss-theme > code > .line:nth-child(17) > span:nth-child(2)",
+          "incomplete|color-contrast|.xl\\:col-span-10.md\\:col-span-15.col-span-full:nth-child(11) > .sm\\:p-8.bg-gray-950\\/2\\.5.after\\:pointer-events-none > .-mr-16.-mb-16 > .bg-gray-950.rounded-xl > .scheme-dark.p-1.dark\\:inset-ring > .text-\\[13px\\]\\/6.\\*\\:\\*\\:p-3\\!.with-line-numbers > .\\*\\:overflow-auto.\\*\\:bg-white\\/10\\!.\\*\\:p-5 > .shiki.tailwindcss-theme > code > .line:nth-child(17) > span:nth-child(1)",
+          "incomplete|color-contrast|.xl\\:col-span-10.md\\:col-span-15.col-span-full:nth-child(11) > .sm\\:p-8.bg-gray-950\\/2\\.5.after\\:pointer-events-none > .-mr-16.-mb-16 > .bg-gray-950.rounded-xl > .scheme-dark.p-1.dark\\:inset-ring > .text-\\[13px\\]\\/6.\\*\\:\\*\\:p-3\\!.with-line-numbers > .\\*\\:overflow-auto.\\*\\:bg-white\\/10\\!.\\*\\:p-5 > .shiki.tailwindcss-theme > code > .line:nth-child(17) > span:nth-child(3)",
+          "incomplete|color-contrast|.line:nth-child(17) > .highlighted-word.before\\:-inset-x-0\\.5.before\\:-inset-y-0\\.25",
+          "incomplete|color-contrast|.gap-10.flex-1.flex-col:nth-child(1) > div:nth-child(1) > h3",
+          "incomplete|color-contrast|.gap-10.flex-1.flex-col:nth-child(1) > div:nth-child(1) > ul > li:nth-child(1) > .hover\\:underline[href$=\"docs\"]",
+          "incomplete|color-contrast|.gap-10.flex-1.flex-col:nth-child(1) > div:nth-child(1) > ul > li:nth-child(2) > .hover\\:underline[href$=\"play.tailwindcss.com/\"]",
+          "incomplete|color-contrast|.gap-10.flex-1.flex-col:nth-child(1) > div:nth-child(1) > ul > li:nth-child(3) > .hover\\:underline[href$=\"blog\"]",
+          "incomplete|color-contrast|.gap-10.flex-1.flex-col:nth-child(1) > div:nth-child(1) > ul > li:nth-child(4) > .hover\\:underline[href$=\"showcase\"]",
+          "incomplete|color-contrast|.gap-10.flex-1.flex-col:nth-child(1) > div:nth-child(1) > ul > li:nth-child(5) > .hover\\:underline[href$=\"partners\"]",
+          "incomplete|color-contrast|.gap-10.flex-1.flex-col:nth-child(1) > div:nth-child(2) > h3",
+          "incomplete|color-contrast|div:nth-child(2) > ul > li:nth-child(1) > .hover\\:underline[href$=\"www.refactoringui.com\"]",
+          "incomplete|color-contrast|div:nth-child(2) > ul > li:nth-child(2) > .hover\\:underline[href$=\"headlessui.com\"]",
+          "incomplete|color-contrast|div:nth-child(2) > ul > li:nth-child(3) > .hover\\:underline[href$=\"heroicons.com\"]",
+          "incomplete|color-contrast|div:nth-child(2) > ul > li:nth-child(4) > .hover\\:underline[href$=\"heropatterns.com\"]",
+          "incomplete|color-contrast|div:nth-child(1) > .mb-2 > .hover\\:underline[href=\"/plus?ref=footer\"]",
+          "incomplete|color-contrast|div:nth-child(1) > ul > li:nth-child(1) > .hover\\:underline[href=\"/plus/ui-blocks?ref=footer\"]",
+          "incomplete|color-contrast|div:nth-child(1) > ul > li:nth-child(2) > .hover\\:underline[href=\"/plus/templates?ref=footer\"]",
+          "incomplete|color-contrast|div:nth-child(1) > ul > li:nth-child(3) > .hover\\:underline[href=\"/plus/ui-kit?ref=footer\"]",
+          "incomplete|color-contrast|.gap-10.flex-1.flex-col:nth-child(2) > div:nth-child(2) > h3",
+          "incomplete|color-contrast|.gap-10.flex-1.flex-col:nth-child(2) > div:nth-child(2) > ul > li:nth-child(1) > .hover\\:underline",
+          "incomplete|color-contrast|div:nth-child(2) > ul > li:nth-child(2) > .hover\\:underline[href$=\"partners#insiders\"]",
+          "incomplete|color-contrast|div:nth-child(2) > ul > li:nth-child(3) > .hover\\:underline[href$=\"tailwindcss\"]"
+        ]
+      },
+      "dark-mobile": {
+        "violations": 10,
+        "incomplete": 36,
+        "ok": true,
+        "suppressed": 0,
+        "keys": [
+          "violation|color-contrast|.max-sm\\:inline",
+          "violation|color-contrast|div:nth-child(1) > .whitespace-pre.text-black\\/20.dark\\:text-white\\/25:nth-child(1) > .dark\\:inline.hidden",
+          "violation|color-contrast|div:nth-child(1) > .sm\\:h-10.h-6.whitespace-pre > .dark\\:inline.hidden",
+          "violation|color-contrast|.max-w-full.relative:nth-child(2) > .sm\\:h-10.h-6.whitespace-pre > .dark\\:inline.hidden",
+          "violation|color-contrast|.max-w-full.relative:nth-child(3) > .sm\\:h-10.h-6.whitespace-pre > .dark\\:inline.hidden",
+          "violation|color-contrast|.\\@min-\\[theme\\(--breakpoint-sm\\)\\]\\:w-auto",
+          "violation|color-contrast|.max-w-full.relative:nth-child(4) > .sm\\:h-10.h-6.whitespace-pre > .dark\\:inline.hidden",
+          "violation|color-contrast|.max-w-screen.\\32 xl\\:flex.h-6 > .dark\\:inline.hidden",
+          "violation|color-contrast|.max-w-full.relative:nth-child(5) > .sm\\:h-10.h-6.whitespace-pre > .dark\\:inline.hidden",
+          "violation|color-contrast|.max-w-full.relative:nth-child(6) > .sm\\:h-10.h-6.whitespace-pre > .dark\\:inline.hidden",
+          "incomplete|color-contrast|.text-white\\/80",
+          "incomplete|color-contrast|.text-xl\\/6",
+          "incomplete|color-contrast|.xl\\:col-span-12 > .sm\\:p-8.bg-gray-950\\/2\\.5.after\\:pointer-events-none > .-mr-16.-mb-16 > .bg-gray-950.rounded-xl > .scheme-dark.p-1.dark\\:inset-ring > .text-\\[13px\\]\\/6.\\*\\:\\*\\:p-3\\!.with-line-numbers > .\\*\\:overflow-auto.\\*\\:bg-white\\/10\\!.\\*\\:p-5 > .shiki.tailwindcss-theme > code > .line:nth-child(17) > span:nth-child(1)",
+          "incomplete|color-contrast|.xl\\:col-span-12 > .sm\\:p-8.bg-gray-950\\/2\\.5.after\\:pointer-events-none > .-mr-16.-mb-16 > .bg-gray-950.rounded-xl > .scheme-dark.p-1.dark\\:inset-ring > .text-\\[13px\\]\\/6.\\*\\:\\*\\:p-3\\!.with-line-numbers > .\\*\\:overflow-auto.\\*\\:bg-white\\/10\\!.\\*\\:p-5 > .shiki.tailwindcss-theme > code > .line:nth-child(17) > span:nth-child(3)",
+          "incomplete|color-contrast|.xl\\:col-span-12 > .sm\\:p-8.bg-gray-950\\/2\\.5.after\\:pointer-events-none > .-mr-16.-mb-16 > .bg-gray-950.rounded-xl > .scheme-dark.p-1.dark\\:inset-ring > .text-\\[13px\\]\\/6.\\*\\:\\*\\:p-3\\!.with-line-numbers > .\\*\\:overflow-auto.\\*\\:bg-white\\/10\\!.\\*\\:p-5 > .shiki.tailwindcss-theme > code > .line:nth-child(17) > span:nth-child(5)",
+          "incomplete|color-contrast|.relative:nth-child(163) > .items-center.flex.h-\\(--height\\) > .text-\\[13px\\]\\/7.font-mono.text-gray-950",
+          "incomplete|color-contrast|.relative:nth-child(181) > .items-center.flex.h-\\(--height\\) > .text-\\[13px\\]\\/7.font-mono.text-gray-950",
+          "incomplete|color-contrast|.relative:nth-child(199) > .items-center.flex.h-\\(--height\\) > .text-\\[13px\\]\\/7.font-mono.text-gray-950",
+          "incomplete|color-contrast|.xl\\:col-span-10.md\\:col-span-15.col-span-full:nth-child(9) > .sm\\:p-8.bg-gray-950\\/2\\.5.after\\:pointer-events-none > .-mr-16.-mb-16 > .bg-gray-950.rounded-xl > .scheme-dark.p-1.dark\\:inset-ring > .text-\\[13px\\]\\/6.\\*\\:\\*\\:p-3\\!.with-line-numbers > .\\*\\:overflow-auto.\\*\\:bg-white\\/10\\!.\\*\\:p-5 > .shiki.tailwindcss-theme > code > .line:nth-child(17) > span:nth-child(1)",
+          "incomplete|color-contrast|.xl\\:col-span-10.md\\:col-span-15.col-span-full:nth-child(9) > .sm\\:p-8.bg-gray-950\\/2\\.5.after\\:pointer-events-none > .-mr-16.-mb-16 > .bg-gray-950.rounded-xl > .scheme-dark.p-1.dark\\:inset-ring > .text-\\[13px\\]\\/6.\\*\\:\\*\\:p-3\\!.with-line-numbers > .\\*\\:overflow-auto.\\*\\:bg-white\\/10\\!.\\*\\:p-5 > .shiki.tailwindcss-theme > code > .line:nth-child(17) > span:nth-child(2)",
+          "incomplete|color-contrast|.xl\\:col-span-10.md\\:col-span-15.col-span-full:nth-child(11) > .sm\\:p-8.bg-gray-950\\/2\\.5.after\\:pointer-events-none > .-mr-16.-mb-16 > .bg-gray-950.rounded-xl > .scheme-dark.p-1.dark\\:inset-ring > .text-\\[13px\\]\\/6.\\*\\:\\*\\:p-3\\!.with-line-numbers > .\\*\\:overflow-auto.\\*\\:bg-white\\/10\\!.\\*\\:p-5 > .shiki.tailwindcss-theme > code > .line:nth-child(5) > span:nth-child(5)",
+          "incomplete|color-contrast|.xl\\:col-span-10.md\\:col-span-15.col-span-full:nth-child(11) > .sm\\:p-8.bg-gray-950\\/2\\.5.after\\:pointer-events-none > .-mr-16.-mb-16 > .bg-gray-950.rounded-xl > .scheme-dark.p-1.dark\\:inset-ring > .text-\\[13px\\]\\/6.\\*\\:\\*\\:p-3\\!.with-line-numbers > .\\*\\:overflow-auto.\\*\\:bg-white\\/10\\!.\\*\\:p-5 > .shiki.tailwindcss-theme > code > .line:nth-child(9) > span:nth-child(5)",
+          "incomplete|color-contrast|.xl\\:col-span-10.md\\:col-span-15.col-span-full:nth-child(11) > .sm\\:p-8.bg-gray-950\\/2\\.5.after\\:pointer-events-none > .-mr-16.-mb-16 > .bg-gray-950.rounded-xl > .scheme-dark.p-1.dark\\:inset-ring > .text-\\[13px\\]\\/6.\\*\\:\\*\\:p-3\\!.with-line-numbers > .\\*\\:overflow-auto.\\*\\:bg-white\\/10\\!.\\*\\:p-5 > .shiki.tailwindcss-theme > code > .line:nth-child(13) > span:nth-child(5)",
+          "incomplete|color-contrast|.xl\\:col-span-10.md\\:col-span-15.col-span-full:nth-child(11) > .sm\\:p-8.bg-gray-950\\/2\\.5.after\\:pointer-events-none > .-mr-16.-mb-16 > .bg-gray-950.rounded-xl > .scheme-dark.p-1.dark\\:inset-ring > .text-\\[13px\\]\\/6.\\*\\:\\*\\:p-3\\!.with-line-numbers > .\\*\\:overflow-auto.\\*\\:bg-white\\/10\\!.\\*\\:p-5 > .shiki.tailwindcss-theme > code > .line:nth-child(17) > span:nth-child(1)",
+          "incomplete|color-contrast|.xl\\:col-span-10.md\\:col-span-15.col-span-full:nth-child(11) > .sm\\:p-8.bg-gray-950\\/2\\.5.after\\:pointer-events-none > .-mr-16.-mb-16 > .bg-gray-950.rounded-xl > .scheme-dark.p-1.dark\\:inset-ring > .text-\\[13px\\]\\/6.\\*\\:\\*\\:p-3\\!.with-line-numbers > .\\*\\:overflow-auto.\\*\\:bg-white\\/10\\!.\\*\\:p-5 > .shiki.tailwindcss-theme > code > .line:nth-child(17) > span:nth-child(3)",
+          "incomplete|color-contrast|.line:nth-child(17) > .highlighted-word.before\\:-inset-x-0\\.5.before\\:-inset-y-0\\.25",
+          "incomplete|color-contrast|.xl\\:col-span-10.md\\:col-span-15.col-span-full:nth-child(11) > .sm\\:p-8.bg-gray-950\\/2\\.5.after\\:pointer-events-none > .-mr-16.-mb-16 > .bg-gray-950.rounded-xl > .scheme-dark.p-1.dark\\:inset-ring > .text-\\[13px\\]\\/6.\\*\\:\\*\\:p-3\\!.with-line-numbers > .\\*\\:overflow-auto.\\*\\:bg-white\\/10\\!.\\*\\:p-5 > .shiki.tailwindcss-theme > code > .line:nth-child(17) > span:nth-child(5)",
+          "incomplete|color-contrast|.gap-10.flex-1.flex-col:nth-child(1) > div:nth-child(1) > h3",
+          "incomplete|color-contrast|.gap-10.flex-1.flex-col:nth-child(1) > div:nth-child(1) > ul > li:nth-child(1) > .hover\\:underline[href$=\"docs\"]",
+          "incomplete|color-contrast|.gap-10.flex-1.flex-col:nth-child(1) > div:nth-child(1) > ul > li:nth-child(2) > .hover\\:underline[href$=\"play.tailwindcss.com/\"]",
+          "incomplete|color-contrast|.gap-10.flex-1.flex-col:nth-child(1) > div:nth-child(1) > ul > li:nth-child(3) > .hover\\:underline[href$=\"blog\"]",
+          "incomplete|color-contrast|.gap-10.flex-1.flex-col:nth-child(1) > div:nth-child(1) > ul > li:nth-child(4) > .hover\\:underline[href$=\"showcase\"]",
+          "incomplete|color-contrast|.gap-10.flex-1.flex-col:nth-child(1) > div:nth-child(1) > ul > li:nth-child(5) > .hover\\:underline[href$=\"partners\"]",
+          "incomplete|color-contrast|.gap-10.flex-1.flex-col:nth-child(1) > div:nth-child(2) > h3",
+          "incomplete|color-contrast|div:nth-child(2) > ul > li:nth-child(1) > .hover\\:underline[href$=\"www.refactoringui.com\"]",
+          "incomplete|color-contrast|div:nth-child(2) > ul > li:nth-child(2) > .hover\\:underline[href$=\"headlessui.com\"]",
+          "incomplete|color-contrast|div:nth-child(2) > ul > li:nth-child(3) > .hover\\:underline[href$=\"heroicons.com\"]",
+          "incomplete|color-contrast|div:nth-child(2) > ul > li:nth-child(4) > .hover\\:underline[href$=\"heropatterns.com\"]",
+          "incomplete|color-contrast|div:nth-child(1) > .mb-2 > .hover\\:underline[href=\"/plus?ref=footer\"]",
+          "incomplete|color-contrast|div:nth-child(1) > ul > li:nth-child(1) > .hover\\:underline[href=\"/plus/ui-blocks?ref=footer\"]",
+          "incomplete|color-contrast|div:nth-child(1) > ul > li:nth-child(2) > .hover\\:underline[href=\"/plus/templates?ref=footer\"]",
+          "incomplete|color-contrast|div:nth-child(1) > ul > li:nth-child(3) > .hover\\:underline[href=\"/plus/ui-kit?ref=footer\"]",
+          "incomplete|color-contrast|.gap-10.flex-1.flex-col:nth-child(2) > div:nth-child(2) > h3",
+          "incomplete|color-contrast|.gap-10.flex-1.flex-col:nth-child(2) > div:nth-child(2) > ul > li:nth-child(1) > .hover\\:underline",
+          "incomplete|color-contrast|div:nth-child(2) > ul > li:nth-child(2) > .hover\\:underline[href$=\"partners#insiders\"]",
+          "incomplete|color-contrast|div:nth-child(2) > ul > li:nth-child(3) > .hover\\:underline[href$=\"tailwindcss\"]"
+        ]
+      }
+    },
+    "distinctMissed": 52,
+    "distinctViolations": 16,
+    "rules": [
+      "color-contrast"
+    ]
+  },
+  {
+    "url": "https://nodejs.org/en",
+    "name": "Node.js",
+    "category": "docs",
+    "ok": true,
+    "baseline": {
+      "violations": 6,
+      "incomplete": 10
+    },
+    "byState": {
+      "dark": {
+        "violations": 0,
+        "incomplete": 1,
+        "ok": true,
+        "suppressed": 0,
+        "keys": [
+          "incomplete|color-contrast|.index-module__EPgSia__special"
+        ]
+      },
+      "reduced-motion": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "forced-colors": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "mobile": {
+        "violations": 1,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 3,
+        "keys": [
+          "violation|page-horizontal-overflow|document"
+        ]
+      },
+      "reflow-320": {
+        "violations": 1,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 7,
+        "keys": [
+          "violation|page-horizontal-overflow|document"
+        ]
+      },
+      "dark-mobile": {
+        "violations": 1,
+        "incomplete": 1,
+        "ok": true,
+        "suppressed": 3,
+        "keys": [
+          "incomplete|color-contrast|.index-module__EPgSia__special",
+          "violation|page-horizontal-overflow|document"
+        ]
+      }
+    },
+    "distinctMissed": 2,
+    "distinctViolations": 1,
+    "rules": [
+      "color-contrast",
+      "page-horizontal-overflow"
+    ]
+  },
+  {
+    "url": "https://www.python.org/",
+    "name": "Python",
+    "category": "docs",
+    "ok": true,
+    "baseline": {
+      "violations": 104,
+      "incomplete": 116
+    },
+    "byState": {
+      "dark": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "reduced-motion": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "forced-colors": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "mobile": {
+        "violations": 4,
+        "incomplete": 1,
+        "ok": true,
+        "suppressed": 0,
+        "keys": [
+          "violation|aria-hidden-focus|#close-python-network",
+          "violation|aria-hidden-focus|#python-network",
+          "violation|color-contrast|#back-to-top-1",
+          "violation|color-contrast|#back-to-top-2",
+          "incomplete|color-contrast|a[rel=\"noopener noreferrer\"]"
+        ]
+      },
+      "reflow-320": {
+        "violations": 4,
+        "incomplete": 2,
+        "ok": true,
+        "suppressed": 0,
+        "keys": [
+          "violation|aria-hidden-focus|#close-python-network",
+          "violation|aria-hidden-focus|#python-network",
+          "violation|color-contrast|#back-to-top-1",
+          "violation|color-contrast|#back-to-top-2",
+          "incomplete|color-contrast|a[rel=\"noopener noreferrer\"]",
+          "incomplete|link-in-text-block|td > p > a"
+        ]
+      },
+      "dark-mobile": {
+        "violations": 4,
+        "incomplete": 1,
+        "ok": true,
+        "suppressed": 0,
+        "keys": [
+          "violation|aria-hidden-focus|#close-python-network",
+          "violation|aria-hidden-focus|#python-network",
+          "violation|color-contrast|#back-to-top-1",
+          "violation|color-contrast|#back-to-top-2",
+          "incomplete|color-contrast|a[rel=\"noopener noreferrer\"]"
+        ]
+      }
+    },
+    "distinctMissed": 6,
+    "distinctViolations": 4,
+    "rules": [
+      "aria-hidden-focus",
+      "color-contrast",
+      "link-in-text-block"
+    ]
+  },
+  {
+    "url": "https://www.rust-lang.org/",
+    "name": "Rust",
+    "category": "docs",
+    "ok": true,
+    "baseline": {
+      "violations": 1,
+      "incomplete": 0
+    },
+    "byState": {
+      "dark": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "reduced-motion": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "forced-colors": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "mobile": {
+        "violations": 1,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": [
+          "violation|color-contrast|.download-link"
+        ]
+      },
+      "reflow-320": {
+        "violations": 1,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": [
+          "violation|color-contrast|.download-link"
+        ]
+      },
+      "dark-mobile": {
+        "violations": 1,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": [
+          "violation|color-contrast|.download-link"
+        ]
+      }
+    },
+    "distinctMissed": 1,
+    "distinctViolations": 1,
+    "rules": [
+      "color-contrast"
+    ]
+  },
+  {
+    "url": "https://go.dev/",
+    "name": "Go",
+    "category": "docs",
+    "ok": true,
+    "baseline": {
+      "violations": 20,
+      "incomplete": 3
+    },
+    "byState": {
+      "dark": {
+        "violations": 1,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": [
+          "violation|link-in-text-block|.Cookie-notice > div:nth-child(1) > a[target=\"_blank\"]"
+        ]
+      },
+      "reduced-motion": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "forced-colors": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "mobile": {
+        "violations": 0,
+        "incomplete": 2,
+        "ok": true,
+        "suppressed": 0,
+        "keys": [
+          "incomplete|color-contrast|.Cookie-notice > div:nth-child(1)",
+          "incomplete|link-in-text-block|.Cookie-notice > div:nth-child(1) > a[target=\"_blank\"]"
+        ]
+      },
+      "reflow-320": {
+        "violations": 0,
+        "incomplete": 3,
+        "ok": true,
+        "suppressed": 0,
+        "keys": [
+          "incomplete|color-contrast|.Hero-footnote > p:nth-child(1)",
+          "incomplete|color-contrast|.Cookie-notice > div:nth-child(1)",
+          "incomplete|link-in-text-block|.Cookie-notice > div:nth-child(1) > a[target=\"_blank\"]"
+        ]
+      },
+      "dark-mobile": {
+        "violations": 0,
+        "incomplete": 2,
+        "ok": true,
+        "suppressed": 0,
+        "keys": [
+          "incomplete|color-contrast|.Cookie-notice > div:nth-child(1)",
+          "incomplete|link-in-text-block|.Cookie-notice > div:nth-child(1) > a[target=\"_blank\"]"
+        ]
+      }
+    },
+    "distinctMissed": 4,
+    "distinctViolations": 1,
+    "rules": [
+      "link-in-text-block",
+      "color-contrast"
+    ]
+  },
+  {
+    "url": "https://kubernetes.io/",
+    "name": "Kubernetes",
+    "category": "docs",
+    "ok": true,
+    "baseline": {
+      "violations": 13,
+      "incomplete": 17
+    },
+    "byState": {
+      "dark": {
+        "violations": 8,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": [
+          "violation|color-contrast|a[href$=\"overview/\"]",
+          "violation|color-contrast|p:nth-child(2) > a",
+          "violation|color-contrast|a[href$=\"download/\"]",
+          "violation|color-contrast|a[href$=\"case-studies/\"]",
+          "violation|color-contrast|a[href$=\"babylon/\"]",
+          "violation|color-contrast|a[href$=\"booz-allen/\"]",
+          "violation|color-contrast|a[href$=\"booking-com/\"]",
+          "violation|color-contrast|a[href$=\"appdirect/\"]"
+        ]
+      },
+      "reduced-motion": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "forced-colors": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "mobile": {
+        "violations": 1,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": [
+          "violation|button-name|#hamburger"
+        ]
+      },
+      "reflow-320": {
+        "violations": 1,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": [
+          "violation|button-name|#hamburger"
+        ]
+      },
+      "dark-mobile": {
+        "violations": 9,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": [
+          "violation|button-name|#hamburger",
+          "violation|color-contrast|a[href$=\"overview/\"]",
+          "violation|color-contrast|p:nth-child(2) > a",
+          "violation|color-contrast|a[href$=\"download/\"]",
+          "violation|color-contrast|a[href$=\"case-studies/\"]",
+          "violation|color-contrast|a[href$=\"babylon/\"]",
+          "violation|color-contrast|a[href$=\"booz-allen/\"]",
+          "violation|color-contrast|a[href$=\"booking-com/\"]",
+          "violation|color-contrast|a[href$=\"appdirect/\"]"
+        ]
+      }
+    },
+    "distinctMissed": 9,
+    "distinctViolations": 9,
+    "rules": [
+      "color-contrast",
+      "button-name"
+    ]
+  },
+  {
+    "url": "https://docs.docker.com/",
+    "name": "Docker Docs",
+    "category": "docs",
+    "ok": true,
+    "baseline": {
+      "violations": 2,
+      "incomplete": 4
+    },
+    "byState": {
+      "dark": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "reduced-motion": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "forced-colors": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "mobile": {
+        "violations": 0,
+        "incomplete": 1,
+        "ok": true,
+        "suppressed": 0,
+        "keys": [
+          "incomplete|color-contrast|#dkr_global_banner_agent_ai_01"
+        ]
+      },
+      "reflow-320": {
+        "violations": 0,
+        "incomplete": 2,
+        "ok": true,
+        "suppressed": 0,
+        "keys": [
+          "incomplete|color-contrast|#dkr_global_banner_agent_ai_01",
+          "incomplete|color-contrast|#onetrust-policy-text"
+        ]
+      },
+      "dark-mobile": {
+        "violations": 0,
+        "incomplete": 1,
+        "ok": true,
+        "suppressed": 0,
+        "keys": [
+          "incomplete|color-contrast|#dkr_global_banner_agent_ai_01"
+        ]
+      }
+    },
+    "distinctMissed": 2,
+    "distinctViolations": 0,
+    "rules": [
+      "color-contrast"
+    ]
+  },
+  {
+    "url": "https://playwright.dev/",
+    "name": "Playwright",
+    "category": "docs",
+    "ok": true,
+    "baseline": {
+      "violations": 0,
+      "incomplete": 10
+    },
+    "byState": {
+      "dark": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "reduced-motion": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "forced-colors": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "mobile": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "reflow-320": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "dark-mobile": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      }
+    },
+    "distinctMissed": 0,
+    "distinctViolations": 0,
+    "rules": []
+  },
+  {
+    "url": "https://vite.dev/",
+    "name": "Vite",
+    "category": "docs",
+    "ok": true,
+    "baseline": {
+      "violations": 1,
+      "incomplete": 32
+    },
+    "byState": {
+      "dark": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "reduced-motion": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "forced-colors": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "mobile": {
+        "violations": 0,
+        "incomplete": 2,
+        "ok": true,
+        "suppressed": 0,
+        "keys": [
+          "incomplete|color-contrast|.max-w-lg",
+          "incomplete|color-contrast|.border-nickel.border-t[data-v-89ee5984=\"\"]:nth-child(2) > .border-b.py-5.border-nickel > .text-xs.uppercase.tracking-wide"
+        ]
+      },
+      "reflow-320": {
+        "violations": 0,
+        "incomplete": 1,
+        "ok": true,
+        "suppressed": 0,
+        "keys": [
+          "incomplete|color-contrast|.max-w-lg"
+        ]
+      },
+      "dark-mobile": {
+        "violations": 0,
+        "incomplete": 2,
+        "ok": true,
+        "suppressed": 0,
+        "keys": [
+          "incomplete|color-contrast|.max-w-lg",
+          "incomplete|color-contrast|.border-nickel.border-t[data-v-89ee5984=\"\"]:nth-child(2) > .border-b.py-5.border-nickel > .text-xs.uppercase.tracking-wide"
+        ]
+      }
+    },
+    "distinctMissed": 2,
+    "distinctViolations": 0,
+    "rules": [
+      "color-contrast"
+    ]
+  },
+  {
+    "url": "https://www.typescriptlang.org/",
+    "name": "TypeScript",
+    "category": "docs",
+    "ok": true,
+    "baseline": {
+      "violations": 0,
+      "incomplete": 25
+    },
+    "byState": {
+      "dark": {
+        "violations": 2,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": [
+          "violation|color-contrast|.col1:nth-child(1) > div > p > a[target=\"_blank\"]",
+          "violation|color-contrast|.row > div:nth-child(2) > p:nth-child(1) > a[target=\"_blank\"]"
+        ]
+      },
+      "reduced-motion": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "forced-colors": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "mobile": {
+        "violations": 0,
+        "incomplete": 4,
+        "ok": true,
+        "suppressed": 0,
+        "keys": [
+          "incomplete|color-contrast|.line:nth-child(4) > span:nth-child(4) > data-err > data-lsp[lsp=\"any\"]",
+          "incomplete|color-contrast|.adopt-step:nth-child(2) > .adopt-step-content > div:nth-child(1) > .tag-container > .light-plus.shiki.twoslash > .code-container > code > .error-behind",
+          "incomplete|color-contrast|span:nth-child(6) > data-err > data-lsp[lsp=\"any\"]",
+          "incomplete|color-contrast|.adopt-step:nth-child(3) > .adopt-step-content > div:nth-child(1) > .tag-container > .light-plus.shiki.twoslash > .code-container > code > .error-behind"
+        ]
+      },
+      "reflow-320": {
+        "violations": 6,
+        "incomplete": 9,
+        "ok": true,
+        "suppressed": 0,
+        "keys": [
+          "violation|scrollable-region-focusable|.adopt-step:nth-child(1) > .adopt-step-content > div:nth-child(1) > .tag-container > .light-plus.shiki.twoslash > .code-container",
+          "violation|scrollable-region-focusable|.adopt-step:nth-child(4) > .adopt-step-content > div:nth-child(1) > .tag-container > .light-plus.shiki.twoslash > .code-container",
+          "violation|scrollable-region-focusable|.col1:nth-child(2) > div > .light-plus.shiki.twoslash > .code-container",
+          "violation|scrollable-region-focusable|.col1:nth-child(3) > div > .light-plus.shiki.twoslash > .code-container",
+          "violation|scrollable-region-focusable|.col1:nth-child(1) > div > .typescript-beta-light.shiki.twoslash > .code-container",
+          "violation|scrollable-region-focusable|.col1:nth-child(2) > div > .typescript-beta-light.shiki.twoslash > .code-container",
+          "incomplete|color-contrast|.line:nth-child(4) > span:nth-child(4) > data-err > data-lsp[lsp=\"any\"]",
+          "incomplete|color-contrast|.adopt-step:nth-child(2) > .adopt-step-content > div:nth-child(1) > .tag-container > .light-plus.shiki.twoslash > .code-container > code > .error-behind",
+          "incomplete|color-contrast|span:nth-child(6) > data-err > data-lsp[lsp=\"any\"]",
+          "incomplete|color-contrast|.adopt-step:nth-child(3) > .adopt-step-content > div:nth-child(1) > .tag-container > .light-plus.shiki.twoslash > .code-container > code > .error-behind",
+          "incomplete|color-contrast|.line:nth-child(1) > span:nth-child(8)",
+          "incomplete|color-contrast|.col1:nth-child(2) > div > .light-plus.shiki.twoslash > .code-container > code > .line:nth-child(7) > span:nth-child(8)",
+          "incomplete|color-contrast|.col1:nth-child(3) > div > .light-plus.shiki.twoslash > .code-container > code > .line:nth-child(3) > span:nth-child(8)",
+          "incomplete|color-contrast|.col1:nth-child(1) > div > .typescript-beta-light.shiki.twoslash > .code-container > code > .line:nth-child(3) > span:nth-child(8)",
+          "incomplete|color-contrast|.col1:nth-child(2) > div > .typescript-beta-light.shiki.twoslash > .code-container > code > .line:nth-child(3) > span:nth-child(8)"
+        ]
+      },
+      "dark-mobile": {
+        "violations": 2,
+        "incomplete": 4,
+        "ok": true,
+        "suppressed": 0,
+        "keys": [
+          "violation|color-contrast|.col1:nth-child(1) > div > p > a[target=\"_blank\"]",
+          "violation|color-contrast|.row > div:nth-child(2) > p:nth-child(1) > a[target=\"_blank\"]",
+          "incomplete|color-contrast|.line:nth-child(4) > span:nth-child(4) > data-err > data-lsp[lsp=\"any\"]",
+          "incomplete|color-contrast|.adopt-step:nth-child(2) > .adopt-step-content > div:nth-child(1) > .tag-container > .light-plus.shiki.twoslash > .code-container > code > .error-behind",
+          "incomplete|color-contrast|span:nth-child(6) > data-err > data-lsp[lsp=\"any\"]",
+          "incomplete|color-contrast|.adopt-step:nth-child(3) > .adopt-step-content > div:nth-child(1) > .tag-container > .light-plus.shiki.twoslash > .code-container > code > .error-behind"
+        ]
+      }
+    },
+    "distinctMissed": 17,
+    "distinctViolations": 8,
+    "rules": [
+      "color-contrast",
+      "scrollable-region-focusable"
+    ]
+  },
+  {
+    "url": "https://www.postgresql.org/",
+    "name": "PostgreSQL",
+    "category": "docs",
+    "ok": true,
+    "baseline": {
+      "violations": 2,
+      "incomplete": 1
+    },
+    "byState": {
+      "dark": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "reduced-motion": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "forced-colors": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "mobile": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "reflow-320": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "dark-mobile": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      }
+    },
+    "distinctMissed": 0,
+    "distinctViolations": 0,
+    "rules": []
+  },
+  {
+    "url": "https://primer.style/",
+    "name": "Primer",
+    "category": "design-system",
+    "ok": true,
+    "baseline": {
+      "violations": 0,
+      "incomplete": 0
+    },
+    "byState": {
+      "dark": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "reduced-motion": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "forced-colors": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "mobile": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "reflow-320": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "dark-mobile": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      }
+    },
+    "distinctMissed": 0,
+    "distinctViolations": 0,
+    "rules": []
+  },
+  {
+    "url": "https://carbondesignsystem.com/",
+    "name": "Carbon",
+    "category": "design-system",
+    "ok": true,
+    "baseline": {
+      "violations": 4,
+      "incomplete": 8
+    },
+    "byState": {
+      "dark": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "reduced-motion": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "forced-colors": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "mobile": {
+        "violations": 0,
+        "incomplete": 5,
+        "ok": true,
+        "suppressed": 0,
+        "keys": [
+          "incomplete|color-contrast|a[aria-label=\"Contact us\"]",
+          "incomplete|color-contrast|a[aria-label=\"Privacy\"]",
+          "incomplete|color-contrast|a[href$=\"ibm.com/\"]",
+          "incomplete|color-contrast|a[aria-label=\"Medium\"]",
+          "incomplete|color-contrast|a[href$=\"_carbondesign\"]"
+        ]
+      },
+      "reflow-320": {
+        "violations": 0,
+        "incomplete": 4,
+        "ok": true,
+        "suppressed": 0,
+        "keys": [
+          "incomplete|color-contrast|a[aria-label=\"Privacy\"]",
+          "incomplete|color-contrast|a[href$=\"ibm.com/\"]",
+          "incomplete|color-contrast|a[aria-label=\"Medium\"]",
+          "incomplete|color-contrast|a[href$=\"_carbondesign\"]"
+        ]
+      },
+      "dark-mobile": {
+        "violations": 0,
+        "incomplete": 5,
+        "ok": true,
+        "suppressed": 0,
+        "keys": [
+          "incomplete|color-contrast|a[aria-label=\"Contact us\"]",
+          "incomplete|color-contrast|a[aria-label=\"Privacy\"]",
+          "incomplete|color-contrast|a[href$=\"ibm.com/\"]",
+          "incomplete|color-contrast|a[aria-label=\"Medium\"]",
+          "incomplete|color-contrast|a[href$=\"_carbondesign\"]"
+        ]
+      }
+    },
+    "distinctMissed": 5,
+    "distinctViolations": 0,
+    "rules": [
+      "color-contrast"
+    ]
+  },
+  {
+    "url": "https://polaris.shopify.com/",
+    "name": "Shopify Polaris",
+    "category": "design-system",
+    "ok": true,
+    "baseline": {
+      "violations": 1,
+      "incomplete": 4
+    },
+    "byState": {
+      "dark": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "reduced-motion": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "forced-colors": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "mobile": {
+        "violations": 1,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": [
+          "violation|list|#MobileNavContainer > ul"
+        ]
+      },
+      "reflow-320": {
+        "violations": 2,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": [
+          "violation|list|#MobileNavContainer > ul",
+          "violation|page-horizontal-overflow|document"
+        ]
+      },
+      "dark-mobile": {
+        "violations": 1,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": [
+          "violation|list|#MobileNavContainer > ul"
+        ]
+      }
+    },
+    "distinctMissed": 2,
+    "distinctViolations": 2,
+    "rules": [
+      "list",
+      "page-horizontal-overflow"
+    ]
+  },
+  {
+    "url": "https://atlassian.design/",
+    "name": "Atlassian Design",
+    "category": "design-system",
+    "ok": true,
+    "baseline": {
+      "violations": 0,
+      "incomplete": 13
+    },
+    "byState": {
+      "dark": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "reduced-motion": {
+        "violations": 0,
+        "incomplete": 4,
+        "ok": true,
+        "suppressed": 0,
+        "keys": [
+          "incomplete|color-contrast|div[aria-hidden=\"true\"]:nth-child(3) > ._v564zzv3._80om1f7y._lcxvxpoc > ._ca0q12x7._n3td12x7._k48p1pd9",
+          "incomplete|color-contrast|._v5641lvb",
+          "incomplete|color-contrast|._1reoewfl._18m9ewfl._i0dlf1ug > ._6rth1ejb._26vxxy5q._1tntxy5q > ._zulppxbi._4cvr1h6o._1e0c1txw > ._1e0c1o8l[data-heading-wrapper=\"\"] > ._fqox10sd",
+          "incomplete|color-contrast|._irr31ts9._zjvpu67f[href$=\"get-started\"] > ._k48pwu06"
+        ]
+      },
+      "forced-colors": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "mobile": {
+        "violations": 0,
+        "incomplete": 2,
+        "ok": true,
+        "suppressed": 0,
+        "keys": [
+          "incomplete|aria-prohibited-attr|._2lx2vrvc._syazi7uo._4cvr1h6o > ._1e0c1o8l._1o9zidpf",
+          "incomplete|color-contrast|._irr31pmm._zjvpu67f[href$=\"news\"] > ._k48pwu06"
+        ]
+      },
+      "reflow-320": {
+        "violations": 0,
+        "incomplete": 2,
+        "ok": true,
+        "suppressed": 0,
+        "keys": [
+          "incomplete|aria-prohibited-attr|._2lx2vrvc._syazi7uo._4cvr1h6o > ._1e0c1o8l._1o9zidpf",
+          "incomplete|color-contrast|._irr31pmm._zjvpu67f[href$=\"news\"] > ._k48pwu06"
+        ]
+      },
+      "dark-mobile": {
+        "violations": 0,
+        "incomplete": 2,
+        "ok": true,
+        "suppressed": 0,
+        "keys": [
+          "incomplete|aria-prohibited-attr|._2lx2vrvc._syazi7uo._4cvr1h6o > ._1e0c1o8l._1o9zidpf",
+          "incomplete|color-contrast|._irr31pmm._zjvpu67f[href$=\"news\"] > ._k48pwu06"
+        ]
+      }
+    },
+    "distinctMissed": 6,
+    "distinctViolations": 0,
+    "rules": [
+      "color-contrast",
+      "aria-prohibited-attr"
+    ]
+  },
+  {
+    "url": "https://www.radix-ui.com/",
+    "name": "Radix UI",
+    "category": "design-system",
+    "ok": true,
+    "baseline": {
+      "violations": 0,
+      "incomplete": 48
+    },
+    "byState": {
+      "dark": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "reduced-motion": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "forced-colors": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "mobile": {
+        "violations": 2,
+        "incomplete": 38,
+        "ok": true,
+        "suppressed": 0,
+        "keys": [
+          "violation|button-name|.md\\:rt-r-display-none > .rt-variant-ghost.rt-IconButton[data-state=\"closed\"]",
+          "violation|scrollable-region-focusable|.rt-ScrollAreaViewport",
+          "incomplete|color-contrast|.rt-r-mb-3",
+          "incomplete|color-contrast|.rt-r-gap-9.rt-r-ai-start.rt-r-jc-space-between:nth-child(5) > .rt-Box > h4",
+          "incomplete|color-contrast|.rt-r-gap-9.rt-r-ai-start.rt-r-jc-space-between:nth-child(5) > .rt-Box > p",
+          "incomplete|color-contrast|.rt-r-gap-9.rt-r-ai-start.rt-r-jc-space-between:nth-child(5) > .rt-r-mt-1.rt-r-gap-4.rt-r-fd-column > label:nth-child(1) > .rt-Text",
+          "incomplete|color-contrast|.rt-r-gap-9.rt-r-ai-start.rt-r-jc-space-between:nth-child(5) > .rt-r-mt-1.rt-r-gap-4.rt-r-fd-column > label:nth-child(2) > .rt-Text",
+          "incomplete|color-contrast|.rt-r-gap-9.rt-r-ai-start.rt-r-jc-space-between:nth-child(5) > .rt-r-mt-1.rt-r-gap-4.rt-r-fd-column > label:nth-child(3) > .rt-Text",
+          "incomplete|color-contrast|.rt-r-fs-0.rt-r-gap-6.rt-r-w:nth-child(1) > .rt-BaseCard.rt-Card.rt-r-size-4:nth-child(3) > .rt-r-lt-start",
+          "incomplete|color-contrast|.rt-r-fs-0.rt-r-gap-6.rt-r-w:nth-child(1) > .rt-BaseCard.rt-Card.rt-r-size-4:nth-child(3) > .rt-r-mb-5",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(1) > .rt-r-size-5.rt-r-mb-1.rt-r-weight-bold",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(1) > .rt-r-mb-4.rt-r-size-2[data-accent-color=\"gray\"]",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(1) > .rt-r-mb-4.rt-r-size-5.rt-r-weight-bold",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(1) > .rt-r-mb-4.rt-r-size-5.rt-r-weight-bold > .rt-r-size-5.rt-r-weight-bold.rt-Text",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(1) > .rt-r-fd-column.rt-r-gap-2.rt-Flex > .rt-r-gap-2.rt-r-ai-center.rt-Flex:nth-child(1) > .rt-r-size-2.rt-Text",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(1) > .rt-r-fd-column.rt-r-gap-2.rt-Flex > .rt-r-gap-2.rt-r-ai-center.rt-Flex:nth-child(2) > .rt-r-size-2.rt-Text",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(1) > .rt-r-fd-column.rt-r-gap-2.rt-Flex > .rt-r-gap-2.rt-r-ai-center.rt-Flex:nth-child(3) > .rt-r-size-2.rt-Text",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(1) > .rt-r-fd-column.rt-r-gap-2.rt-Flex > .rt-r-gap-2.rt-r-ai-center.rt-Flex:nth-child(4) > .rt-r-size-2.rt-Text",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(1) > .rt-r-fd-column.rt-r-gap-2.rt-Flex > .rt-r-gap-2.rt-r-ai-center.rt-Flex:nth-child(5) > .rt-r-size-2.rt-Text",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(1) > .rt-r-fd-column.rt-r-gap-2.rt-Flex > .rt-r-gap-2.rt-r-ai-center.rt-Flex:nth-child(6) > .rt-r-size-2.rt-Text",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(2) > .rt-r-size-5.rt-r-mb-1.rt-r-weight-bold",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(2) > .rt-r-mb-4.rt-r-size-2[data-accent-color=\"gray\"]",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(2) > .rt-r-mb-4.rt-r-size-5.rt-r-weight-bold",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(2) > .rt-r-mb-4.rt-r-size-5.rt-r-weight-bold > .rt-r-size-5.rt-r-weight-bold.rt-Text",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(2) > .rt-r-fd-column.rt-r-gap-2.rt-Flex > .rt-r-gap-2.rt-r-ai-center.rt-Flex:nth-child(1) > .rt-r-size-2.rt-Text",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(2) > .rt-r-fd-column.rt-r-gap-2.rt-Flex > .rt-r-gap-2.rt-r-ai-center.rt-Flex:nth-child(2) > .rt-r-size-2.rt-Text",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(2) > .rt-r-fd-column.rt-r-gap-2.rt-Flex > .rt-r-gap-2.rt-r-ai-center.rt-Flex:nth-child(3) > .rt-r-size-2.rt-Text",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(2) > .rt-r-fd-column.rt-r-gap-2.rt-Flex > .rt-r-gap-2.rt-r-ai-center.rt-Flex:nth-child(4) > .rt-r-size-2.rt-Text",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(2) > .rt-r-fd-column.rt-r-gap-2.rt-Flex > .rt-r-gap-2.rt-r-ai-center.rt-Flex:nth-child(5) > .rt-r-size-2.rt-Text",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(2) > .rt-r-fd-column.rt-r-gap-2.rt-Flex > .rt-r-gap-2.rt-r-ai-center.rt-Flex:nth-child(6) > .rt-r-size-2.rt-Text",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(3) > .rt-r-size-5.rt-r-mb-1.rt-r-weight-bold",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(3) > .rt-r-mb-4.rt-r-size-2[data-accent-color=\"gray\"]",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(3) > .rt-r-mb-4.rt-r-size-5.rt-r-weight-bold",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(3) > .rt-r-mb-4.rt-r-size-5.rt-r-weight-bold > .rt-r-size-5.rt-r-weight-bold.rt-Text",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(3) > .rt-r-fd-column.rt-r-gap-2.rt-Flex > .rt-r-gap-2.rt-r-ai-center.rt-Flex:nth-child(1) > .rt-r-size-2.rt-Text",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(3) > .rt-r-fd-column.rt-r-gap-2.rt-Flex > .rt-r-gap-2.rt-r-ai-center.rt-Flex:nth-child(2) > .rt-r-size-2.rt-Text",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(3) > .rt-r-fd-column.rt-r-gap-2.rt-Flex > .rt-r-gap-2.rt-r-ai-center.rt-Flex:nth-child(3) > .rt-r-size-2.rt-Text",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(3) > .rt-r-fd-column.rt-r-gap-2.rt-Flex > .rt-r-gap-2.rt-r-ai-center.rt-Flex:nth-child(4) > .rt-r-size-2.rt-Text",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(3) > .rt-r-fd-column.rt-r-gap-2.rt-Flex > .rt-r-gap-2.rt-r-ai-center.rt-Flex:nth-child(5) > .rt-r-size-2.rt-Text",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(3) > .rt-r-fd-column.rt-r-gap-2.rt-Flex > .rt-r-gap-2.rt-r-ai-center.rt-Flex:nth-child(6) > .rt-r-size-2.rt-Text"
+        ]
+      },
+      "reflow-320": {
+        "violations": 2,
+        "incomplete": 35,
+        "ok": true,
+        "suppressed": 0,
+        "keys": [
+          "violation|button-name|.md\\:rt-r-display-none > .rt-variant-ghost.rt-IconButton[data-state=\"closed\"]",
+          "violation|scrollable-region-focusable|.rt-ScrollAreaViewport",
+          "incomplete|color-contrast|.rt-r-mb-3",
+          "incomplete|color-contrast|.rt-r-gap-9.rt-r-ai-start.rt-r-jc-space-between:nth-child(5) > .rt-Box > h4",
+          "incomplete|color-contrast|.rt-r-gap-9.rt-r-ai-start.rt-r-jc-space-between:nth-child(5) > .rt-Box > p",
+          "incomplete|color-contrast|.rt-r-fs-0.rt-r-gap-6.rt-r-w:nth-child(1) > .rt-BaseCard.rt-Card.rt-r-size-4:nth-child(3) > .rt-r-lt-start",
+          "incomplete|color-contrast|.rt-r-fs-0.rt-r-gap-6.rt-r-w:nth-child(1) > .rt-BaseCard.rt-Card.rt-r-size-4:nth-child(3) > .rt-r-mb-5",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(1) > .rt-r-size-5.rt-r-mb-1.rt-r-weight-bold",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(1) > .rt-r-mb-4.rt-r-size-2[data-accent-color=\"gray\"]",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(1) > .rt-r-mb-4.rt-r-size-5.rt-r-weight-bold",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(1) > .rt-r-mb-4.rt-r-size-5.rt-r-weight-bold > .rt-r-size-5.rt-r-weight-bold.rt-Text",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(1) > .rt-r-fd-column.rt-r-gap-2.rt-Flex > .rt-r-gap-2.rt-r-ai-center.rt-Flex:nth-child(1) > .rt-r-size-2.rt-Text",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(1) > .rt-r-fd-column.rt-r-gap-2.rt-Flex > .rt-r-gap-2.rt-r-ai-center.rt-Flex:nth-child(2) > .rt-r-size-2.rt-Text",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(1) > .rt-r-fd-column.rt-r-gap-2.rt-Flex > .rt-r-gap-2.rt-r-ai-center.rt-Flex:nth-child(3) > .rt-r-size-2.rt-Text",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(1) > .rt-r-fd-column.rt-r-gap-2.rt-Flex > .rt-r-gap-2.rt-r-ai-center.rt-Flex:nth-child(4) > .rt-r-size-2.rt-Text",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(1) > .rt-r-fd-column.rt-r-gap-2.rt-Flex > .rt-r-gap-2.rt-r-ai-center.rt-Flex:nth-child(5) > .rt-r-size-2.rt-Text",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(1) > .rt-r-fd-column.rt-r-gap-2.rt-Flex > .rt-r-gap-2.rt-r-ai-center.rt-Flex:nth-child(6) > .rt-r-size-2.rt-Text",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(2) > .rt-r-size-5.rt-r-mb-1.rt-r-weight-bold",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(2) > .rt-r-mb-4.rt-r-size-2[data-accent-color=\"gray\"]",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(2) > .rt-r-mb-4.rt-r-size-5.rt-r-weight-bold",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(2) > .rt-r-mb-4.rt-r-size-5.rt-r-weight-bold > .rt-r-size-5.rt-r-weight-bold.rt-Text",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(2) > .rt-r-fd-column.rt-r-gap-2.rt-Flex > .rt-r-gap-2.rt-r-ai-center.rt-Flex:nth-child(1) > .rt-r-size-2.rt-Text",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(2) > .rt-r-fd-column.rt-r-gap-2.rt-Flex > .rt-r-gap-2.rt-r-ai-center.rt-Flex:nth-child(2) > .rt-r-size-2.rt-Text",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(2) > .rt-r-fd-column.rt-r-gap-2.rt-Flex > .rt-r-gap-2.rt-r-ai-center.rt-Flex:nth-child(3) > .rt-r-size-2.rt-Text",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(2) > .rt-r-fd-column.rt-r-gap-2.rt-Flex > .rt-r-gap-2.rt-r-ai-center.rt-Flex:nth-child(4) > .rt-r-size-2.rt-Text",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(2) > .rt-r-fd-column.rt-r-gap-2.rt-Flex > .rt-r-gap-2.rt-r-ai-center.rt-Flex:nth-child(5) > .rt-r-size-2.rt-Text",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(2) > .rt-r-fd-column.rt-r-gap-2.rt-Flex > .rt-r-gap-2.rt-r-ai-center.rt-Flex:nth-child(6) > .rt-r-size-2.rt-Text",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(3) > .rt-r-size-5.rt-r-mb-1.rt-r-weight-bold",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(3) > .rt-r-mb-4.rt-r-size-2[data-accent-color=\"gray\"]",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(3) > .rt-r-mb-4.rt-r-size-5.rt-r-weight-bold",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(3) > .rt-r-mb-4.rt-r-size-5.rt-r-weight-bold > .rt-r-size-5.rt-r-weight-bold.rt-Text",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(3) > .rt-r-fd-column.rt-r-gap-2.rt-Flex > .rt-r-gap-2.rt-r-ai-center.rt-Flex:nth-child(1) > .rt-r-size-2.rt-Text",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(3) > .rt-r-fd-column.rt-r-gap-2.rt-Flex > .rt-r-gap-2.rt-r-ai-center.rt-Flex:nth-child(2) > .rt-r-size-2.rt-Text",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(3) > .rt-r-fd-column.rt-r-gap-2.rt-Flex > .rt-r-gap-2.rt-r-ai-center.rt-Flex:nth-child(3) > .rt-r-size-2.rt-Text",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(3) > .rt-r-fd-column.rt-r-gap-2.rt-Flex > .rt-r-gap-2.rt-r-ai-center.rt-Flex:nth-child(4) > .rt-r-size-2.rt-Text",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(3) > .rt-r-fd-column.rt-r-gap-2.rt-Flex > .rt-r-gap-2.rt-r-ai-center.rt-Flex:nth-child(5) > .rt-r-size-2.rt-Text",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(3) > .rt-r-fd-column.rt-r-gap-2.rt-Flex > .rt-r-gap-2.rt-r-ai-center.rt-Flex:nth-child(6) > .rt-r-size-2.rt-Text"
+        ]
+      },
+      "dark-mobile": {
+        "violations": 2,
+        "incomplete": 38,
+        "ok": true,
+        "suppressed": 0,
+        "keys": [
+          "violation|button-name|.md\\:rt-r-display-none > .rt-variant-ghost.rt-IconButton[data-state=\"closed\"]",
+          "violation|scrollable-region-focusable|.rt-ScrollAreaViewport",
+          "incomplete|color-contrast|.rt-r-mb-3",
+          "incomplete|color-contrast|.rt-r-gap-9.rt-r-ai-start.rt-r-jc-space-between:nth-child(5) > .rt-Box > h4",
+          "incomplete|color-contrast|.rt-r-gap-9.rt-r-ai-start.rt-r-jc-space-between:nth-child(5) > .rt-Box > p",
+          "incomplete|color-contrast|.rt-r-gap-9.rt-r-ai-start.rt-r-jc-space-between:nth-child(5) > .rt-r-mt-1.rt-r-gap-4.rt-r-fd-column > label:nth-child(1) > .rt-Text",
+          "incomplete|color-contrast|.rt-r-gap-9.rt-r-ai-start.rt-r-jc-space-between:nth-child(5) > .rt-r-mt-1.rt-r-gap-4.rt-r-fd-column > label:nth-child(2) > .rt-Text",
+          "incomplete|color-contrast|.rt-r-gap-9.rt-r-ai-start.rt-r-jc-space-between:nth-child(5) > .rt-r-mt-1.rt-r-gap-4.rt-r-fd-column > label:nth-child(3) > .rt-Text",
+          "incomplete|color-contrast|.rt-r-fs-0.rt-r-gap-6.rt-r-w:nth-child(1) > .rt-BaseCard.rt-Card.rt-r-size-4:nth-child(3) > .rt-r-lt-start",
+          "incomplete|color-contrast|.rt-r-fs-0.rt-r-gap-6.rt-r-w:nth-child(1) > .rt-BaseCard.rt-Card.rt-r-size-4:nth-child(3) > .rt-r-mb-5",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(1) > .rt-r-size-5.rt-r-mb-1.rt-r-weight-bold",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(1) > .rt-r-mb-4.rt-r-size-2[data-accent-color=\"gray\"]",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(1) > .rt-r-mb-4.rt-r-size-5.rt-r-weight-bold",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(1) > .rt-r-mb-4.rt-r-size-5.rt-r-weight-bold > .rt-r-size-5.rt-r-weight-bold.rt-Text",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(1) > .rt-r-fd-column.rt-r-gap-2.rt-Flex > .rt-r-gap-2.rt-r-ai-center.rt-Flex:nth-child(1) > .rt-r-size-2.rt-Text",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(1) > .rt-r-fd-column.rt-r-gap-2.rt-Flex > .rt-r-gap-2.rt-r-ai-center.rt-Flex:nth-child(2) > .rt-r-size-2.rt-Text",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(1) > .rt-r-fd-column.rt-r-gap-2.rt-Flex > .rt-r-gap-2.rt-r-ai-center.rt-Flex:nth-child(3) > .rt-r-size-2.rt-Text",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(1) > .rt-r-fd-column.rt-r-gap-2.rt-Flex > .rt-r-gap-2.rt-r-ai-center.rt-Flex:nth-child(4) > .rt-r-size-2.rt-Text",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(1) > .rt-r-fd-column.rt-r-gap-2.rt-Flex > .rt-r-gap-2.rt-r-ai-center.rt-Flex:nth-child(5) > .rt-r-size-2.rt-Text",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(1) > .rt-r-fd-column.rt-r-gap-2.rt-Flex > .rt-r-gap-2.rt-r-ai-center.rt-Flex:nth-child(6) > .rt-r-size-2.rt-Text",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(2) > .rt-r-size-5.rt-r-mb-1.rt-r-weight-bold",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(2) > .rt-r-mb-4.rt-r-size-2[data-accent-color=\"gray\"]",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(2) > .rt-r-mb-4.rt-r-size-5.rt-r-weight-bold",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(2) > .rt-r-mb-4.rt-r-size-5.rt-r-weight-bold > .rt-r-size-5.rt-r-weight-bold.rt-Text",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(2) > .rt-r-fd-column.rt-r-gap-2.rt-Flex > .rt-r-gap-2.rt-r-ai-center.rt-Flex:nth-child(1) > .rt-r-size-2.rt-Text",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(2) > .rt-r-fd-column.rt-r-gap-2.rt-Flex > .rt-r-gap-2.rt-r-ai-center.rt-Flex:nth-child(2) > .rt-r-size-2.rt-Text",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(2) > .rt-r-fd-column.rt-r-gap-2.rt-Flex > .rt-r-gap-2.rt-r-ai-center.rt-Flex:nth-child(3) > .rt-r-size-2.rt-Text",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(2) > .rt-r-fd-column.rt-r-gap-2.rt-Flex > .rt-r-gap-2.rt-r-ai-center.rt-Flex:nth-child(4) > .rt-r-size-2.rt-Text",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(2) > .rt-r-fd-column.rt-r-gap-2.rt-Flex > .rt-r-gap-2.rt-r-ai-center.rt-Flex:nth-child(5) > .rt-r-size-2.rt-Text",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(2) > .rt-r-fd-column.rt-r-gap-2.rt-Flex > .rt-r-gap-2.rt-r-ai-center.rt-Flex:nth-child(6) > .rt-r-size-2.rt-Text",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(3) > .rt-r-size-5.rt-r-mb-1.rt-r-weight-bold",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(3) > .rt-r-mb-4.rt-r-size-2[data-accent-color=\"gray\"]",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(3) > .rt-r-mb-4.rt-r-size-5.rt-r-weight-bold",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(3) > .rt-r-mb-4.rt-r-size-5.rt-r-weight-bold > .rt-r-size-5.rt-r-weight-bold.rt-Text",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(3) > .rt-r-fd-column.rt-r-gap-2.rt-Flex > .rt-r-gap-2.rt-r-ai-center.rt-Flex:nth-child(1) > .rt-r-size-2.rt-Text",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(3) > .rt-r-fd-column.rt-r-gap-2.rt-Flex > .rt-r-gap-2.rt-r-ai-center.rt-Flex:nth-child(2) > .rt-r-size-2.rt-Text",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(3) > .rt-r-fd-column.rt-r-gap-2.rt-Flex > .rt-r-gap-2.rt-r-ai-center.rt-Flex:nth-child(3) > .rt-r-size-2.rt-Text",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(3) > .rt-r-fd-column.rt-r-gap-2.rt-Flex > .rt-r-gap-2.rt-r-ai-center.rt-Flex:nth-child(4) > .rt-r-size-2.rt-Text",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(3) > .rt-r-fd-column.rt-r-gap-2.rt-Flex > .rt-r-gap-2.rt-r-ai-center.rt-Flex:nth-child(5) > .rt-r-size-2.rt-Text",
+          "incomplete|color-contrast|.rt-r-fd-column.rt-Flex:nth-child(3) > .rt-r-fd-column.rt-r-gap-2.rt-Flex > .rt-r-gap-2.rt-r-ai-center.rt-Flex:nth-child(6) > .rt-r-size-2.rt-Text"
+        ]
+      }
+    },
+    "distinctMissed": 40,
+    "distinctViolations": 2,
+    "rules": [
+      "button-name",
+      "scrollable-region-focusable",
+      "color-contrast"
+    ]
+  },
+  {
+    "url": "https://github.com/",
+    "name": "GitHub",
+    "category": "platform",
+    "ok": true,
+    "baseline": {
+      "violations": 0,
+      "incomplete": 26
+    },
+    "byState": {
+      "dark": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "reduced-motion": {
+        "violations": 0,
+        "incomplete": 3,
+        "ok": true,
+        "suppressed": 0,
+        "keys": [
+          "incomplete|color-contrast|.lp-SectionHero-text-title",
+          "incomplete|color-contrast|.lp-SectionHero-text-title > span",
+          "incomplete|color-contrast|.lp-SectionHero-text-link > .Primer_Brand__Link-module__Link--label___jM8Ty.Primer_Brand__Text-module__Text--200____P1wy.Primer_Brand__Text-module__Text--default___GhPh_ > .Primer_Brand__Text-module__Text--300___6_Yx4.Primer_Brand__Text-module__Text--default___GhPh_.Primer_Brand__Text-module__Text--antialiased___TYoXS"
+        ]
+      },
+      "forced-colors": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "mobile": {
+        "violations": 0,
+        "incomplete": 2,
+        "ok": true,
+        "suppressed": 0,
+        "keys": [
+          "incomplete|color-contrast|.AuthCTAs-module__mobileActions__NNzeV > .AuthCTAs-module__link__sMMQQ.AuthCTAs-module__button__OLoT8[href$=\"login\"]",
+          "incomplete|color-contrast|#_R_agl_-button > .Primer_Brand__Button-module__Button__text___ED0bX > .Primer_Brand__Button-module__Button--label-secondary___eJ0_a.Primer_Brand__Button-module__Button--label-medium___ClmeR.Primer_Brand__Button-module__Button--label___qrkyz > span"
+        ]
+      },
+      "reflow-320": {
+        "violations": 0,
+        "incomplete": 2,
+        "ok": true,
+        "suppressed": 0,
+        "keys": [
+          "incomplete|color-contrast|.AuthCTAs-module__mobileActions__NNzeV > .AuthCTAs-module__link__sMMQQ.AuthCTAs-module__button__OLoT8[href$=\"login\"]",
+          "incomplete|color-contrast|#_R_agl_-button > .Primer_Brand__Button-module__Button__text___ED0bX > .Primer_Brand__Button-module__Button--label-secondary___eJ0_a.Primer_Brand__Button-module__Button--label-medium___ClmeR.Primer_Brand__Button-module__Button--label___qrkyz > span"
+        ]
+      },
+      "dark-mobile": {
+        "violations": 0,
+        "incomplete": 2,
+        "ok": true,
+        "suppressed": 0,
+        "keys": [
+          "incomplete|color-contrast|.AuthCTAs-module__mobileActions__NNzeV > .AuthCTAs-module__link__sMMQQ.AuthCTAs-module__button__OLoT8[href$=\"login\"]",
+          "incomplete|color-contrast|#_R_agl_-button > .Primer_Brand__Button-module__Button__text___ED0bX > .Primer_Brand__Button-module__Button--label-secondary___eJ0_a.Primer_Brand__Button-module__Button--label-medium___ClmeR.Primer_Brand__Button-module__Button--label___qrkyz > span"
+        ]
+      }
+    },
+    "distinctMissed": 5,
+    "distinctViolations": 0,
+    "rules": [
+      "color-contrast"
+    ]
+  },
+  {
+    "url": "https://about.gitlab.com/",
+    "name": "GitLab",
+    "category": "platform",
+    "ok": true,
+    "baseline": {
+      "violations": 7,
+      "incomplete": 16
+    },
+    "byState": {
+      "dark": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "reduced-motion": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "forced-colors": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "mobile": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "reflow-320": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "dark-mobile": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      }
+    },
+    "distinctMissed": 0,
+    "distinctViolations": 0,
+    "rules": []
+  },
+  {
+    "url": "https://www.npmjs.com/",
+    "name": "npm",
+    "category": "platform",
+    "ok": true,
+    "baseline": {
+      "violations": 1,
+      "incomplete": 0
+    },
+    "byState": {
+      "dark": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "reduced-motion": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "forced-colors": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "mobile": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "reflow-320": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "dark-mobile": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      }
+    },
+    "distinctMissed": 0,
+    "distinctViolations": 0,
+    "rules": []
+  },
+  {
+    "url": "https://dev.to/",
+    "name": "DEV Community",
+    "category": "platform",
+    "ok": true,
+    "baseline": {
+      "violations": 65,
+      "incomplete": 21
+    },
+    "byState": {
+      "dark": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "reduced-motion": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "forced-colors": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "mobile": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "reflow-320": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "dark-mobile": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      }
+    },
+    "distinctMissed": 0,
+    "distinctViolations": 0,
+    "rules": []
+  },
+  {
+    "url": "https://www.netlify.com/",
+    "name": "Netlify",
+    "category": "platform",
+    "ok": true,
+    "baseline": {
+      "violations": 1,
+      "incomplete": 26
+    },
+    "byState": {
+      "dark": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "reduced-motion": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "forced-colors": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "mobile": {
+        "violations": 0,
+        "incomplete": 1,
+        "ok": true,
+        "suppressed": 0,
+        "keys": [
+          "incomplete|color-contrast|#onetrust-accept-btn-handler"
+        ]
+      },
+      "reflow-320": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "dark-mobile": {
+        "violations": 0,
+        "incomplete": 1,
+        "ok": true,
+        "suppressed": 3,
+        "keys": [
+          "incomplete|color-contrast|#onetrust-accept-btn-handler"
+        ]
+      }
+    },
+    "distinctMissed": 1,
+    "distinctViolations": 0,
+    "rules": [
+      "color-contrast"
+    ]
+  },
+  {
+    "url": "https://vercel.com/",
+    "name": "Vercel",
+    "category": "platform",
+    "ok": true,
+    "baseline": {
+      "violations": 1,
+      "incomplete": 26
+    },
+    "byState": {
+      "dark": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "reduced-motion": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "forced-colors": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "mobile": {
+        "violations": 1,
+        "incomplete": 69,
+        "ok": true,
+        "suppressed": 0,
+        "keys": [
+          "violation|scrollable-region-focusable|.\\[-ms-overflow-style\\:none\\]",
+          "incomplete|color-contrast|.top-7 > p",
+          "incomplete|color-contrast|li:nth-child(1) > p",
+          "incomplete|color-contrast|li:nth-child(2) > p",
+          "incomplete|color-contrast|li:nth-child(3) > p",
+          "incomplete|color-contrast|li:nth-child(4) > p",
+          "incomplete|color-contrast|.p-4 > p:nth-child(1)",
+          "incomplete|color-contrast|.p-4 > p:nth-child(2)",
+          "incomplete|color-contrast|.list-none > .m-0.text-gray-1000:nth-child(1)",
+          "incomplete|color-contrast|.m-0.text-gray-1000:nth-child(2)",
+          "incomplete|color-contrast|.max-w-5xl",
+          "incomplete|color-contrast|a[href$=\"eve.dev/\"]",
+          "incomplete|color-contrast|.leading-5.focus-visible\\:rounded-sm.focus-visible\\:shadow-\\[var\\(--ds-focus-ring\\)\\]:nth-child(2) > .duration-100.\\[\\:not\\(\\[aria-disabled\\]\\)\\]\\:hover\\:text-gray-1000[data-zone=\"667155\"]",
+          "incomplete|color-contrast|div:nth-child(5) > .list-none > .leading-5.focus-visible\\:rounded-sm.focus-visible\\:shadow-\\[var\\(--ds-focus-ring\\)\\]:nth-child(3) > .duration-100.\\[\\:not\\(\\[aria-disabled\\]\\)\\]\\:hover\\:text-gray-1000[data-zone=\"667155\"]",
+          "incomplete|color-contrast|a[href$=\"nitro\"]",
+          "incomplete|color-contrast|a[href$=\"turborepo\"]",
+          "incomplete|color-contrast|.leading-5.focus-visible\\:rounded-sm.focus-visible\\:shadow-\\[var\\(--ds-focus-ring\\)\\]:nth-child(6) > .duration-100.\\[\\:not\\(\\[aria-disabled\\]\\)\\]\\:hover\\:text-gray-1000[data-zone=\"667155\"]",
+          "incomplete|color-contrast|.leading-5.focus-visible\\:rounded-sm.focus-visible\\:shadow-\\[var\\(--ds-focus-ring\\)\\]:nth-child(7) > .duration-100.\\[\\:not\\(\\[aria-disabled\\]\\)\\]\\:hover\\:text-gray-1000[data-zone=\"667155\"]",
+          "incomplete|color-contrast|a[href$=\"xmcp\"]",
+          "incomplete|color-contrast|a[href$=\"frameworks\"]",
+          "incomplete|color-contrast|.leading-5.focus-visible\\:rounded-sm.focus-visible\\:shadow-\\[var\\(--ds-focus-ring\\)\\]:nth-child(1) > .duration-100[href$=\"sdk\"][data-zone=\"667155\"]",
+          "incomplete|color-contrast|.leading-5.focus-visible\\:rounded-sm.focus-visible\\:shadow-\\[var\\(--ds-focus-ring\\)\\]:nth-child(2) > .duration-100.\\[\\:not\\(\\[aria-disabled\\]\\)\\]\\:hover\\:text-gray-1000[href$=\"workflows\"]",
+          "incomplete|color-contrast|div:nth-child(6) > .list-none > .leading-5.focus-visible\\:rounded-sm.focus-visible\\:shadow-\\[var\\(--ds-focus-ring\\)\\]:nth-child(3) > .duration-100.\\[\\:not\\(\\[aria-disabled\\]\\)\\]\\:hover\\:text-gray-1000[data-zone=\"667155\"]",
+          "incomplete|color-contrast|a[href$=\"chat\"]",
+          "incomplete|color-contrast|.leading-5.focus-visible\\:rounded-sm.focus-visible\\:shadow-\\[var\\(--ds-focus-ring\\)\\]:nth-child(5) > .duration-100[href$=\"sdk\"][data-zone=\"667155\"]",
+          "incomplete|color-contrast|a[href$=\"streamdown.ai\"]",
+          "incomplete|color-contrast|div:nth-child(7) > .my-\\[var\\(--geist-gap-half\\)\\]",
+          "incomplete|color-contrast|a[href$=\"ai-apps\"]",
+          "incomplete|color-contrast|.duration-100.\\[\\:not\\(\\[aria-disabled\\]\\)\\]\\:hover\\:text-gray-1000[href$=\"web-apps\"]",
+          "incomplete|color-contrast|.duration-100.\\[\\:not\\(\\[aria-disabled\\]\\)\\]\\:hover\\:text-gray-1000[href$=\"marketing-sites\"]",
+          "incomplete|color-contrast|.duration-100.\\[\\:not\\(\\[aria-disabled\\]\\)\\]\\:hover\\:text-gray-1000[href$=\"multi-tenant-saas\"]",
+          "incomplete|color-contrast|.duration-100.\\[\\:not\\(\\[aria-disabled\\]\\)\\]\\:hover\\:text-gray-1000[href$=\"composable-commerce\"]",
+          "incomplete|color-contrast|div:nth-child(7) > .list-none > .leading-5.focus-visible\\:rounded-sm.focus-visible\\:shadow-\\[var\\(--ds-focus-ring\\)\\]:nth-child(6) > .duration-100.\\[\\:not\\(\\[aria-disabled\\]\\)\\]\\:hover\\:text-gray-1000.p-0\\.5",
+          "incomplete|color-contrast|a[href$=\"design-engineering\"]",
+          "incomplete|color-contrast|div:nth-child(8) > .my-\\[var\\(--geist-gap-half\\)\\]",
+          "incomplete|color-contrast|.duration-100[href$=\"docs\"][data-zone=\"667155\"]",
+          "incomplete|color-contrast|.duration-100.\\[\\:not\\(\\[aria-disabled\\]\\)\\]\\:hover\\:text-gray-1000[href$=\"blog\"]",
+          "incomplete|color-contrast|.duration-100.\\[\\:not\\(\\[aria-disabled\\]\\)\\]\\:hover\\:text-gray-1000[href$=\"changelog\"]",
+          "incomplete|color-contrast|.duration-100[href=\"/kb\"][data-zone=\"667155\"]",
+          "incomplete|color-contrast|a[href$=\"academy\"]",
+          "incomplete|color-contrast|a[href=\"/i\"]",
+          "incomplete|color-contrast|a[href$=\"community.vercel.com\"]",
+          "incomplete|color-contrast|div:nth-child(9) > .my-\\[var\\(--geist-gap-half\\)\\]",
+          "incomplete|color-contrast|.duration-100.\\[\\:not\\(\\[aria-disabled\\]\\)\\]\\:hover\\:text-gray-1000[href$=\"customers\"]",
+          "incomplete|color-contrast|.duration-100[href$=\"marketplace\"][data-zone=\"2d9dc9\"]",
+          "incomplete|color-contrast|a[href$=\"templates\"]",
+          "incomplete|color-contrast|.duration-100.\\[\\:not\\(\\[aria-disabled\\]\\)\\]\\:hover\\:text-gray-1000[href$=\"solution-partners\"]",
+          "incomplete|color-contrast|.duration-100.\\[\\:not\\(\\[aria-disabled\\]\\)\\]\\:hover\\:text-gray-1000[href$=\"aws\"]",
+          "incomplete|color-contrast|div:nth-child(10) > .my-\\[var\\(--geist-gap-half\\)\\]",
+          "incomplete|color-contrast|.duration-100.\\[\\:not\\(\\[aria-disabled\\]\\)\\]\\:hover\\:text-gray-1000[href$=\"about\"]",
+          "incomplete|color-contrast|a[href$=\"careers\"]",
+          "incomplete|color-contrast|a[href$=\"press\"]",
+          "incomplete|color-contrast|a[href$=\"events\"]",
+          "incomplete|color-contrast|a[href$=\"startups\"]",
+          "incomplete|color-contrast|a[href$=\"shipped\"]",
+          "incomplete|color-contrast|a[href$=\"open-source-program\"]",
+          "incomplete|color-contrast|div:nth-child(11) > .my-\\[var\\(--geist-gap-half\\)\\]",
+          "incomplete|color-contrast|a[href$=\"privacy-policy\"]",
+          "incomplete|color-contrast|a[href$=\"terms\"]",
+          "incomplete|color-contrast|a[href$=\"cookie-policy\"]",
+          "incomplete|color-contrast|a[href$=\"dpa\"]",
+          "incomplete|color-contrast|a[href$=\"acceptable-use-policy\"]",
+          "incomplete|color-contrast|a[href$=\"legal\"]",
+          "incomplete|color-contrast|a[href$=\"security.vercel.com\"]",
+          "incomplete|color-contrast|div:nth-child(12) > .my-\\[var\\(--geist-gap-half\\)\\]",
+          "incomplete|color-contrast|.leading-5.focus-visible\\:rounded-sm.focus-visible\\:shadow-\\[var\\(--ds-focus-ring\\)\\]:nth-child(1) > a[href$=\"vercel\"][rel=\"noopener\"][target=\"_blank\"]",
+          "incomplete|color-contrast|.leading-5.focus-visible\\:rounded-sm.focus-visible\\:shadow-\\[var\\(--ds-focus-ring\\)\\]:nth-child(2) > a[href$=\"vercel\"][rel=\"noopener\"][target=\"_blank\"]",
+          "incomplete|color-contrast|.leading-5.focus-visible\\:rounded-sm.focus-visible\\:shadow-\\[var\\(--ds-focus-ring\\)\\]:nth-child(3) > a[rel=\"noopener\"][target=\"_blank\"][data-zone=\"null\"]",
+          "incomplete|color-contrast|a[href$=\"@VercelHQ\"]",
+          "incomplete|color-contrast|.leading-5.focus-visible\\:rounded-sm.focus-visible\\:shadow-\\[var\\(--ds-focus-ring\\)\\]:nth-child(5) > a[rel=\"noopener\"][target=\"_blank\"][data-zone=\"null\"]"
+        ]
+      },
+      "reflow-320": {
+        "violations": 1,
+        "incomplete": 69,
+        "ok": true,
+        "suppressed": 0,
+        "keys": [
+          "violation|scrollable-region-focusable|.\\[-ms-overflow-style\\:none\\]",
+          "incomplete|color-contrast|.top-7 > p",
+          "incomplete|color-contrast|li:nth-child(1) > p",
+          "incomplete|color-contrast|li:nth-child(2) > p",
+          "incomplete|color-contrast|li:nth-child(3) > p",
+          "incomplete|color-contrast|li:nth-child(4) > p",
+          "incomplete|color-contrast|.p-4 > p:nth-child(1)",
+          "incomplete|color-contrast|.p-4 > p:nth-child(2)",
+          "incomplete|color-contrast|.list-none > .m-0.text-gray-1000:nth-child(1)",
+          "incomplete|color-contrast|div:nth-child(5) > .my-\\[var\\(--geist-gap-half\\)\\]",
+          "incomplete|color-contrast|a[href$=\"eve.dev/\"]",
+          "incomplete|color-contrast|.leading-5.focus-visible\\:rounded-sm.focus-visible\\:shadow-\\[var\\(--ds-focus-ring\\)\\]:nth-child(2) > .duration-100.\\[\\:not\\(\\[aria-disabled\\]\\)\\]\\:hover\\:text-gray-1000[data-zone=\"667155\"]",
+          "incomplete|color-contrast|div:nth-child(5) > .list-none > .leading-5.focus-visible\\:rounded-sm.focus-visible\\:shadow-\\[var\\(--ds-focus-ring\\)\\]:nth-child(3) > .duration-100.\\[\\:not\\(\\[aria-disabled\\]\\)\\]\\:hover\\:text-gray-1000[data-zone=\"667155\"]",
+          "incomplete|color-contrast|a[href$=\"nitro\"]",
+          "incomplete|color-contrast|a[href$=\"turborepo\"]",
+          "incomplete|color-contrast|.leading-5.focus-visible\\:rounded-sm.focus-visible\\:shadow-\\[var\\(--ds-focus-ring\\)\\]:nth-child(6) > .duration-100.\\[\\:not\\(\\[aria-disabled\\]\\)\\]\\:hover\\:text-gray-1000[data-zone=\"667155\"]",
+          "incomplete|color-contrast|.leading-5.focus-visible\\:rounded-sm.focus-visible\\:shadow-\\[var\\(--ds-focus-ring\\)\\]:nth-child(7) > .duration-100.\\[\\:not\\(\\[aria-disabled\\]\\)\\]\\:hover\\:text-gray-1000[data-zone=\"667155\"]",
+          "incomplete|color-contrast|a[href$=\"xmcp\"]",
+          "incomplete|color-contrast|a[href$=\"frameworks\"]",
+          "incomplete|color-contrast|div:nth-child(6) > .my-\\[var\\(--geist-gap-half\\)\\]",
+          "incomplete|color-contrast|.leading-5.focus-visible\\:rounded-sm.focus-visible\\:shadow-\\[var\\(--ds-focus-ring\\)\\]:nth-child(1) > .duration-100[href$=\"sdk\"][data-zone=\"667155\"]",
+          "incomplete|color-contrast|.leading-5.focus-visible\\:rounded-sm.focus-visible\\:shadow-\\[var\\(--ds-focus-ring\\)\\]:nth-child(2) > .duration-100.\\[\\:not\\(\\[aria-disabled\\]\\)\\]\\:hover\\:text-gray-1000[href$=\"workflows\"]",
+          "incomplete|color-contrast|div:nth-child(6) > .list-none > .leading-5.focus-visible\\:rounded-sm.focus-visible\\:shadow-\\[var\\(--ds-focus-ring\\)\\]:nth-child(3) > .duration-100.\\[\\:not\\(\\[aria-disabled\\]\\)\\]\\:hover\\:text-gray-1000[data-zone=\"667155\"]",
+          "incomplete|color-contrast|a[href$=\"chat\"]",
+          "incomplete|color-contrast|.leading-5.focus-visible\\:rounded-sm.focus-visible\\:shadow-\\[var\\(--ds-focus-ring\\)\\]:nth-child(5) > .duration-100[href$=\"sdk\"][data-zone=\"667155\"]",
+          "incomplete|color-contrast|a[href$=\"streamdown.ai\"]",
+          "incomplete|color-contrast|div:nth-child(7) > .my-\\[var\\(--geist-gap-half\\)\\]",
+          "incomplete|color-contrast|a[href$=\"ai-apps\"]",
+          "incomplete|color-contrast|.duration-100.\\[\\:not\\(\\[aria-disabled\\]\\)\\]\\:hover\\:text-gray-1000[href$=\"web-apps\"]",
+          "incomplete|color-contrast|.duration-100.\\[\\:not\\(\\[aria-disabled\\]\\)\\]\\:hover\\:text-gray-1000[href$=\"marketing-sites\"]",
+          "incomplete|color-contrast|.duration-100.\\[\\:not\\(\\[aria-disabled\\]\\)\\]\\:hover\\:text-gray-1000[href$=\"multi-tenant-saas\"]",
+          "incomplete|color-contrast|.duration-100.\\[\\:not\\(\\[aria-disabled\\]\\)\\]\\:hover\\:text-gray-1000[href$=\"composable-commerce\"]",
+          "incomplete|color-contrast|div:nth-child(7) > .list-none > .leading-5.focus-visible\\:rounded-sm.focus-visible\\:shadow-\\[var\\(--ds-focus-ring\\)\\]:nth-child(6) > .duration-100.\\[\\:not\\(\\[aria-disabled\\]\\)\\]\\:hover\\:text-gray-1000.p-0\\.5",
+          "incomplete|color-contrast|a[href$=\"design-engineering\"]",
+          "incomplete|color-contrast|div:nth-child(8) > .my-\\[var\\(--geist-gap-half\\)\\]",
+          "incomplete|color-contrast|.duration-100[href$=\"docs\"][data-zone=\"667155\"]",
+          "incomplete|color-contrast|.duration-100.\\[\\:not\\(\\[aria-disabled\\]\\)\\]\\:hover\\:text-gray-1000[href$=\"blog\"]",
+          "incomplete|color-contrast|.duration-100.\\[\\:not\\(\\[aria-disabled\\]\\)\\]\\:hover\\:text-gray-1000[href$=\"changelog\"]",
+          "incomplete|color-contrast|.duration-100[href=\"/kb\"][data-zone=\"667155\"]",
+          "incomplete|color-contrast|a[href$=\"academy\"]",
+          "incomplete|color-contrast|a[href=\"/i\"]",
+          "incomplete|color-contrast|a[href$=\"community.vercel.com\"]",
+          "incomplete|color-contrast|div:nth-child(9) > .my-\\[var\\(--geist-gap-half\\)\\]",
+          "incomplete|color-contrast|.duration-100.\\[\\:not\\(\\[aria-disabled\\]\\)\\]\\:hover\\:text-gray-1000[href$=\"customers\"]",
+          "incomplete|color-contrast|.duration-100[href$=\"marketplace\"][data-zone=\"2d9dc9\"]",
+          "incomplete|color-contrast|a[href$=\"templates\"]",
+          "incomplete|color-contrast|.duration-100.\\[\\:not\\(\\[aria-disabled\\]\\)\\]\\:hover\\:text-gray-1000[href$=\"solution-partners\"]",
+          "incomplete|color-contrast|.duration-100.\\[\\:not\\(\\[aria-disabled\\]\\)\\]\\:hover\\:text-gray-1000[href$=\"aws\"]",
+          "incomplete|color-contrast|div:nth-child(10) > .my-\\[var\\(--geist-gap-half\\)\\]",
+          "incomplete|color-contrast|.duration-100.\\[\\:not\\(\\[aria-disabled\\]\\)\\]\\:hover\\:text-gray-1000[href$=\"about\"]",
+          "incomplete|color-contrast|a[href$=\"careers\"]",
+          "incomplete|color-contrast|a[href$=\"press\"]",
+          "incomplete|color-contrast|a[href$=\"events\"]",
+          "incomplete|color-contrast|a[href$=\"startups\"]",
+          "incomplete|color-contrast|a[href$=\"shipped\"]",
+          "incomplete|color-contrast|a[href$=\"open-source-program\"]",
+          "incomplete|color-contrast|div:nth-child(11) > .my-\\[var\\(--geist-gap-half\\)\\]",
+          "incomplete|color-contrast|a[href$=\"privacy-policy\"]",
+          "incomplete|color-contrast|a[href$=\"terms\"]",
+          "incomplete|color-contrast|a[href$=\"cookie-policy\"]",
+          "incomplete|color-contrast|a[href$=\"dpa\"]",
+          "incomplete|color-contrast|a[href$=\"acceptable-use-policy\"]",
+          "incomplete|color-contrast|a[href$=\"legal\"]",
+          "incomplete|color-contrast|a[href$=\"security.vercel.com\"]",
+          "incomplete|color-contrast|div:nth-child(12) > .my-\\[var\\(--geist-gap-half\\)\\]",
+          "incomplete|color-contrast|.leading-5.focus-visible\\:rounded-sm.focus-visible\\:shadow-\\[var\\(--ds-focus-ring\\)\\]:nth-child(1) > a[href$=\"vercel\"][rel=\"noopener\"][target=\"_blank\"]",
+          "incomplete|color-contrast|.leading-5.focus-visible\\:rounded-sm.focus-visible\\:shadow-\\[var\\(--ds-focus-ring\\)\\]:nth-child(2) > a[href$=\"vercel\"][rel=\"noopener\"][target=\"_blank\"]",
+          "incomplete|color-contrast|.leading-5.focus-visible\\:rounded-sm.focus-visible\\:shadow-\\[var\\(--ds-focus-ring\\)\\]:nth-child(3) > a[rel=\"noopener\"][target=\"_blank\"][data-zone=\"null\"]",
+          "incomplete|color-contrast|a[href$=\"@VercelHQ\"]",
+          "incomplete|color-contrast|.leading-5.focus-visible\\:rounded-sm.focus-visible\\:shadow-\\[var\\(--ds-focus-ring\\)\\]:nth-child(5) > a[rel=\"noopener\"][target=\"_blank\"][data-zone=\"null\"]"
+        ]
+      },
+      "dark-mobile": {
+        "violations": 1,
+        "incomplete": 69,
+        "ok": true,
+        "suppressed": 0,
+        "keys": [
+          "violation|scrollable-region-focusable|.\\[-ms-overflow-style\\:none\\]",
+          "incomplete|color-contrast|.top-7 > p",
+          "incomplete|color-contrast|li:nth-child(1) > p",
+          "incomplete|color-contrast|li:nth-child(2) > p",
+          "incomplete|color-contrast|li:nth-child(3) > p",
+          "incomplete|color-contrast|li:nth-child(4) > p",
+          "incomplete|color-contrast|.p-4 > p:nth-child(1)",
+          "incomplete|color-contrast|.p-4 > p:nth-child(2)",
+          "incomplete|color-contrast|.list-none > .m-0.text-gray-1000:nth-child(1)",
+          "incomplete|color-contrast|.m-0.text-gray-1000:nth-child(2)",
+          "incomplete|color-contrast|.max-w-5xl",
+          "incomplete|color-contrast|a[href$=\"eve.dev/\"]",
+          "incomplete|color-contrast|.leading-5.focus-visible\\:rounded-sm.focus-visible\\:shadow-\\[var\\(--ds-focus-ring\\)\\]:nth-child(2) > .duration-100.\\[\\:not\\(\\[aria-disabled\\]\\)\\]\\:hover\\:text-gray-1000[data-zone=\"667155\"]",
+          "incomplete|color-contrast|div:nth-child(5) > .list-none > .leading-5.focus-visible\\:rounded-sm.focus-visible\\:shadow-\\[var\\(--ds-focus-ring\\)\\]:nth-child(3) > .duration-100.\\[\\:not\\(\\[aria-disabled\\]\\)\\]\\:hover\\:text-gray-1000[data-zone=\"667155\"]",
+          "incomplete|color-contrast|a[href$=\"nitro\"]",
+          "incomplete|color-contrast|a[href$=\"turborepo\"]",
+          "incomplete|color-contrast|.leading-5.focus-visible\\:rounded-sm.focus-visible\\:shadow-\\[var\\(--ds-focus-ring\\)\\]:nth-child(6) > .duration-100.\\[\\:not\\(\\[aria-disabled\\]\\)\\]\\:hover\\:text-gray-1000[data-zone=\"667155\"]",
+          "incomplete|color-contrast|.leading-5.focus-visible\\:rounded-sm.focus-visible\\:shadow-\\[var\\(--ds-focus-ring\\)\\]:nth-child(7) > .duration-100.\\[\\:not\\(\\[aria-disabled\\]\\)\\]\\:hover\\:text-gray-1000[data-zone=\"667155\"]",
+          "incomplete|color-contrast|a[href$=\"xmcp\"]",
+          "incomplete|color-contrast|a[href$=\"frameworks\"]",
+          "incomplete|color-contrast|.leading-5.focus-visible\\:rounded-sm.focus-visible\\:shadow-\\[var\\(--ds-focus-ring\\)\\]:nth-child(1) > .duration-100[href$=\"sdk\"][data-zone=\"667155\"]",
+          "incomplete|color-contrast|.leading-5.focus-visible\\:rounded-sm.focus-visible\\:shadow-\\[var\\(--ds-focus-ring\\)\\]:nth-child(2) > .duration-100.\\[\\:not\\(\\[aria-disabled\\]\\)\\]\\:hover\\:text-gray-1000[href$=\"workflows\"]",
+          "incomplete|color-contrast|div:nth-child(6) > .list-none > .leading-5.focus-visible\\:rounded-sm.focus-visible\\:shadow-\\[var\\(--ds-focus-ring\\)\\]:nth-child(3) > .duration-100.\\[\\:not\\(\\[aria-disabled\\]\\)\\]\\:hover\\:text-gray-1000[data-zone=\"667155\"]",
+          "incomplete|color-contrast|a[href$=\"chat\"]",
+          "incomplete|color-contrast|.leading-5.focus-visible\\:rounded-sm.focus-visible\\:shadow-\\[var\\(--ds-focus-ring\\)\\]:nth-child(5) > .duration-100[href$=\"sdk\"][data-zone=\"667155\"]",
+          "incomplete|color-contrast|a[href$=\"streamdown.ai\"]",
+          "incomplete|color-contrast|div:nth-child(7) > .my-\\[var\\(--geist-gap-half\\)\\]",
+          "incomplete|color-contrast|a[href$=\"ai-apps\"]",
+          "incomplete|color-contrast|.duration-100.\\[\\:not\\(\\[aria-disabled\\]\\)\\]\\:hover\\:text-gray-1000[href$=\"web-apps\"]",
+          "incomplete|color-contrast|.duration-100.\\[\\:not\\(\\[aria-disabled\\]\\)\\]\\:hover\\:text-gray-1000[href$=\"marketing-sites\"]",
+          "incomplete|color-contrast|.duration-100.\\[\\:not\\(\\[aria-disabled\\]\\)\\]\\:hover\\:text-gray-1000[href$=\"multi-tenant-saas\"]",
+          "incomplete|color-contrast|.duration-100.\\[\\:not\\(\\[aria-disabled\\]\\)\\]\\:hover\\:text-gray-1000[href$=\"composable-commerce\"]",
+          "incomplete|color-contrast|div:nth-child(7) > .list-none > .leading-5.focus-visible\\:rounded-sm.focus-visible\\:shadow-\\[var\\(--ds-focus-ring\\)\\]:nth-child(6) > .duration-100.\\[\\:not\\(\\[aria-disabled\\]\\)\\]\\:hover\\:text-gray-1000.p-0\\.5",
+          "incomplete|color-contrast|a[href$=\"design-engineering\"]",
+          "incomplete|color-contrast|div:nth-child(8) > .my-\\[var\\(--geist-gap-half\\)\\]",
+          "incomplete|color-contrast|.duration-100[href$=\"docs\"][data-zone=\"667155\"]",
+          "incomplete|color-contrast|.duration-100.\\[\\:not\\(\\[aria-disabled\\]\\)\\]\\:hover\\:text-gray-1000[href$=\"blog\"]",
+          "incomplete|color-contrast|.duration-100.\\[\\:not\\(\\[aria-disabled\\]\\)\\]\\:hover\\:text-gray-1000[href$=\"changelog\"]",
+          "incomplete|color-contrast|.duration-100[href=\"/kb\"][data-zone=\"667155\"]",
+          "incomplete|color-contrast|a[href$=\"academy\"]",
+          "incomplete|color-contrast|a[href=\"/i\"]",
+          "incomplete|color-contrast|a[href$=\"community.vercel.com\"]",
+          "incomplete|color-contrast|div:nth-child(9) > .my-\\[var\\(--geist-gap-half\\)\\]",
+          "incomplete|color-contrast|.duration-100.\\[\\:not\\(\\[aria-disabled\\]\\)\\]\\:hover\\:text-gray-1000[href$=\"customers\"]",
+          "incomplete|color-contrast|.duration-100[href$=\"marketplace\"][data-zone=\"2d9dc9\"]",
+          "incomplete|color-contrast|a[href$=\"templates\"]",
+          "incomplete|color-contrast|.duration-100.\\[\\:not\\(\\[aria-disabled\\]\\)\\]\\:hover\\:text-gray-1000[href$=\"solution-partners\"]",
+          "incomplete|color-contrast|.duration-100.\\[\\:not\\(\\[aria-disabled\\]\\)\\]\\:hover\\:text-gray-1000[href$=\"aws\"]",
+          "incomplete|color-contrast|div:nth-child(10) > .my-\\[var\\(--geist-gap-half\\)\\]",
+          "incomplete|color-contrast|.duration-100.\\[\\:not\\(\\[aria-disabled\\]\\)\\]\\:hover\\:text-gray-1000[href$=\"about\"]",
+          "incomplete|color-contrast|a[href$=\"careers\"]",
+          "incomplete|color-contrast|a[href$=\"press\"]",
+          "incomplete|color-contrast|a[href$=\"events\"]",
+          "incomplete|color-contrast|a[href$=\"startups\"]",
+          "incomplete|color-contrast|a[href$=\"shipped\"]",
+          "incomplete|color-contrast|a[href$=\"open-source-program\"]",
+          "incomplete|color-contrast|div:nth-child(11) > .my-\\[var\\(--geist-gap-half\\)\\]",
+          "incomplete|color-contrast|a[href$=\"privacy-policy\"]",
+          "incomplete|color-contrast|a[href$=\"terms\"]",
+          "incomplete|color-contrast|a[href$=\"cookie-policy\"]",
+          "incomplete|color-contrast|a[href$=\"dpa\"]",
+          "incomplete|color-contrast|a[href$=\"acceptable-use-policy\"]",
+          "incomplete|color-contrast|a[href$=\"legal\"]",
+          "incomplete|color-contrast|a[href$=\"security.vercel.com\"]",
+          "incomplete|color-contrast|div:nth-child(12) > .my-\\[var\\(--geist-gap-half\\)\\]",
+          "incomplete|color-contrast|.leading-5.focus-visible\\:rounded-sm.focus-visible\\:shadow-\\[var\\(--ds-focus-ring\\)\\]:nth-child(1) > a[href$=\"vercel\"][rel=\"noopener\"][target=\"_blank\"]",
+          "incomplete|color-contrast|.leading-5.focus-visible\\:rounded-sm.focus-visible\\:shadow-\\[var\\(--ds-focus-ring\\)\\]:nth-child(2) > a[href$=\"vercel\"][rel=\"noopener\"][target=\"_blank\"]",
+          "incomplete|color-contrast|.leading-5.focus-visible\\:rounded-sm.focus-visible\\:shadow-\\[var\\(--ds-focus-ring\\)\\]:nth-child(3) > a[rel=\"noopener\"][target=\"_blank\"][data-zone=\"null\"]",
+          "incomplete|color-contrast|a[href$=\"@VercelHQ\"]",
+          "incomplete|color-contrast|.leading-5.focus-visible\\:rounded-sm.focus-visible\\:shadow-\\[var\\(--ds-focus-ring\\)\\]:nth-child(5) > a[rel=\"noopener\"][target=\"_blank\"][data-zone=\"null\"]"
+        ]
+      }
+    },
+    "distinctMissed": 72,
+    "distinctViolations": 1,
+    "rules": [
+      "scrollable-region-focusable",
+      "color-contrast"
+    ]
+  },
+  {
+    "url": "https://stripe.com/",
+    "name": "Stripe",
+    "category": "platform",
+    "ok": true,
+    "baseline": {
+      "violations": 2,
+      "incomplete": 71
+    },
+    "byState": {
+      "dark": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 12,
+        "keys": []
+      },
+      "reduced-motion": {
+        "violations": 0,
+        "incomplete": 1,
+        "ok": true,
+        "suppressed": 12,
+        "keys": [
+          "incomplete|color-contrast|#bento-card-title-billing"
+        ]
+      },
+      "forced-colors": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 12,
+        "keys": []
+      },
+      "mobile": {
+        "violations": 0,
+        "incomplete": 16,
+        "ok": true,
+        "suppressed": 12,
+        "keys": [
+          "incomplete|color-contrast|.hero-section__eyebrow-label",
+          "incomplete|color-contrast|#bento-card-title-billing",
+          "incomplete|color-contrast|.stats-list__stat:nth-child(1) > .stats-list__stat-value.hds-text--xxl",
+          "incomplete|color-contrast|.stats-list__stat:nth-child(1) > .stats-list__stat-description",
+          "incomplete|color-contrast|.stats-list__stat:nth-child(2) > .stats-list__stat-value.hds-text--xxl",
+          "incomplete|color-contrast|.stats-list__stat:nth-child(2) > .stats-list__stat-description",
+          "incomplete|color-contrast|.stats-list__stat:nth-child(3) > .stats-list__stat-value.hds-text--xxl",
+          "incomplete|color-contrast|.stats-list__stat:nth-child(3) > .stats-list__stat-description",
+          "incomplete|color-contrast|.stats-list__stat:nth-child(4) > .stats-list__stat-value.hds-text--xxl",
+          "incomplete|color-contrast|.stats-list__stat:nth-child(4) > .stats-list__stat-description",
+          "incomplete|color-contrast|#summary-customer-content-Hertz",
+          "incomplete|color-contrast|#detail-customer-content-URBN > .customer-stories__customer-data > .customer-stories__customer-data-stat:nth-child(1) > .hds-text--soft.hds-text--inline.hds-text--md > .hds-text--emphasized.hds-text--inline",
+          "incomplete|color-contrast|#detail-customer-content-URBN > .customer-stories__customer-data > .customer-stories__customer-data-stat:nth-child(2) > .hds-text--soft.hds-text--inline.hds-text--md > .hds-text--emphasized.hds-text--inline",
+          "incomplete|color-contrast|#detail-customer-content-Instacart > .customer-stories__customer-data > .customer-stories__customer-data-stat:nth-child(1) > .hds-text--soft.hds-text--inline.hds-text--md > .hds-text--emphasized.hds-text--inline",
+          "incomplete|color-contrast|#detail-customer-content-Instacart > .customer-stories__customer-data > .customer-stories__customer-data-stat:nth-child(2) > .hds-text--soft.hds-text--inline.hds-text--md > .hds-text--emphasized.hds-text--inline",
+          "incomplete|color-contrast|#detail-customer-content-LeMonde > .customer-stories__customer-data > .customer-stories__customer-data-stat:nth-child(1) > .hds-text--soft.hds-text--inline.hds-text--md > .hds-text--emphasized.hds-text--inline"
+        ]
+      },
+      "reflow-320": {
+        "violations": 0,
+        "incomplete": 16,
+        "ok": true,
+        "suppressed": 12,
+        "keys": [
+          "incomplete|color-contrast|.hero-section__eyebrow-label",
+          "incomplete|color-contrast|#bento-card-title-billing",
+          "incomplete|color-contrast|#bento-card-title-agentic-commerce",
+          "incomplete|color-contrast|.stats-list__stat:nth-child(1) > .stats-list__stat-value.hds-text--xxl",
+          "incomplete|color-contrast|.stats-list__stat:nth-child(1) > .stats-list__stat-description",
+          "incomplete|color-contrast|.stats-list__stat:nth-child(2) > .stats-list__stat-value.hds-text--xxl",
+          "incomplete|color-contrast|.stats-list__stat:nth-child(2) > .stats-list__stat-description",
+          "incomplete|color-contrast|.stats-list__stat:nth-child(3) > .stats-list__stat-value.hds-text--xxl",
+          "incomplete|color-contrast|.stats-list__stat:nth-child(3) > .stats-list__stat-description",
+          "incomplete|color-contrast|.stats-list__stat:nth-child(4) > .stats-list__stat-value.hds-text--xxl",
+          "incomplete|color-contrast|.stats-list__stat:nth-child(4) > .stats-list__stat-description",
+          "incomplete|color-contrast|#summary-customer-content-Hertz",
+          "incomplete|color-contrast|#detail-customer-content-URBN > .customer-stories__customer-data > .customer-stories__customer-data-stat:nth-child(1) > .hds-text--soft.hds-text--inline.hds-text--md > .hds-text--emphasized.hds-text--inline",
+          "incomplete|color-contrast|#detail-customer-content-URBN > .customer-stories__customer-data > .customer-stories__customer-data-stat:nth-child(2) > .hds-text--soft.hds-text--inline.hds-text--md > .hds-text--emphasized.hds-text--inline",
+          "incomplete|color-contrast|#detail-customer-content-Instacart > .customer-stories__customer-data > .customer-stories__customer-data-stat:nth-child(2) > .hds-text--soft.hds-text--inline.hds-text--md > .hds-text--emphasized.hds-text--inline",
+          "incomplete|color-contrast|#detail-customer-content-LeMonde > .customer-stories__customer-data > .customer-stories__customer-data-stat:nth-child(1) > .hds-text--soft.hds-text--inline.hds-text--md > .hds-text--emphasized.hds-text--inline"
+        ]
+      },
+      "dark-mobile": {
+        "violations": 0,
+        "incomplete": 16,
+        "ok": true,
+        "suppressed": 12,
+        "keys": [
+          "incomplete|color-contrast|.hero-section__eyebrow-label",
+          "incomplete|color-contrast|#bento-card-title-billing",
+          "incomplete|color-contrast|.stats-list__stat:nth-child(1) > .stats-list__stat-value.hds-text--xxl",
+          "incomplete|color-contrast|.stats-list__stat:nth-child(1) > .stats-list__stat-description",
+          "incomplete|color-contrast|.stats-list__stat:nth-child(2) > .stats-list__stat-value.hds-text--xxl",
+          "incomplete|color-contrast|.stats-list__stat:nth-child(2) > .stats-list__stat-description",
+          "incomplete|color-contrast|.stats-list__stat:nth-child(3) > .stats-list__stat-value.hds-text--xxl",
+          "incomplete|color-contrast|.stats-list__stat:nth-child(3) > .stats-list__stat-description",
+          "incomplete|color-contrast|.stats-list__stat:nth-child(4) > .stats-list__stat-value.hds-text--xxl",
+          "incomplete|color-contrast|.stats-list__stat:nth-child(4) > .stats-list__stat-description",
+          "incomplete|color-contrast|#summary-customer-content-Hertz",
+          "incomplete|color-contrast|#detail-customer-content-URBN > .customer-stories__customer-data > .customer-stories__customer-data-stat:nth-child(1) > .hds-text--soft.hds-text--inline.hds-text--md > .hds-text--emphasized.hds-text--inline",
+          "incomplete|color-contrast|#detail-customer-content-URBN > .customer-stories__customer-data > .customer-stories__customer-data-stat:nth-child(2) > .hds-text--soft.hds-text--inline.hds-text--md > .hds-text--emphasized.hds-text--inline",
+          "incomplete|color-contrast|#detail-customer-content-Instacart > .customer-stories__customer-data > .customer-stories__customer-data-stat:nth-child(1) > .hds-text--soft.hds-text--inline.hds-text--md > .hds-text--emphasized.hds-text--inline",
+          "incomplete|color-contrast|#detail-customer-content-Instacart > .customer-stories__customer-data > .customer-stories__customer-data-stat:nth-child(2) > .hds-text--soft.hds-text--inline.hds-text--md > .hds-text--emphasized.hds-text--inline",
+          "incomplete|color-contrast|#detail-customer-content-LeMonde > .customer-stories__customer-data > .customer-stories__customer-data-stat:nth-child(1) > .hds-text--soft.hds-text--inline.hds-text--md > .hds-text--emphasized.hds-text--inline"
+        ]
+      }
+    },
+    "distinctMissed": 17,
+    "distinctViolations": 0,
+    "rules": [
+      "color-contrast"
+    ]
+  },
+  {
+    "url": "https://www.wikipedia.org/",
+    "name": "Wikipedia",
+    "category": "general",
+    "ok": true,
+    "baseline": {
+      "violations": 0,
+      "incomplete": 2
+    },
+    "byState": {
+      "dark": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "reduced-motion": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "forced-colors": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "mobile": {
+        "violations": 1,
+        "incomplete": 30,
+        "ok": true,
+        "suppressed": 0,
+        "keys": [
+          "violation|label|#searchInput",
+          "incomplete|color-contrast|#js-link-box-pt > strong",
+          "incomplete|color-contrast|#js-link-box-pt > small",
+          "incomplete|color-contrast|#js-link-box-pt > small > span",
+          "incomplete|color-contrast|#js-link-box-en > strong",
+          "incomplete|color-contrast|#js-link-box-en > small",
+          "incomplete|color-contrast|#js-link-box-en > small > span",
+          "incomplete|color-contrast|#js-link-box-ja > strong",
+          "incomplete|color-contrast|#js-link-box-ja > small",
+          "incomplete|color-contrast|#js-link-box-ja > small > span",
+          "incomplete|color-contrast|#js-link-box-de > strong",
+          "incomplete|color-contrast|#js-link-box-de > small",
+          "incomplete|color-contrast|#js-link-box-de > small > span",
+          "incomplete|color-contrast|#js-link-box-ru > strong",
+          "incomplete|color-contrast|#js-link-box-ru > small",
+          "incomplete|color-contrast|#js-link-box-ru > small > span",
+          "incomplete|color-contrast|#js-link-box-fr > strong",
+          "incomplete|color-contrast|#js-link-box-fr > small",
+          "incomplete|color-contrast|#js-link-box-fr > small > span",
+          "incomplete|color-contrast|#js-link-box-es > strong",
+          "incomplete|color-contrast|#js-link-box-es > small",
+          "incomplete|color-contrast|#js-link-box-es > small > span",
+          "incomplete|color-contrast|#js-link-box-zh > strong",
+          "incomplete|color-contrast|#js-link-box-zh > small",
+          "incomplete|color-contrast|#js-link-box-zh > small > span",
+          "incomplete|color-contrast|#js-link-box-it > strong",
+          "incomplete|color-contrast|#js-link-box-it > small",
+          "incomplete|color-contrast|#js-link-box-it > small > span",
+          "incomplete|color-contrast|#js-link-box-pl > strong",
+          "incomplete|color-contrast|#js-link-box-pl > small",
+          "incomplete|color-contrast|#js-link-box-pl > small > span"
+        ]
+      },
+      "reflow-320": {
+        "violations": 1,
+        "incomplete": 30,
+        "ok": true,
+        "suppressed": 0,
+        "keys": [
+          "violation|label|#searchInput",
+          "incomplete|color-contrast|#js-link-box-pt > strong",
+          "incomplete|color-contrast|#js-link-box-pt > small",
+          "incomplete|color-contrast|#js-link-box-pt > small > span",
+          "incomplete|color-contrast|#js-link-box-en > strong",
+          "incomplete|color-contrast|#js-link-box-en > small",
+          "incomplete|color-contrast|#js-link-box-en > small > span",
+          "incomplete|color-contrast|#js-link-box-ja > strong",
+          "incomplete|color-contrast|#js-link-box-ja > small",
+          "incomplete|color-contrast|#js-link-box-ja > small > span",
+          "incomplete|color-contrast|#js-link-box-de > strong",
+          "incomplete|color-contrast|#js-link-box-de > small",
+          "incomplete|color-contrast|#js-link-box-de > small > span",
+          "incomplete|color-contrast|#js-link-box-ru > strong",
+          "incomplete|color-contrast|#js-link-box-ru > small",
+          "incomplete|color-contrast|#js-link-box-ru > small > span",
+          "incomplete|color-contrast|#js-link-box-fr > strong",
+          "incomplete|color-contrast|#js-link-box-fr > small",
+          "incomplete|color-contrast|#js-link-box-fr > small > span",
+          "incomplete|color-contrast|#js-link-box-es > strong",
+          "incomplete|color-contrast|#js-link-box-es > small",
+          "incomplete|color-contrast|#js-link-box-es > small > span",
+          "incomplete|color-contrast|#js-link-box-zh > strong",
+          "incomplete|color-contrast|#js-link-box-zh > small",
+          "incomplete|color-contrast|#js-link-box-zh > small > span",
+          "incomplete|color-contrast|#js-link-box-it > strong",
+          "incomplete|color-contrast|#js-link-box-it > small",
+          "incomplete|color-contrast|#js-link-box-it > small > span",
+          "incomplete|color-contrast|#js-link-box-pl > strong",
+          "incomplete|color-contrast|#js-link-box-pl > small",
+          "incomplete|color-contrast|#js-link-box-pl > small > span"
+        ]
+      },
+      "dark-mobile": {
+        "violations": 1,
+        "incomplete": 30,
+        "ok": true,
+        "suppressed": 0,
+        "keys": [
+          "violation|label|#searchInput",
+          "incomplete|color-contrast|#js-link-box-pt > strong",
+          "incomplete|color-contrast|#js-link-box-pt > small",
+          "incomplete|color-contrast|#js-link-box-pt > small > span",
+          "incomplete|color-contrast|#js-link-box-en > strong",
+          "incomplete|color-contrast|#js-link-box-en > small",
+          "incomplete|color-contrast|#js-link-box-en > small > span",
+          "incomplete|color-contrast|#js-link-box-ja > strong",
+          "incomplete|color-contrast|#js-link-box-ja > small",
+          "incomplete|color-contrast|#js-link-box-ja > small > span",
+          "incomplete|color-contrast|#js-link-box-de > strong",
+          "incomplete|color-contrast|#js-link-box-de > small",
+          "incomplete|color-contrast|#js-link-box-de > small > span",
+          "incomplete|color-contrast|#js-link-box-ru > strong",
+          "incomplete|color-contrast|#js-link-box-ru > small",
+          "incomplete|color-contrast|#js-link-box-ru > small > span",
+          "incomplete|color-contrast|#js-link-box-fr > strong",
+          "incomplete|color-contrast|#js-link-box-fr > small",
+          "incomplete|color-contrast|#js-link-box-fr > small > span",
+          "incomplete|color-contrast|#js-link-box-es > strong",
+          "incomplete|color-contrast|#js-link-box-es > small",
+          "incomplete|color-contrast|#js-link-box-es > small > span",
+          "incomplete|color-contrast|#js-link-box-zh > strong",
+          "incomplete|color-contrast|#js-link-box-zh > small",
+          "incomplete|color-contrast|#js-link-box-zh > small > span",
+          "incomplete|color-contrast|#js-link-box-it > strong",
+          "incomplete|color-contrast|#js-link-box-it > small",
+          "incomplete|color-contrast|#js-link-box-it > small > span",
+          "incomplete|color-contrast|#js-link-box-pl > strong",
+          "incomplete|color-contrast|#js-link-box-pl > small",
+          "incomplete|color-contrast|#js-link-box-pl > small > span"
+        ]
+      }
+    },
+    "distinctMissed": 31,
+    "distinctViolations": 1,
+    "rules": [
+      "label",
+      "color-contrast"
+    ]
+  },
+  {
+    "url": "https://www.gov.uk/",
+    "name": "GOV.UK",
+    "category": "general",
+    "ok": true,
+    "baseline": {
+      "violations": 0,
+      "incomplete": 0
+    },
+    "byState": {
+      "dark": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "reduced-motion": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "forced-colors": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "mobile": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "reflow-320": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      },
+      "dark-mobile": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 0,
+        "keys": []
+      }
+    },
+    "distinctMissed": 0,
+    "distinctViolations": 0,
+    "rules": []
+  },
+  {
+    "url": "https://www.nasa.gov/",
+    "name": "NASA",
+    "category": "general",
+    "ok": true,
+    "baseline": {
+      "violations": 0,
+      "incomplete": 47
+    },
+    "byState": {
+      "dark": {
+        "violations": 0,
+        "incomplete": 2,
+        "ok": true,
+        "suppressed": 0,
+        "keys": [
+          "incomplete|video-caption|#html5_media_1whrh1btj7t",
+          "incomplete|video-caption|#html5_media_kisuer4vve"
+        ]
+      },
+      "reduced-motion": {
+        "violations": 0,
+        "incomplete": 2,
+        "ok": true,
+        "suppressed": 0,
+        "keys": [
+          "incomplete|video-caption|#html5_media_crrxy6vwvsh",
+          "incomplete|video-caption|#html5_media_6ivhuagfq6v"
+        ]
+      },
+      "forced-colors": {
+        "violations": 0,
+        "incomplete": 2,
+        "ok": true,
+        "suppressed": 0,
+        "keys": [
+          "incomplete|video-caption|#html5_media_4jxk5ot7mpa",
+          "incomplete|video-caption|#html5_media_9fhk6onngeb"
+        ]
+      },
+      "mobile": {
+        "violations": 2,
+        "incomplete": 2,
+        "ok": true,
+        "suppressed": 0,
+        "keys": [
+          "violation|button-name|#global-navigation-trigger--mobile",
+          "violation|button-name|.hds-search-panel-mobile-trigger",
+          "incomplete|video-caption|#html5_media_nfqe2dcsz0h",
+          "incomplete|video-caption|#html5_media_302zkqiyuu6"
+        ]
+      },
+      "reflow-320": {
+        "violations": 2,
+        "incomplete": 2,
+        "ok": true,
+        "suppressed": 0,
+        "keys": [
+          "violation|button-name|#global-navigation-trigger--mobile",
+          "violation|button-name|.hds-search-panel-mobile-trigger",
+          "incomplete|video-caption|#html5_media_zpnzx8kk74g",
+          "incomplete|video-caption|#html5_media_cq8g39m1j9s"
+        ]
+      },
+      "dark-mobile": {
+        "violations": 2,
+        "incomplete": 2,
+        "ok": true,
+        "suppressed": 0,
+        "keys": [
+          "violation|button-name|#global-navigation-trigger--mobile",
+          "violation|button-name|.hds-search-panel-mobile-trigger",
+          "incomplete|video-caption|#html5_media_8skmav3jdmo",
+          "incomplete|video-caption|#html5_media_nb0tql0gsft"
+        ]
+      }
+    },
+    "distinctMissed": 14,
+    "distinctViolations": 2,
+    "rules": [
+      "video-caption",
+      "button-name"
+    ]
+  },
+  {
+    "url": "https://www.bbc.com/",
+    "name": "BBC",
+    "category": "general",
+    "ok": true,
+    "baseline": {
+      "violations": 1,
+      "incomplete": 0
+    },
+    "byState": {
+      "dark": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 22,
+        "keys": []
+      },
+      "reduced-motion": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 22,
+        "keys": []
+      },
+      "forced-colors": {
+        "violations": 0,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 22,
+        "keys": []
+      },
+      "mobile": {
+        "violations": 1,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 56,
+        "keys": [
+          "violation|button-name|.AccountButtons-styles__AccountMobileToggleButtonStyled-sc-32916240-0"
+        ]
+      },
+      "reflow-320": {
+        "violations": 1,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 56,
+        "keys": [
+          "violation|button-name|.AccountButtons-styles__AccountMobileToggleButtonStyled-sc-32916240-0"
+        ]
+      },
+      "dark-mobile": {
+        "violations": 1,
+        "incomplete": 0,
+        "ok": true,
+        "suppressed": 56,
+        "keys": [
+          "violation|button-name|.AccountButtons-styles__AccountMobileToggleButtonStyled-sc-32916240-0"
+        ]
+      }
+    },
+    "distinctMissed": 1,
+    "distinctViolations": 1,
+    "rules": [
+      "button-name"
+    ]
+  }
+]

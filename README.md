@@ -47,6 +47,22 @@ Dark mode (dark)  1 needing review not present in baseline
 1 finding is invisible to a single-run pipeline.
 ```
 
+## Does this actually find anything?
+
+I pointed it at 36 public homepages — standards bodies, framework docs, design systems, GitHub,
+Wikipedia, GOV.UK, the BBC — and measured how much a baseline-only run misses.
+
+**24 of 34 stable sites (71%) had at least one finding the baseline never surfaced. 16 of 34 (47%)
+had a violation, not merely something needing review.** Median two per site; the distribution is
+skewed and seven sites carry most of the volume. Six were clean in all seven states: W3C, WebAIM,
+MDN, Playwright, Primer and GOV.UK.
+
+Two identical runs of the same state produced 7 spurious findings across all 36 sites, so the signal
+clears the noise floor by roughly forty to one.
+
+[**Full method, counting rules, caveats and raw data →**](study/) Everything is committed, including
+the control run, so you can disagree with the interpretation without re-running anything.
+
 ## The states
 
 Each state changes exactly **one** variable away from the baseline. A full cross-product would be
