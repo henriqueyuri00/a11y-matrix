@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Pricing — shared header defect plus one of its own</title>
+<style>
+  :root { --bg:#ffffff; --ink:#1a1a1a; --accent:#1c5d3f; --on-accent:#ffffff; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#12161a; --ink:#e8ecef; --accent:#6cc49a; }
+    :root:not([data-theme=light]) .nav-cta { color: #6cc49a; }
+  }
+  body { background:var(--bg); color:var(--ink); font:16px/1.6 system-ui, sans-serif; margin:0; padding:20px; }
+  .nav-cta { background:var(--accent); color:var(--on-accent); border:0;
+             padding:10px 16px; border-radius:8px; font-size:15px; }
+  /* This one is only on this page, so it must not be classed as site-wide. */
+  .fineprint { color:#a8a8a8; background:#ffffff; font-size:13px; }
+</style>
+</head>
+<body>
+  <header><nav aria-label="Main"><button class="nav-cta" type="button">Start free trial</button></nav></header>
+  <main>
+    <h1>Pricing</h1>
+    <p>Simple plans that scale with you.</p>
+    <p class="fineprint">Prices exclude VAT and are billed annually in advance.</p>
+  </main>
+</body>
+</html>

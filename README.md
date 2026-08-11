@@ -100,11 +100,44 @@ never dropped silently, so you can audit the decision.
 That second one was found by scanning my own sales page, correcting it the recommended way, and
 watching the tool keep failing the corrected version.
 
+## Scanning a whole site
+
+One page is a demo. Pass several, a file of URLs, or a sitemap:
+
+```bash
+npx github:henriqueyuri00/a11y-matrix --sitemap https://example.com/sitemap.xml
+npx github:henriqueyuri00/a11y-matrix https://example.com/ https://example.com/pricing
+npx github:henriqueyuri00/a11y-matrix --urls pages.txt --max-pages 50
+```
+
+Across pages, findings are **deduplicated by element**, and the page count becomes the headline
+instead of the volume:
+
+```
+every page (shared layout — fixing this once fixes it everywhere)
+  serious   color-contrast  .nav-cta
+            18 page(s) · exposed by: dark, dark-mobile
+
+one page (specific to a single page)
+  serious   button-name     #filter-toggle
+            1 page(s) · exposed by: mobile, reflow-320
+```
+
+A header defect on 18 pages is one problem in one component, not 18 problems. Reporting it 18 times
+buries the handful that are genuinely page-specific — and tells the team the wrong thing about how
+much work they have.
+
+`--max-pages` defaults to 25, and truncation is always printed. A tool that silently scans 25 of
+4000 pages and reports "nothing found" has told you something false.
+
 ## Usage
 
 ```bash
-npx github:henriqueyuri00/a11y-matrix <url|file> [options]
+npx github:henriqueyuri00/a11y-matrix <url|file> [more urls...] [options]
 
+  --sitemap <url>    take pages from a sitemap.xml (follows an index one level)
+  --urls <file>      one URL or path per line; '#' comments allowed
+  --max-pages <n>    cap on pages scanned, always announced  (default: 25)
   --states <a,b>     only these states (baseline is always included)
   --tags <a,b>       axe tag filter    (default: wcag2a,wcag2aa,wcag21a,wcag21aa)
   --json <file>      full result as JSON

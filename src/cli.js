@@ -7,13 +7,21 @@ const path = require("path");
 const fs = require("fs");
 const { runMatrix } = require("./run.js");
 const { STATES, selectStates } = require("./states.js");
+const { resolvePages } = require("./pages.js");
+const { aggregate } = require("./aggregate.js");
 
 const USAGE = `
-a11y-matrix <url|file> [options]
+a11y-matrix <url|file> [more urls...] [options]
 
-  Runs axe-core across ${STATES.length} user preference states and reports the violations
+  Runs axe-core across ${STATES.length} user preference states and reports the findings
   that exist in one state but not in the baseline — the ones a single-run
   pipeline structurally cannot see.
+
+Pages
+  <url|file>...       one or more pages, or local files
+  --sitemap <url>     take pages from a sitemap.xml (follows a sitemap index one level)
+  --urls <file>       one URL or path per line; '#' comments allowed
+  --max-pages <n>     cap on pages scanned, always announced when it bites (default: 25)
 
 Options
   --states <a,b>    only these states (baseline is always included)
@@ -33,7 +41,8 @@ ${STATES.map(s => "  " + s.id.padEnd(15) + s.label).join("\n")}
 function parseArgs(argv) {
   const o = { states: null, tags: ["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"],
               json: null, markdown: null, settle: 400, timeout: 30000,
-              failOn: "unique", quiet: false, url: null };
+              failOn: "unique", quiet: false,
+              urls: [], sitemap: null, urlsFile: null, maxPages: 25 };
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i];
     const next = () => {
@@ -48,27 +57,21 @@ function parseArgs(argv) {
     else if (a === "--settle") o.settle = Number(next());
     else if (a === "--timeout") o.timeout = Number(next());
     else if (a === "--fail-on") o.failOn = next();
+    else if (a === "--sitemap") o.sitemap = next();
+    else if (a === "--urls") o.urlsFile = next();
+    else if (a === "--max-pages") o.maxPages = Number(next());
     else if (a === "--quiet") o.quiet = true;
     else if (a === "--list-states") o.listStates = true;
     else if (a === "-h" || a === "--help") o.help = true;
     else if (a.startsWith("-")) throw new Error("unknown option: " + a);
-    else if (o.url === null) o.url = a;
-    else throw new Error("unexpected argument: " + a);
+    else o.urls.push(a);
   }
   if (!["unique", "any", "never"].includes(o.failOn))
     throw new Error("--fail-on must be one of: unique, any, never");
   if (!Number.isFinite(o.settle) || o.settle < 0) throw new Error("--settle must be a non-negative number");
   if (!Number.isFinite(o.timeout) || o.timeout <= 0) throw new Error("--timeout must be a positive number");
+  if (!Number.isFinite(o.maxPages) || o.maxPages < 1) throw new Error("--max-pages must be a positive number");
   return o;
-}
-
-/* A bare path is far more common than a file:// URL on the command line, and
-   getting it wrong yields an opaque navigation error, so resolve it here. */
-function toUrl(target) {
-  if (/^[a-z][a-z0-9+.-]*:/i.test(target)) return target;
-  const abs = path.resolve(target);
-  if (!fs.existsSync(abs)) throw new Error("no such file: " + abs);
-  return "file:///" + abs.replace(/\\/g, "/");
 }
 
 const C = process.stdout.isTTY
@@ -191,6 +194,76 @@ function toMarkdown(results, summary) {
   return md.join("\n");
 }
 
+/*
+ * The site report leads with scope rather than volume. "This defect is on every
+ * page you scanned" is a different instruction to a team than "there are 47
+ * findings", and it is usually one shared component rather than 47 mistakes.
+ */
+function reportSite(site, opts) {
+  const L = [];
+  L.push(`\n${C.bold}${site.pagesScanned} page${site.pagesScanned === 1 ? "" : "s"} scanned${C.off}` +
+         (site.pagesFailed.length ? `  ${C.red}${site.pagesFailed.length} failed to load${C.off}` : ""));
+  for (const f of site.pagesFailed) L.push(`  ${C.red}${f.url} — ${f.error}${C.off}`);
+
+  L.push(`  ${C.dim}baseline sees ${site.baselineViolations} violation(s) and ` +
+         `${site.baselineDistinct - site.baselineViolations} needing review, deduplicated across pages${C.off}`);
+
+  if (!site.distinctMissed) {
+    L.push(`\n${C.green}Nothing appears outside the baseline state on any page.${C.off}`);
+    if (site.suppressed)
+      L.push(`${C.dim}${site.suppressed} finding(s) suppressed as scrolled out of view inside a ` +
+             `keyboard-reachable container.${C.off}`);
+    return L.join("\n");
+  }
+
+  const order = { "every page": 0, "several pages": 1, "one page": 2 };
+  const rows = site.findings.slice().sort((a, b) =>
+    (order[a.scope] - order[b.scope]) || (b.pageCount - a.pageCount) ||
+    (impactRank(a.impact) - impactRank(b.impact)));
+
+  let scope = null;
+  for (const f of rows) {
+    if (f.scope !== scope) {
+      scope = f.scope;
+      const note = scope === "every page"
+        ? "shared layout — fixing this once fixes it everywhere"
+        : scope === "several pages" ? "a shared component, or a repeated pattern"
+        : "specific to a single page";
+      L.push(`\n${C.bold}${scope}${C.off} ${C.dim}(${note})${C.off}`);
+    }
+    const mark = f.kind === "incomplete" ? C.yellow + "review  " : C.red + f.impact.padEnd(8);
+    L.push(`  ${mark}${C.off} ${f.rule}  ${C.dim}${f.target}${C.off}`);
+    L.push(`           ${C.dim}${f.pageCount} page(s) · exposed by: ${f.states.join(", ")}${C.off}`);
+  }
+
+  L.push("");
+  L.push(`${C.bold}${C.red}${site.distinctMissed} distinct finding(s) ` +
+         `(${site.distinctViolations} violation) are invisible to a single-state run.${C.off}`);
+  if (site.suppressed)
+    L.push(`${C.dim}${site.suppressed} further finding(s) suppressed as scrolled out of view inside a ` +
+           `keyboard-reachable container.${C.off}`);
+  return L.join("\n");
+}
+
+function siteMarkdown(site) {
+  const md = ["## Accessibility state matrix", "",
+              `${site.pagesScanned} page(s) scanned.` +
+              (site.pagesFailed.length ? ` ${site.pagesFailed.length} failed to load.` : "")];
+  if (!site.distinctMissed) {
+    md.push("", "Nothing appears outside the baseline state on any page.");
+  } else {
+    md.push("", `**${site.distinctMissed} distinct finding(s) are invisible to a single-state run** ` +
+                `(${site.distinctViolations} classed as violations).`, "");
+    md.push("| Scope | Pages | Rule | Element | Exposed by |");
+    md.push("|---|---:|---|---|---|");
+    const order = { "every page": 0, "several pages": 1, "one page": 2 };
+    for (const f of site.findings.slice().sort((a, b) => order[a.scope] - order[b.scope] || b.pageCount - a.pageCount))
+      md.push(`| ${f.scope} | ${f.pageCount} | \`${f.rule}\` | \`${f.target}\` | ${f.states.join(", ")} |`);
+  }
+  md.push("", "<sub>Generated by [a11y-matrix](https://github.com/henriqueyuri00/a11y-matrix).</sub>");
+  return md.join("\n");
+}
+
 async function main() {
   let opts;
   try { opts = parseArgs(process.argv.slice(2)); }
@@ -201,44 +274,80 @@ async function main() {
     for (const s of STATES) console.log(`\n${C.bold}${s.id}${C.off}  ${s.label}\n  ${C.dim}${s.why}${C.off}`);
     return;
   }
-  if (!opts.url) { console.error(C.red + "a target url or file is required" + C.off + "\n" + USAGE); process.exit(2); }
-
-  let url, states;
-  try { url = toUrl(opts.url); states = selectStates(opts.states); }
-  catch (e) { console.error(C.red + e.message + C.off); process.exit(2); }
-
-  if (!opts.quiet) console.error(`${C.dim}scanning ${url} across ${states.length} states${C.off}`);
-
-  let results;
+  let pages, states;
   try {
-    results = await runMatrix(url, states, {
-      tags: opts.tags, settle: opts.settle, timeout: opts.timeout,
-      onState: s => { if (!opts.quiet) process.stderr.write(`${C.dim}  · ${s.id}${C.off}\n`); }
-    });
-  } catch (e) { console.error(C.red + e.message + C.off); process.exit(2); }
+    states = selectStates(opts.states);
+    pages = await resolvePages(opts, (found, cap) =>
+      console.error(`${C.yellow}${found} pages found, scanning the first ${cap}. ` +
+                    `Raise --max-pages to cover the rest.${C.off}`));
+  } catch (e) { console.error(C.red + e.message + C.off + "\n" + USAGE); process.exit(2); }
 
-  const summary = report(results, opts);
-  console.log(summary.text);
+  const runOpts = { tags: opts.tags, settle: opts.settle, timeout: opts.timeout };
 
-  if (opts.json) {
-    fs.writeFileSync(opts.json, JSON.stringify({
-      url, generatedFor: states.map(s => s.id),
-      states: results.map(r => ({
-        id: r.state.id, label: r.state.label, ok: r.ok, error: r.error || null,
-        total: r.findings.size,
-        findings: [...r.findings.values()],
-        uniqueToState: r.uniqueToState,
-        alsoInBaseline: r.alsoInBaseline.length,
-        goneFromState: r.goneFromState
-      })),
-      uniqueTotal: summary.uniqueTotal
-    }, null, 2));
+  /* Single page keeps the original output verbatim. The per-state detail is
+     what a person debugging one page wants, and collapsing it into a site
+     rollup would be a downgrade for the common case. */
+  if (pages.length === 1) {
+    const url = pages[0];
+    if (!opts.quiet) console.error(`${C.dim}scanning ${url} across ${states.length} states${C.off}`);
+    let results;
+    try {
+      results = await runMatrix(url, states, { ...runOpts,
+        onState: s => { if (!opts.quiet) process.stderr.write(`${C.dim}  · ${s.id}${C.off}\n`); } });
+    } catch (e) { console.error(C.red + e.message + C.off); process.exit(2); }
+
+    const summary = report(results, opts);
+    console.log(summary.text);
+
+    if (opts.json) {
+      fs.writeFileSync(opts.json, JSON.stringify({
+        url, generatedFor: states.map(s => s.id),
+        states: results.map(r => ({
+          id: r.state.id, label: r.state.label, ok: r.ok, error: r.error || null,
+          total: r.findings.size,
+          findings: [...r.findings.values()],
+          uniqueToState: r.uniqueToState,
+          alsoInBaseline: r.alsoInBaseline.length,
+          goneFromState: r.goneFromState
+        })),
+        uniqueTotal: summary.uniqueTotal
+      }, null, 2));
+    }
+    if (opts.markdown) fs.writeFileSync(opts.markdown, toMarkdown(results, summary));
+
+    const fail = opts.failOn === "never" ? false
+               : opts.failOn === "any"   ? summary.anyTotal > 0
+               :                           summary.uniqueTotal > 0;
+    process.exit(fail ? 1 : 0);
   }
-  if (opts.markdown) fs.writeFileSync(opts.markdown, toMarkdown(results, summary));
+
+  /* ---------------------------------------------------------------- site */
+  if (!opts.quiet)
+    console.error(`${C.dim}scanning ${pages.length} pages across ${states.length} states each` +
+                  ` (${pages.length * states.length} loads)${C.off}`);
+
+  const perPage = [];
+  for (const [i, url] of pages.entries()) {
+    if (!opts.quiet) process.stderr.write(`${C.dim}  [${i + 1}/${pages.length}] ${url}${C.off}\n`);
+    try {
+      perPage.push({ url, ok: true, results: await runMatrix(url, states, runOpts) });
+    } catch (e) {
+      perPage.push({ url, ok: false, error: e.message, results: [] });
+      process.stderr.write(`${C.red}      failed: ${e.message}${C.off}\n`);
+    }
+  }
+
+  const site = aggregate(perPage);
+  console.log(reportSite(site, opts));
+
+  if (opts.json) fs.writeFileSync(opts.json, JSON.stringify({
+    pages, generatedFor: states.map(s => s.id), ...site
+  }, null, 2));
+  if (opts.markdown) fs.writeFileSync(opts.markdown, siteMarkdown(site));
 
   const fail = opts.failOn === "never" ? false
-             : opts.failOn === "any"   ? summary.anyTotal > 0
-             :                           summary.uniqueTotal > 0;
+             : opts.failOn === "any"   ? site.distinctMissed + site.baselineDistinct > 0
+             :                           site.distinctMissed > 0;
   process.exit(fail ? 1 : 0);
 }
 

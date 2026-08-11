@@ -8,8 +8,12 @@
  * attributed to that state and no other. Everything else is detail.
  */
 const path = require("path");
+const fs = require("fs");
+const os = require("os");
 const { runMatrix, normalise, key } = require("../src/run.js");
 const { STATES, selectStates } = require("../src/states.js");
+const { aggregate } = require("../src/aggregate.js");
+const { resolvePages, fromFile } = require("../src/pages.js");
 
 let pass = 0, fail = 0;
 const failures = [];
@@ -58,8 +62,88 @@ console.log("\nSTATE SELECTION");
   ok("  rejects an unknown state", threw);
 }
 
+console.log("\nPAGE LISTS");
+{
+  const tmp = path.join(os.tmpdir(), "a11y-matrix-urls-test.txt");
+  fs.writeFileSync(tmp, "# a comment\nhttps://a.example/\n\n  https://b.example/  \n# another\n");
+  const got = fromFile(tmp);
+  ok("  strips comments and blank lines", got.length === 2, got.join(","));
+  ok("  trims whitespace", got[1] === "https://b.example/", JSON.stringify(got[1]));
+  fs.unlinkSync(tmp);
+}
+
+console.log("\nAGGREGATION — one shared defect is one defect");
+{
+  const f = (rule, target, kind = "violation") => ({ kind, rule, target, impact: "serious", summary: "" });
+  const page = (url, uniq) => ({
+    url, ok: true,
+    results: [
+      { state: { id: "baseline" }, findings: new Map(), uniqueToState: [], suppressed: 0 },
+      { state: { id: "dark" }, findings: new Map(), uniqueToState: uniq, suppressed: 0 }
+    ]
+  });
+  const site = aggregate([
+    page("/a", [f("color-contrast", ".nav-cta"), f("button-name", "#only-a")]),
+    page("/b", [f("color-contrast", ".nav-cta")]),
+    page("/c", [f("color-contrast", ".nav-cta")])
+  ]);
+  ok("  the shared defect is counted once", site.distinctMissed === 2, site.distinctMissed);
+  const shared = site.findings.find(x => x.target === ".nav-cta");
+  const onlyA = site.findings.find(x => x.target === "#only-a");
+  ok("  and knows it is on every page", shared.scope === "every page", shared.scope);
+  ok("  with the page count kept", shared.pageCount === 3, shared.pageCount);
+  ok("  a single-page defect is not called site-wide", onlyA.scope === "one page", onlyA.scope);
+  ok("  violations are counted separately", site.distinctViolations === 2, site.distinctViolations);
+}
+{
+  /* Scope must not claim "every page" when there was only one page to be on. */
+  const site = aggregate([{ url: "/only", ok: true, results: [
+    { state: { id: "baseline" }, findings: new Map(), uniqueToState: [], suppressed: 0 },
+    { state: { id: "dark" }, findings: new Map(), suppressed: 0,
+      uniqueToState: [{ kind: "violation", rule: "color-contrast", target: ".x", impact: "serious", summary: "" }] }
+  ] }]);
+  ok("  one page scanned never yields \"every page\"",
+     site.findings[0].scope === "one page", site.findings[0].scope);
+}
+{
+  const site = aggregate([
+    { url: "/ok", ok: true, results: [{ state: { id: "baseline" }, findings: new Map(), uniqueToState: [], suppressed: 0 }] },
+    { url: "/bad", ok: false, error: "boom", results: [] }
+  ]);
+  ok("  failed pages are reported, not folded into the count",
+     site.pagesScanned === 1 && site.pagesFailed.length === 1, site.pagesScanned + "/" + site.pagesFailed.length);
+}
+
 /* ------------------------------------------------------- integration: pages */
 (async () => {
+  console.log("\nPAGE CAP — truncation must never be silent");
+  {
+    let announced = null;
+    const pages = await resolvePages(
+      { urls: ["https://a.example/", "https://b.example/", "https://a.example/", "https://c.example/"],
+        sitemap: null, urlsFile: null, maxPages: 2 },
+      (found, cap) => { announced = { found, cap }; });
+    ok("  duplicates removed before capping", pages.length === 2, pages.join(","));
+    ok("  the cap is announced with the real total",
+       announced && announced.found === 3 && announced.cap === 2, JSON.stringify(announced));
+  }
+
+  console.log("\nSITE SCAN — a shared defect is reported once, in place");
+  {
+    const site = aggregate(await Promise.all(
+      ["shared-header-a.html", "shared-header-b.html"].map(async f => ({
+        url: fixture(f), ok: true,
+        results: await runMatrix(fixture(f), selectStates(["dark"]), OPTS)
+      }))));
+    const shared = site.findings.find(x => x.rule === "color-contrast" && x.target === "button");
+    ok("  the header defect is found", !!shared,
+       site.findings.map(f => f.rule + "@" + f.target).join(", "));
+    ok("  and attributed to every page", shared && shared.scope === "every page", shared && shared.scope);
+    ok("  not duplicated per page", site.distinctMissed === 1, site.distinctMissed);
+    ok("  the page-specific baseline defect is not confused with it",
+       site.baselineViolations >= 1, site.baselineViolations);
+  }
+
   console.log("\nNO FALSE ALARMS — a page that is genuinely fine stays quiet");
   {
     const r = await runMatrix(fixture("clean.html"), STATES, OPTS);
