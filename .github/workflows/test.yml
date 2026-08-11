@@ -27,30 +27,63 @@ jobs:
       - uses: actions/setup-node@v4
         with: { node-version: 20 }
 
-      - name: Clean fixture must pass
+      - name: A clean page must pass
         uses: ./
         with:
           url: test/fixtures/clean.html
           comment-file: clean-report.md
 
-      - name: Broken fixture must fail
-        id: broken
+      # A real violation must break the build under the default policy.
+      - name: A real violation must fail
+        id: violation
+        continue-on-error: true
+        uses: ./
+        with:
+          url: test/fixtures/reflow-only.html
+          states: reflow-320
+          comment-file: violation-report.md
+
+      # The 1:1 contrast defect lands in axe's "incomplete" bucket, and the
+      # default policy deliberately does NOT fail on those -- otherwise any page
+      # with a data table breaks the build and the check gets deleted. It must
+      # still fail when a team opts in with fail-on: findings. Both directions
+      # are asserted, because a policy only tested one way is half tested.
+      - name: Needs-review alone must NOT fail by default
+        id: review-default
         continue-on-error: true
         uses: ./
         with:
           url: test/fixtures/dark-only.html
           states: dark
-          comment-file: broken-report.md
 
-      - name: Assert the broken fixture actually failed
+      - name: Needs-review must fail when asked for
+        id: review-strict
+        continue-on-error: true
+        uses: ./
+        with:
+          url: test/fixtures/dark-only.html
+          states: dark
+          fail-on: findings
+          comment-file: review-report.md
+
+      - name: Assert the failure policy
         run: |
-          if [ "${{ steps.broken.outcome }}" != "failure" ]; then
-            echo "::error::dark-only.html should have failed the action but did not"
-            exit 1
-          fi
-          echo "unique-total reported: ${{ steps.broken.outputs.unique-total }}"
-          if [ "${{ steps.broken.outputs.unique-total }}" = "0" ]; then
-            echo "::error::the action failed but reported no unique findings -- the output is wrong"
-            exit 1
-          fi
-          test -s broken-report.md || { echo "::error::markdown report was not written"; exit 1; }
+          fail() { echo "::error::$1"; exit 1; }
+
+          [ "${{ steps.violation.outcome }}" = "failure" ] \
+            || fail "a real violation did not fail the build"
+          [ "${{ steps.violation.outputs.unique-total }}" != "0" ] \
+            || fail "the violation run failed but reported no findings -- the output is wrong"
+
+          [ "${{ steps.review-default.outcome }}" = "success" ] \
+            || fail "needs-review results broke the build under the default policy"
+
+          [ "${{ steps.review-strict.outcome }}" = "failure" ] \
+            || fail "fail-on: findings did not fail on needs-review results"
+          [ "${{ steps.review-strict.outputs.unique-total }}" != "0" ] \
+            || fail "the strict run failed but reported no findings"
+
+          test -s violation-report.md || fail "markdown report was not written"
+          test -s review-report.md    || fail "markdown report was not written for the strict run"
+
+          echo "policy verified: violations fail, needs-review does not unless asked for"
