@@ -18,9 +18,9 @@ inputs:
     required: false
     default: "wcag2a,wcag2aa,wcag21a,wcag21aa"
   fail-on:
-    description: "unique | any | never. Default fails only on findings new relative to the baseline."
+    description: "violations | findings | any | never. Default fails only on violations that are new relative to the baseline; axe incomplete results are always reported but do not break the build."
     required: false
-    default: "unique"
+    default: "violations"
   settle:
     description: "Milliseconds to wait after load before scanning."
     required: false

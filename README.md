@@ -144,14 +144,24 @@ npx github:henriqueyuri00/a11y-matrix <url|file> [more urls...] [options]
   --tags <a,b>       axe tag filter    (default: wcag2a,wcag2aa,wcag21a,wcag21aa)
   --json <file>      full result as JSON
   --markdown <file>  a PR-comment-shaped summary
-  --fail-on <mode>   unique | any | never   (default: unique)
+  --fail-on <mode>   violations | findings | any | never   (default: violations)
   --settle <ms>      wait after load before scanning (default: 400)
   --list-states      print the matrix and exit
 ```
 
 Exit code is `1` when something fails the `--fail-on` mode, `2` on a usage or navigation error.
-The default, `unique`, fails only on findings that are **new relative to your baseline** — so
-adopting this does not dump your existing backlog into a red build on day one.
+
+**Two deliberate choices about what breaks a build.** Only findings that are *new relative to your
+baseline* count, so adopting this does not dump your existing backlog into a red build on day one.
+And only **violations** fail by default — axe's `incomplete` results are shown prominently and cost
+nothing.
+
+That second one is a retreat, and it came from running this against its own results page: one
+ordinary data table produced 478 incomplete results across seven states with **zero** violations
+among them, because `content is too short to determine if it is actual text content` fires on every
+numeric cell. Failing a build on *a person should look at this* is how a check gets deleted in its
+first week, and a deleted check finds nothing at all. Use `--fail-on findings` if you want them
+enforced.
 
 ### In GitHub Actions
 

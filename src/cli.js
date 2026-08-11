@@ -10,6 +10,7 @@ const { STATES, selectStates } = require("./states.js");
 const { resolvePages } = require("./pages.js");
 const { aggregate } = require("./aggregate.js");
 const { groupFindings } = require("./grouping.js");
+const { FAIL_MODES, shouldFail } = require("./failure.js");
 
 const USAGE = `
 a11y-matrix <url|file> [more urls...] [options]
@@ -31,7 +32,9 @@ Options
   --markdown <file> write a PR-comment-shaped summary
   --settle <ms>     wait after load before scanning  (default: 400)
   --timeout <ms>    navigation timeout               (default: 30000)
-  --fail-on <mode>  unique | any | never             (default: unique)
+  --fail-on <mode>  violations | findings | any | never  (default: violations)
+                    violations = new violations only; findings also counts
+                    axe "incomplete" results, which are always shown either way
   --quiet           only print the summary line
   --list-states     print the state matrix and exit
 
@@ -42,7 +45,7 @@ ${STATES.map(s => "  " + s.id.padEnd(15) + s.label).join("\n")}
 function parseArgs(argv) {
   const o = { states: null, tags: ["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"],
               json: null, markdown: null, settle: 400, timeout: 30000,
-              failOn: "unique", quiet: false,
+              failOn: "violations", quiet: false,
               urls: [], sitemap: null, urlsFile: null, maxPages: 25 };
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i];
@@ -67,8 +70,11 @@ function parseArgs(argv) {
     else if (a.startsWith("-")) throw new Error("unknown option: " + a);
     else o.urls.push(a);
   }
-  if (!["unique", "any", "never"].includes(o.failOn))
-    throw new Error("--fail-on must be one of: unique, any, never");
+  /* "unique" was the old name for what is now "findings". Kept working rather
+     than failing someone's pipeline over a rename. */
+  if (o.failOn === "unique") o.failOn = "findings";
+  if (!FAIL_MODES.includes(o.failOn))
+    throw new Error("--fail-on must be one of: " + FAIL_MODES.join(", "));
   if (!Number.isFinite(o.settle) || o.settle < 0) throw new Error("--settle must be a non-negative number");
   if (!Number.isFinite(o.timeout) || o.timeout <= 0) throw new Error("--timeout must be a positive number");
   if (!Number.isFinite(o.maxPages) || o.maxPages < 1) throw new Error("--max-pages must be a positive number");
@@ -161,22 +167,31 @@ function report(results, opts) {
                  `not rendered in this state, not that it was fixed.${C.off}`);
   }
 
+  const uniqueViolations = results
+    .filter(r => r.state.id !== "baseline")
+    .reduce((t, r) => t + r.uniqueToState.filter(f => f.kind === "violation").length, 0);
+
   lines.push("");
   if (uniqueTotal === 0) {
     lines.push(`${C.green}No state-specific findings.${C.off} ` +
                `${C.dim}${anyTotal} total finding(s) across ${results.length} states.${C.off}`);
   } else {
     lines.push(`${C.bold}${C.red}${uniqueTotal} finding${uniqueTotal === 1 ? "" : "s"} ` +
-               `${uniqueTotal === 1 ? "is" : "are"} invisible to a single-run pipeline.${C.off}`);
+               `${uniqueTotal === 1 ? "is" : "are"} invisible to a single-run pipeline` +
+               (uniqueViolations !== uniqueTotal
+                 ? `, ${uniqueViolations} of them violation${uniqueViolations === 1 ? "" : "s"}` : "") +
+               `.${C.off}`);
     const anyIncomplete = results.some(r => r.state.id !== "baseline" &&
                                             r.uniqueToState.some(f => f.kind === "incomplete"));
     if (anyIncomplete)
       lines.push(`${C.dim}Findings marked ${C.off}${C.yellow}review${C.off}${C.dim} are axe "incomplete" results. ` +
                  `Pipelines that assert only on violations never see them — which is where text at 1:1 ` +
-                 `against its own background lands, because axe cannot prove it was not meant to be hidden.${C.off}`);
+                 `against its own background lands, because axe cannot prove it was not meant to be hidden. ` +
+                 `They are shown, but by default they do not fail the build: see --fail-on.${C.off}`);
   }
-  return { text: lines.join("\n"), uniqueTotal, anyTotal };
+  return { text: lines.join("\n"), uniqueTotal, uniqueViolations, anyTotal };
 }
+
 
 function toMarkdown(results, summary) {
   const md = ["## Accessibility state matrix", ""];
@@ -326,10 +341,11 @@ async function main() {
     }
     if (opts.markdown) fs.writeFileSync(opts.markdown, toMarkdown(results, summary));
 
-    const fail = opts.failOn === "never" ? false
-               : opts.failOn === "any"   ? summary.anyTotal > 0
-               :                           summary.uniqueTotal > 0;
-    process.exit(fail ? 1 : 0);
+    process.exit(shouldFail(opts.failOn, {
+      newViolations: summary.uniqueViolations,
+      newFindings: summary.uniqueTotal,
+      everything: summary.anyTotal
+    }) ? 1 : 0);
   }
 
   /* ---------------------------------------------------------------- site */
@@ -356,10 +372,11 @@ async function main() {
   }, null, 2));
   if (opts.markdown) fs.writeFileSync(opts.markdown, siteMarkdown(site));
 
-  const fail = opts.failOn === "never" ? false
-             : opts.failOn === "any"   ? site.distinctMissed + site.baselineDistinct > 0
-             :                           site.distinctMissed > 0;
-  process.exit(fail ? 1 : 0);
+  process.exit(shouldFail(opts.failOn, {
+    newViolations: site.distinctViolations,
+    newFindings: site.distinctMissed,
+    everything: site.distinctMissed + site.baselineDistinct
+  }) ? 1 : 0);
 }
 
 main().catch(e => { console.error(e); process.exit(2); });

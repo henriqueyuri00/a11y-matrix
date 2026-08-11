@@ -72,6 +72,25 @@ console.log("\nPAGE LISTS");
   fs.unlinkSync(tmp);
 }
 
+console.log("\nFAIL MODES — what is allowed to break a build");
+{
+  const { shouldFail, FAIL_MODES } = require("../src/failure.js");
+  const onlyReview = { newViolations: 0, newFindings: 478, everything: 478 };
+  const oneViolation = { newViolations: 1, newFindings: 479, everything: 479 };
+  const clean = { newViolations: 0, newFindings: 0, everything: 0 };
+
+  ok("  default does not fail on needs-review alone", shouldFail("violations", onlyReview) === false);
+  ok("  default fails on a single new violation", shouldFail("violations", oneViolation) === true);
+  ok("  findings mode does fail on needs-review", shouldFail("findings", onlyReview) === true);
+  ok("  never means never", shouldFail("never", oneViolation) === false);
+  ok("  any counts the baseline too", shouldFail("any", { ...clean, everything: 3 }) === true);
+  ok("  a clean page passes in every mode",
+     FAIL_MODES.every(m => shouldFail(m, clean) === false),
+     FAIL_MODES.filter(m => shouldFail(m, clean)).join(","));
+  ok("  an unknown mode falls back to the safe default, not to passing",
+     shouldFail("nonsense", oneViolation) === true);
+}
+
 console.log("\nGROUPING — repeats collapse, they do not disappear");
 {
   const { groupFindings } = require("../src/grouping.js");
