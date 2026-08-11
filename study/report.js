@@ -19,8 +19,7 @@ const data = JSON.parse(fs.readFileSync(path.join(__dirname, "results.json"), "u
 
 /* Join the noise-floor control, if it has been run. A site whose output differs
    between two IDENTICAL runs cannot support a claim that a difference between
-   two DIFFERENT runs was caused by the preference. Those sites are named, and
-   excluded from the conservative headline rather than quietly kept. */
+   two DIFFERENT runs was caused by the preference. */
 const controlPath = path.join(__dirname, "control.json");
 const control = fs.existsSync(controlPath)
   ? new Map(JSON.parse(fs.readFileSync(controlPath, "utf8")).map(c => [c.url, c]))
@@ -32,11 +31,26 @@ for (const d of data) {
   d.stable = d.noise === 0;
 }
 
-const ok = data.filter(d => d.ok);
-const failed = data.filter(d => !d.ok);
-const stable = ok.filter(d => d.stable);
+const scanned  = data.filter(d => d.ok);
+const failed   = data.filter(d => !d.ok);
+const stable   = scanned.filter(d => d.stable);
+const unstable = scanned.filter(d => d.noise !== null && d.noise > 0);
+const unknown  = scanned.filter(d => d.noise === null);
 
-const pct = (n, d) => d === 0 ? "—" : (100 * n / d).toFixed(0) + "%";
+/*
+ * Every figure below is computed on ONE basis, and it is the conservative one
+ * whenever the control has been run.
+ *
+ * Mixing bases is how a report ends up excluding a site as unstable in one
+ * section and quoting that same site's noise as a category total three lines
+ * later. An earlier version of this script did exactly that: a shopping site
+ * whose carousel produced 715 phantom findings was correctly dropped from the
+ * headline and then silently dominated the sector breakdown.
+ */
+const basis = control.size ? stable : scanned;
+const BASIS = control.size ? "stable sites only" : "all scanned sites (no control run)";
+
+const pct = (n, d) => d === 0 ? "-" : (100 * n / d).toFixed(0) + "%";
 const sum = (a, f) => a.reduce((t, x) => t + f(x), 0);
 const median = a => {
   if (!a.length) return 0;
@@ -46,28 +60,39 @@ const median = a => {
 };
 
 console.log(`\nSAMPLE`);
-console.log(`  ${data.length} sites attempted, ${ok.length} scanned, ${failed.length} failed to load`);
+console.log(`  ${data.length} attempted, ${scanned.length} scanned, ${failed.length} failed to load`);
 if (failed.length) console.log(`  failed: ${failed.map(f => f.name).join(", ")}`);
 
-const missed = ok.filter(d => d.distinctMissed > 0);
-const missedV = ok.filter(d => d.distinctViolations > 0);
+if (control.size) {
+  console.log(`\nNOISE CONTROL  (same state twice, nothing changed between runs)`);
+  console.log(`  ${stable.length}/${scanned.length} produced identical output across two identical runs`);
+  const app = sum(unstable, d => control.get(d.url).appeared);
+  const dis = sum(unstable, d => control.get(d.url).disappeared);
+  console.log(`  ${app} findings appeared and ${dis} disappeared with nothing changed`);
+  if (unstable.length) console.log(`  excluded as unstable: ${unstable.map(d => `${d.name}(${d.noise})`).join(", ")}`);
+  if (unknown.length)  console.log(`  no control data: ${unknown.map(d => d.name).join(", ")}`);
+}
 
-console.log(`\nHEADLINE  (all sites that scanned)`);
-console.log(`  ${missed.length}/${ok.length} (${pct(missed.length, ok.length)}) had at least one finding a baseline-only run did not surface`);
-console.log(`  ${missedV.length}/${ok.length} (${pct(missedV.length, ok.length)}) had at least one such finding axe classes as a VIOLATION`);
+console.log(`\n--- everything below is computed on ${BASIS}: ${basis.length} sites ---`);
+
+const missed  = basis.filter(d => d.distinctMissed > 0);
+const missedV = basis.filter(d => d.distinctViolations > 0);
+
+console.log(`\nHEADLINE`);
+console.log(`  ${missed.length}/${basis.length} (${pct(missed.length, basis.length)}) had at least one finding a baseline-only run did not surface`);
+console.log(`  ${missedV.length}/${basis.length} (${pct(missedV.length, basis.length)}) had at least one such finding axe classes as a VIOLATION`);
 
 console.log(`\nVOLUME  (deduplicated across states)`);
-console.log(`  baseline violations across the sample  : ${sum(ok, d => d.baseline.violations)}`);
-console.log(`  baseline incomplete                    : ${sum(ok, d => d.baseline.incomplete)}`);
-console.log(`  distinct findings missed by baseline   : ${sum(ok, d => d.distinctMissed)}`);
-console.log(`    of which violations                  : ${sum(ok, d => d.distinctViolations)}`);
-console.log(`  median missed per site                 : ${median(ok.map(d => d.distinctMissed))}`);
-console.log(`  worst single site                      : ${Math.max(0, ...ok.map(d => d.distinctMissed))}`);
+console.log(`  baseline violations across the sample  : ${sum(basis, d => d.baseline.violations)}`);
+console.log(`  baseline incomplete                    : ${sum(basis, d => d.baseline.incomplete)}`);
+console.log(`  distinct findings missed by baseline   : ${sum(basis, d => d.distinctMissed)}`);
+console.log(`    of which violations                  : ${sum(basis, d => d.distinctViolations)}`);
+console.log(`  median missed per site                 : ${median(basis.map(d => d.distinctMissed))}`);
+console.log(`  worst single site                      : ${Math.max(0, ...basis.map(d => d.distinctMissed))}`);
 
 console.log(`\nWHAT EXPOSED IT`);
-/* A finding is attributed to a group of states, not to one, because narrow
-   viewports overlap by construction. Reporting "which single state found it"
-   would be arbitrary between three equally valid answers. */
+/* Attribution is by group, not by single state: narrow-viewport states overlap
+   by construction, so naming one of three as "the" cause would be arbitrary. */
 const GROUPS = {
   "narrow viewport": ["mobile", "reflow-320", "dark-mobile"],
   "dark scheme":     ["dark", "dark-mobile"],
@@ -76,54 +101,38 @@ const GROUPS = {
 };
 for (const [label, ids] of Object.entries(GROUPS)) {
   let sites = 0, findings = 0;
-  for (const d of ok) {
+  for (const d of basis) {
     const keys = new Set(ids.flatMap(id => d.byState[id]?.keys || []));
     if (keys.size) { sites++; findings += keys.size; }
   }
   console.log(`  ${label.padEnd(18)} ${String(sites).padStart(3)} sites   ${String(findings).padStart(4)} distinct findings`);
 }
-/* Dark-only: exposed by a dark state and by nothing narrow, so the colour
-   scheme is the only variable that can explain it. */
+/* Exposed by a dark state and by nothing narrow, so the colour scheme is the
+   only variable that can explain it. */
 let darkOnlySites = 0, darkOnly = 0;
-for (const d of ok) {
+for (const d of basis) {
   const narrow = new Set(["mobile", "reflow-320"].flatMap(id => d.byState[id]?.keys || []));
-  const dark = new Set(["dark", "dark-mobile"].flatMap(id => d.byState[id]?.keys || []));
-  const only = [...dark].filter(k => !narrow.has(k));
+  const dark   = new Set(["dark", "dark-mobile"].flatMap(id => d.byState[id]?.keys || []));
+  const only   = [...dark].filter(k => !narrow.has(k));
   if (only.length) { darkOnlySites++; darkOnly += only.length; }
 }
 console.log(`  ${"dark scheme ALONE".padEnd(18)} ${String(darkOnlySites).padStart(3)} sites   ${String(darkOnly).padStart(4)} distinct findings`);
 
 console.log(`\nRULES INVOLVED  (sites where the rule fired outside the baseline)`);
 const ruleCount = {};
-for (const d of ok) for (const r of d.rules || []) ruleCount[r] = (ruleCount[r] || 0) + 1;
+for (const d of basis) for (const r of d.rules || []) ruleCount[r] = (ruleCount[r] || 0) + 1;
 Object.entries(ruleCount).sort((a, b) => b[1] - a[1])
   .forEach(([r, c]) => console.log(`  ${String(c).padStart(3)} sites  ${r}`));
 
 console.log(`\nBY CATEGORY`);
-for (const c of [...new Set(ok.map(d => d.category))]) {
-  const g = ok.filter(d => d.category === c);
+for (const c of [...new Set(basis.map(d => d.category))]) {
+  const g = basis.filter(d => d.category === c);
   const m = g.filter(d => d.distinctMissed > 0).length;
-  console.log(`  ${c.padEnd(14)} ${m}/${g.length} affected (${pct(m, g.length)}), ` +
-              `${sum(g, d => d.distinctMissed)} distinct findings missed`);
-}
-
-if (control.size) {
-  const unstable = ok.filter(d => d.noise !== null && d.noise > 0);
-  const unknown = ok.filter(d => d.noise === null);
-  console.log(`\nNOISE CONTROL  (same state twice, nothing changed between runs)`);
-  console.log(`  ${stable.length}/${ok.length} sites produced identical output across two identical runs`);
-  if (unstable.length) console.log(`  unstable: ${unstable.map(d => `${d.name}(${d.noise})`).join(", ")}`);
-  if (unknown.length)  console.log(`  no control data: ${unknown.map(d => d.name).join(", ")}`);
-
-  const sm = stable.filter(d => d.distinctMissed > 0);
-  const smv = stable.filter(d => d.distinctViolations > 0);
-  console.log(`\n  CONSERVATIVE HEADLINE — stable sites only`);
-  console.log(`    ${sm.length}/${stable.length} (${pct(sm.length, stable.length)}) had a finding the baseline missed`);
-  console.log(`    ${smv.length}/${stable.length} (${pct(smv.length, stable.length)}) had a VIOLATION the baseline missed`);
-  console.log(`    ${sum(stable, d => d.distinctMissed)} distinct findings, median ${median(stable.map(d => d.distinctMissed))} per site`);
+  console.log(`  ${c.padEnd(18)} ${m}/${g.length} affected (${pct(m, g.length)}), ` +
+              `${sum(g, d => d.distinctMissed)} distinct findings, median ${median(g.map(d => d.distinctMissed))}`);
 }
 
 console.log(`\nCLEAN IN EVERY STATE`);
-const clean = ok.filter(d => d.distinctMissed === 0 && d.baseline.violations === 0);
+const clean = basis.filter(d => d.distinctMissed === 0 && d.baseline.violations === 0);
 console.log(`  ${clean.length}: ${clean.map(d => d.name).join(", ") || "none"}`);
 console.log("");

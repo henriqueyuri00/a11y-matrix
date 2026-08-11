@@ -286,5 +286,275 @@
     "appeared": 0,
     "disappeared": 0,
     "baselineTotal": 1
+  },
+  {
+    "url": "https://european-union.europa.eu/index_en",
+    "name": "European Union",
+    "ok": true,
+    "appeared": 0,
+    "disappeared": 0,
+    "baselineTotal": 8
+  },
+  {
+    "url": "https://commission.europa.eu/index_en",
+    "name": "European Commission",
+    "ok": true,
+    "appeared": 0,
+    "disappeared": 0,
+    "baselineTotal": 3
+  },
+  {
+    "url": "https://www.europarl.europa.eu/portal/en",
+    "name": "European Parliament",
+    "ok": true,
+    "appeared": 0,
+    "disappeared": 0,
+    "baselineTotal": 58
+  },
+  {
+    "url": "https://eur-lex.europa.eu/homepage.html",
+    "name": "EUR-Lex",
+    "ok": true,
+    "appeared": 0,
+    "disappeared": 0,
+    "baselineTotal": 23
+  },
+  {
+    "url": "https://www.bund.de/",
+    "name": "Bund.de (DE)",
+    "ok": true,
+    "appeared": 0,
+    "disappeared": 0,
+    "baselineTotal": 12
+  },
+  {
+    "url": "https://www.service-public.fr/",
+    "name": "Service-Public (FR)",
+    "ok": true,
+    "appeared": 0,
+    "disappeared": 0,
+    "baselineTotal": 39
+  },
+  {
+    "url": "https://www.rijksoverheid.nl/",
+    "name": "Rijksoverheid (NL)",
+    "ok": true,
+    "appeared": 0,
+    "disappeared": 0,
+    "baselineTotal": 1
+  },
+  {
+    "url": "https://www.gov.ie/en/",
+    "name": "Gov.ie (IE)",
+    "ok": true,
+    "appeared": 0,
+    "disappeared": 0,
+    "baselineTotal": 1
+  },
+  {
+    "url": "https://www.borger.dk/",
+    "name": "Borger.dk (DK)",
+    "ok": true,
+    "appeared": 0,
+    "disappeared": 0,
+    "baselineTotal": 47
+  },
+  {
+    "url": "https://www.suomi.fi/frontpage",
+    "name": "Suomi.fi (FI)",
+    "ok": true,
+    "appeared": 0,
+    "disappeared": 0,
+    "baselineTotal": 11
+  },
+  {
+    "url": "https://www.gov.pl/",
+    "name": "Gov.pl (PL)",
+    "ok": true,
+    "appeared": 0,
+    "disappeared": 0,
+    "baselineTotal": 12
+  },
+  {
+    "url": "https://www.gov.pt/",
+    "name": "Gov.pt (PT)",
+    "ok": true,
+    "appeared": 0,
+    "disappeared": 0,
+    "baselineTotal": 2
+  },
+  {
+    "url": "https://www.zalando.com/",
+    "name": "Zalando",
+    "ok": true,
+    "appeared": 0,
+    "disappeared": 0,
+    "baselineTotal": 1
+  },
+  {
+    "url": "https://www.bol.com/nl/nl/",
+    "name": "bol.com",
+    "ok": true,
+    "appeared": 0,
+    "disappeared": 0,
+    "baselineTotal": 3
+  },
+  {
+    "url": "https://allegro.pl/",
+    "name": "Allegro",
+    "ok": true,
+    "appeared": 0,
+    "disappeared": 0,
+    "baselineTotal": 0
+  },
+  {
+    "url": "https://www.fnac.com/",
+    "name": "Fnac",
+    "ok": true,
+    "appeared": 0,
+    "disappeared": 0,
+    "baselineTotal": 0
+  },
+  {
+    "url": "https://www.mediamarkt.de/",
+    "name": "MediaMarkt",
+    "ok": true,
+    "appeared": 0,
+    "disappeared": 0,
+    "baselineTotal": 2
+  },
+  {
+    "url": "https://www.ikea.com/",
+    "name": "IKEA",
+    "ok": true,
+    "appeared": 0,
+    "disappeared": 0,
+    "baselineTotal": 53
+  },
+  {
+    "url": "https://www2.hm.com/en_eur/index.html",
+    "name": "H&M",
+    "ok": true,
+    "appeared": 0,
+    "disappeared": 0,
+    "baselineTotal": 1
+  },
+  {
+    "url": "https://www.decathlon.com/",
+    "name": "Decathlon",
+    "ok": true,
+    "appeared": 0,
+    "disappeared": 0,
+    "baselineTotal": 73
+  },
+  {
+    "url": "https://www.otto.de/",
+    "name": "Otto",
+    "ok": true,
+    "appeared": 122,
+    "disappeared": 125,
+    "baselineTotal": 209
+  },
+  {
+    "url": "https://www.elcorteingles.es/",
+    "name": "El Corte Ingles",
+    "ok": true,
+    "appeared": 0,
+    "disappeared": 0,
+    "baselineTotal": 1
+  },
+  {
+    "url": "https://www.bahn.de/",
+    "name": "Deutsche Bahn",
+    "ok": true,
+    "appeared": 0,
+    "disappeared": 0,
+    "baselineTotal": 24
+  },
+  {
+    "url": "https://www.sncf-connect.com/",
+    "name": "SNCF Connect",
+    "ok": true,
+    "appeared": 0,
+    "disappeared": 0,
+    "baselineTotal": 0
+  },
+  {
+    "url": "https://www.trenitalia.com/",
+    "name": "Trenitalia",
+    "ok": true,
+    "appeared": 0,
+    "disappeared": 0,
+    "baselineTotal": 37
+  },
+  {
+    "url": "https://www.lufthansa.com/de/en/homepage",
+    "name": "Lufthansa",
+    "ok": true,
+    "appeared": 0,
+    "disappeared": 0,
+    "baselineTotal": 3
+  },
+  {
+    "url": "https://wwws.airfrance.fr/",
+    "name": "Air France",
+    "ok": false,
+    "error": "baseline state failed to load: page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://wwws.airfrance.fr/\nCall log:\n\u001b[2m  - navigating to \"https://wwws.airfrance.fr/\", waiting until \"load\"\u001b[22m\n"
+  },
+  {
+    "url": "https://www.renfe.com/es/es",
+    "name": "Renfe",
+    "ok": true,
+    "appeared": 13,
+    "disappeared": 13,
+    "baselineTotal": 34
+  },
+  {
+    "url": "https://www.ing.com/Home.htm",
+    "name": "ING",
+    "ok": true,
+    "appeared": 0,
+    "disappeared": 0,
+    "baselineTotal": 6
+  },
+  {
+    "url": "https://n26.com/en-eu",
+    "name": "N26",
+    "ok": true,
+    "appeared": 1,
+    "disappeared": 13,
+    "baselineTotal": 18
+  },
+  {
+    "url": "https://www.revolut.com/",
+    "name": "Revolut",
+    "ok": true,
+    "appeared": 0,
+    "disappeared": 0,
+    "baselineTotal": 1
+  },
+  {
+    "url": "https://www.santander.com/en/home",
+    "name": "Santander",
+    "ok": true,
+    "appeared": 3,
+    "disappeared": 3,
+    "baselineTotal": 108
+  },
+  {
+    "url": "https://group.bnpparibas/en/",
+    "name": "BNP Paribas",
+    "ok": true,
+    "appeared": 0,
+    "disappeared": 0,
+    "baselineTotal": 1
+  },
+  {
+    "url": "https://www.rabobank.nl/",
+    "name": "Rabobank",
+    "ok": true,
+    "appeared": 0,
+    "disappeared": 0,
+    "baselineTotal": 15
   }
 ]

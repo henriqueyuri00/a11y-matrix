@@ -49,16 +49,18 @@ Dark mode (dark)  1 needing review not present in baseline
 
 ## Does this actually find anything?
 
-I pointed it at 36 public homepages — standards bodies, framework docs, design systems, GitHub,
-Wikipedia, GOV.UK, the BBC — and measured how much a baseline-only run misses.
+I pointed it at 70 public homepages — standards bodies, framework docs, design systems, GitHub,
+Wikipedia, and sectors with an explicit EU legal accessibility duty: public sector, banking,
+passenger transport and e-commerce.
 
-**24 of 34 stable sites (71%) had at least one finding the baseline never surfaced. 16 of 34 (47%)
-had a violation, not merely something needing review.** Median two per site; the distribution is
-skewed and seven sites carry most of the volume. Six were clean in all seven states: W3C, WebAIM,
-MDN, Playwright, Primer and GOV.UK.
+**42 of 62 stable sites (68%) had at least one finding the baseline never surfaced. 26 of 62 (42%)
+had a violation, not merely something needing review.** Median one per site; the distribution is
+skewed and a handful of sites carry most of the volume. Eleven were clean in all seven states,
+including W3C, MDN, GOV.UK and three EU government portals.
 
-Two identical runs of the same state produced 7 spurious findings across all 36 sites, so the signal
-clears the noise floor by roughly forty to one.
+Six sites were excluded because two *identical* runs of the same state disagreed — rotating
+carousels, not defects. One of them alone accounted for 715 apparent findings. Excluding it moved
+its sector's total from 729 to 14, which is why the control run exists.
 
 [**Full method, counting rules, caveats and raw data →**](study/) Everything is committed, including
 the control run, so you can disagree with the interpretation without re-running anything.

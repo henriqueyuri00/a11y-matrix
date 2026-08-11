@@ -18,50 +18,77 @@ node study/report.js    # the numbers
 
 ## Result
 
-Of 36 homepages, all of which scanned successfully:
+70 homepages attempted. 68 loaded; **Allegro** and **Air France** did not and are excluded rather
+than counted as clean. Of the 68, **62 produced byte-identical output across two identical runs** and
+only those 62 are used below.
 
 | | |
 |---|---:|
-| Produced output identical across two identical runs (the control) | **34 / 36** |
-| Of those, had at least one finding the baseline run did not surface | **24 / 34 — 71%** |
-| Had at least one such finding axe classes as a **violation**, not "needs review" | **16 / 34 — 47%** |
-| Distinct findings missed by the baseline, across the stable sites | **296** |
-| Median per site | **2** |
+| Had at least one finding the baseline run did not surface | **42 / 62 — 68%** |
+| Had at least one such finding axe classes as a **violation**, not "needs review" | **26 / 62 — 42%** |
+| Distinct findings missed by the baseline | **348** |
+| Median per site | **1** |
 
-**The distribution is very skewed, and the median is the honest number.** Half the sites have two or
-fewer. Seven sites carry most of the volume — Vercel (72), Tailwind CSS (52), Radix UI (40),
-Wikipedia (31), TypeScript (17), Stripe (17), NASA (14). Quoting the 296 without the median would
-imply every site is sitting on dozens, and that is not what the data says.
+**The median is the honest headline, not the 348.** The distribution is badly skewed: half the sites
+have one or none, and a handful carry most of the volume — Vercel (72), Tailwind CSS (52), Radix UI
+(40), Wikipedia (31). Quoting the total alone would imply every site is sitting on dozens.
+
+The first pass of this study covered 36 mostly-technical sites and returned 71% / 47%. Extending it
+to 70 sites across regulated sectors moved those to 68% / 42%. **The finding replicated on a nearly
+doubled and much more varied sample**, which is more interesting than either number on its own.
 
 ### What exposed the finding
 
 | Variable | Sites | Distinct findings |
 |---|---:|---:|
-| Narrow viewport (mobile / 320px reflow) | 26 | 301 |
-| Dark colour scheme | 25 | 270 |
-| **Dark scheme alone** — not exposed by any narrow state | **9** | **31** |
-| Reduced motion | 4 | 10 |
-| Forced colors | 1 | 2 |
+| Narrow viewport (mobile / 320px reflow) | 42 | 340 |
+| Dark colour scheme | 38 | 303 |
+| **Dark scheme alone** — not exposed by any narrow state | **9** | **28** |
+| Reduced motion | 3 | 8 |
+| Forced colors | 0 | 0 |
 
 The first two overlap heavily, which is why *dark scheme alone* is broken out: on those 9 sites the
-colour scheme is the only variable that can explain the finding.
+colour scheme is the only variable that can explain the finding. Forced colors found nothing on any
+stable site — worth reporting precisely because it is a negative result.
+
+### By sector
+
+| Sector | Affected | Median findings |
+|---|---:|---:|
+| Framework and tool docs | 13 / 16 (81%) | 3 |
+| Design systems | 3 / 4 (75%) | 4 |
+| EU passenger transport | 3 / 4 (75%) | 3 |
+| EU banking | 3 / 4 (75%) | 1 |
+| EU public sector | 8 / 12 (67%) | 1 |
+| Developer platforms | 4 / 7 (57%) | 1 |
+| EU e-commerce | 4 / 8 (50%) | 0.5 |
+| Standards bodies | 2 / 4 (50%) | 1 |
+
+The sectors carrying an explicit legal accessibility duty are not visibly better than the ones that
+do not. They are also not visibly worse.
 
 ### Which rules
 
-`color-contrast` on 22 sites, then `scrollable-region-focusable` (4), `link-in-text-block` (4),
-`button-name` (4), and `page-horizontal-overflow` (3 — a document genuinely wider than a 320px
-viewport, which is the WCAG 1.4.10 condition stated directly rather than inferred).
+`color-contrast` on 32 sites, then `page-horizontal-overflow` (9 — a document genuinely wider than a
+320px viewport, the WCAG 1.4.10 condition stated directly rather than inferred),
+`scrollable-region-focusable` (4), `link-in-text-block` (4), `button-name` (3).
 
 ### Clean in all seven states
 
-**W3C, WebAIM, MDN, Playwright, Primer, GOV.UK.** Six of thirty-six. It is worth noticing that four
-of them either write the standard, teach it, or are bound by a public-sector accessibility duty.
+**W3C, WebAIM, MDN, Playwright, Primer, GOV.UK, Service-Public (FR), Rijksoverheid (NL), Suomi.fi
+(FI), Fnac, SNCF Connect.** Eleven of sixty-two. Several either write the standard, teach it, or are
+bound by a public-sector accessibility duty and appear to be meeting it.
 
 ### The noise floor
 
-Two identical runs of the same state, across all 36 sites, produced **7 findings that appeared and 2
-that disappeared** — all of them on two sites (Carbon, NASA), which are excluded from the figures
-above. The other 34 were byte-identical. The signal clears the noise by roughly forty to one.
+Two identical runs of the same state, across all 68 sites, produced **146 findings that appeared and
+156 that disappeared** — concentrated on six sites, all excluded above. The other 62 were
+byte-identical.
+
+That control is not a formality. One shopping site produced **715 apparent findings** and a churn of
++122/−125 between two identical loads: a rotating product carousel, not a defect. It was excluded,
+and doing so moved its whole sector's total from 729 findings to 14. Without the control, that one
+number would have been the loudest thing in this study and it would have been wrong.
 
 ## Method
 
@@ -105,6 +132,33 @@ no narrow state are reported separately as *dark scheme alone*, since there the 
 only variable that can explain them.
 
 **Sites that failed to load are reported, never folded into a denominator.**
+
+## Why the sample includes regulated sectors
+
+The first pass covered standards bodies, framework docs, design systems and platforms — places where
+the people running the site are usually the people who read the WCAG spec. That answers whether the
+gap is technically real. It does not answer whether it matters.
+
+So the sample was extended to sectors that carry an explicit legal accessibility obligation in the
+EU:
+
+- **Public sector** — bound by the Web Accessibility Directive (EU) 2016/2102, which requires
+  conformance with EN 301 549 and a published accessibility statement.
+- **E-commerce, banking and passenger transport** — in scope of the European Accessibility Act,
+  applicable since **28 June 2025** to services offered to consumers, with a microenterprise
+  exemption (fewer than 10 staff *and* under €2m turnover).
+
+This changes what the number means, and it needs stating carefully:
+
+**A finding here is not a finding of non-compliance.** Conformance is assessed across a whole
+service against 50-odd success criteria, most of which no scanner can evaluate; this looks at one
+page, with one engine, and reports differences between rendering states. Nothing here establishes
+that any organisation is in breach of anything, and it is not offered as evidence in that direction.
+
+What it does show is narrower and still worth knowing: **the states where these defects hide are the
+states an automated pipeline does not render.** An organisation that has a legal obligation, runs
+automated checks, and sees them pass green may be relying on a test that never opened dark mode or
+the 320px width the standard itself names.
 
 ## What this is not
 
