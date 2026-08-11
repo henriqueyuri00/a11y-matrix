@@ -9,6 +9,7 @@ const { runMatrix } = require("./run.js");
 const { STATES, selectStates } = require("./states.js");
 const { resolvePages } = require("./pages.js");
 const { aggregate } = require("./aggregate.js");
+const { groupFindings } = require("./grouping.js");
 
 const USAGE = `
 a11y-matrix <url|file> [more urls...] [options]
@@ -137,10 +138,20 @@ function report(results, opts) {
 
     lines.push(`\n${head}  ${C.red}${describe(tally(uniq))} not present in baseline${C.off}`);
     lines.push(`  ${C.dim}${r.state.why}${C.off}`);
-    for (const f of uniq) {
-      const mark = f.kind === "incomplete" ? C.yellow + "review  " : C.red + f.impact.padEnd(8);
-      lines.push(`    ${mark}${C.off} ${f.rule}  ${C.dim}${f.target}${C.off}`);
-      if (f.summary) lines.push(`             ${C.dim}${f.summary.slice(0, 200)}${C.off}`);
+    for (const entry of groupFindings(uniq)) {
+      if (entry.single) {
+        const f = entry.single;
+        const mark = f.kind === "incomplete" ? C.yellow + "review  " : C.red + f.impact.padEnd(8);
+        lines.push(`    ${mark}${C.off} ${f.rule}  ${C.dim}${f.target}${C.off}`);
+        if (f.summary) lines.push(`             ${C.dim}${f.summary.slice(0, 200)}${C.off}`);
+        continue;
+      }
+      const g = entry.group;
+      const mark = g.kind === "incomplete" ? C.yellow + "review  " : C.red + String(g.impact).padEnd(8);
+      lines.push(`    ${mark}${C.off} ${g.rule}  ${C.bold}x${entry.count}${C.off}  ${C.dim}${g.reason}${C.off}`);
+      for (const f of entry.examples) lines.push(`             ${C.dim}e.g. ${f.target}${C.off}`);
+      if (entry.count > entry.examples.length)
+        lines.push(`             ${C.dim}...and ${entry.count - entry.examples.length} more like it${C.off}`);
     }
     if (r.suppressed)
       lines.push(`  ${C.dim}${r.suppressed} further finding(s) suppressed: scrolled out of view inside a ` +

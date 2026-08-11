@@ -72,6 +72,42 @@ console.log("\nPAGE LISTS");
   fs.unlinkSync(tmp);
 }
 
+console.log("\nGROUPING — repeats collapse, they do not disappear");
+{
+  const { groupFindings } = require("../src/grouping.js");
+  const many = Array.from({ length: 12 }, (_, i) => ({
+    kind: "incomplete", rule: "color-contrast", impact: "review", target: `td:nth-child(${i})`,
+    summary: "Fix any of the following: Element content is too short to determine if it is actual text content"
+  }));
+  const few = [
+    { kind: "violation", rule: "button-name", impact: "serious", target: "#a", summary: "Element has no title attribute" },
+    { kind: "violation", rule: "link-name", impact: "serious", target: "#b", summary: "Element is in tab order and has no accessible text" }
+  ];
+  const out = groupFindings([...many, ...few]);
+  const grouped = out.filter(e => e.group);
+  const singles = out.filter(e => e.single);
+  ok("  twelve identical results become one entry", grouped.length === 1, grouped.length);
+  ok("  and the count is preserved", grouped[0] && grouped[0].count === 12, grouped[0] && grouped[0].count);
+  ok("  nothing is lost: count plus singles equals input",
+     (grouped[0] ? grouped[0].count : 0) + singles.length === 14,
+     (grouped[0] ? grouped[0].count : 0) + singles.length);
+  ok("  distinct results are still listed individually", singles.length === 2, singles.length);
+  ok("  examples are carried for the grouped entry", grouped[0] && grouped[0].examples.length === 2);
+}
+{
+  const { groupFindings } = require("../src/grouping.js");
+  /* Same rule, different reason: these are different problems and must not be
+     merged just because axe used one rule id for both. */
+  const mixed = [
+    ...Array.from({ length: 5 }, (_, i) => ({ kind: "incomplete", rule: "color-contrast", impact: "review",
+      target: `#a${i}`, summary: "Element content is too short to determine if it is actual text content" })),
+    ...Array.from({ length: 5 }, (_, i) => ({ kind: "incomplete", rule: "color-contrast", impact: "review",
+      target: `#b${i}`, summary: "Element's background color could not be determined because it is obscured" }))
+  ];
+  const groups = groupFindings(mixed).filter(e => e.group);
+  ok("  same rule with different reasons stays separate", groups.length === 2, groups.length);
+}
+
 console.log("\nAGGREGATION — one shared defect is one defect");
 {
   const f = (rule, target, kind = "violation") => ({ kind, rule, target, impact: "serious", summary: "" });
